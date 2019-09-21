@@ -1,11 +1,11 @@
 import React from "react";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Image from "../components/image";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
+import Image from "../../components/image";
 import Button from '@material-ui/core/Button';
 
-const IndexPage = () => (
+const OpociiSimulation = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Hi people</h1>
@@ -20,4 +20,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default OpociiSimulation
