@@ -1,15 +1,19 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import {createMemoryHistory} from "history";
+import {Route, Router, Switch} from "react-router-dom";
 
-import Layout from '../components/layout'
+import "assets/material-kit-react.scss";
+import 'typeface-roboto';
+import 'typeface-roboto-slab';
+// pages for this product
+import Components from "./Components/Components.jsx";
 
-const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+let hist = createMemoryHistory();
 
-export default IndexPage
+export default () => (
+  <Router history={hist}>
+    <Switch>
+      <Route path="/" component={Components} />
+    </Switch>
+  </Router>
+);
