@@ -32,8 +32,14 @@ class Looppydoop extends React.Component {
   }
 }
 
-const LoopPage = ({ location }) => (
-  <Looppydoop page={location.state.page} level={0} deepness={location.state.level} />
-)
+const LoopPage = ({ location }) => {
+  let page = "/";
+  let level = 0;
+  if (location.state) {
+    page = location.state.page;
+    level = location.state.level;
+  }
+  return (<Looppydoop page={page} level={0} deepness={level} />);
+}
 
 export default LoopPage
