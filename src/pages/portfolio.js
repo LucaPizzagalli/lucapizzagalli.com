@@ -53,6 +53,16 @@ const previews = [
     github: "https://github.com/LucaPizzagalli/chemotaxis-pathfinding"
   },
   {
+    title: "This same website",
+    link: "/projects/loop",
+    image: opociiCover,
+    imageAlt: "Contemplative Reptile",
+    imageTitle: "cosa",
+    excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    technologies: ["Html", "Javascript", "React"],
+    github: "https://github.com/LucaPizzagalli/LucaPizzagalli.local"
+  },
+  {
     title: "Memory Cards",
     link: "/projects/memory",
     image: memoryCardsCover,
@@ -70,16 +80,6 @@ const previews = [
     imageTitle: "cosa",
     excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     technologies: ["C++"]
-  },
-  {
-    title: "This same website",
-    link: "/projects/loop",
-    image: opociiCover,
-    imageAlt: "Contemplative Reptile",
-    imageTitle: "cosa",
-    excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-    technologies: ["Html", "Javascript", "React"],
-    github: "https://github.com/LucaPizzagalli/LucaPizzagalli.local"
   },
 ]
 
