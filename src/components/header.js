@@ -1,52 +1,83 @@
 import { Link } from "gatsby";
 import React from "react";
 
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-// import IconButton from '@material-ui/core/IconButton';
+import { styled } from '@material-ui/styles';
 
-const useStyles = makeStyles(theme => ({
-  title: {
-    marginRight: theme.spacing(3),
-    marginLeft: theme.spacing(3),
+const navigation = [
+  {
+    title: "Home",
+    link: "/"
   },
-}));
+  {
+    title: "Portfolio",
+    link: "/portfolio"
+  },
+  {
+    title: "About",
+    link: "/about"
+  }
+];
 
-function Header() {
-  const classes = useStyles();
+const MenuElement = styled(Typography)({
+  marginRight: "0.5rem",
+  marginLeft: "0.5rem",
+});
 
-  return (
-    <AppBar color="primary" position="static">
-      <Toolbar style={{margin: `0 auto`}}>
-        {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-          <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation" width="1.2em"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
-        </IconButton> */}
-        <Typography variant="h6" className={classes.title}>
-          <Link to="/" activeStyle={{ color: `black` }}
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}>Home</Link>
-        </Typography>
-        <Typography variant="h6" className={classes.title}>
-          <Link to="/portfolio/" activeStyle={{ color: `black` }}
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}>Portfolio</Link>
-        </Typography>
-        <Typography variant="h6" className={classes.title}>
-          <Link to="/about/" activeStyle={{ color: `black` }}
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}>About</Link>
-        </Typography>
-      </Toolbar>
-    </AppBar>
-  )
+class Header extends React.Component {
+  render() {
+    if (this.props.level) {
+      return (
+        <AppBar color="primary" position="static">
+          <Toolbar style={{ margin: `0 auto` }}>
+            {navigation.map(element => (
+              <MenuElement variant="h6">
+                {(() => {
+                  if (this.props.active === element.link) {
+                    return (
+                      <Link to="/projects/loop" state={{ level: this.props.level, page: element.link }}
+                        style={{
+                          color: `black`,
+                          textDecoration: `none`,
+                        }}>{element.title}
+                      </Link>);
+                  }
+                  else {
+                    return (
+                      <Link to="/projects/loop" state={{ level: this.props.level, page: element.link }}
+                        style={{
+                          color: `white`,
+                          textDecoration: `none`,
+                        }}>{element.title}
+                      </Link>);
+                  }
+                })()}
+              </MenuElement>
+            ))}
+          </Toolbar>
+        </AppBar>
+      );
+    }
+    else
+      return (
+        <AppBar color="primary" position="static">
+          <Toolbar style={{ margin: `0 auto` }}>
+            {navigation.map(element => (
+              <MenuElement variant="h6">
+                <Link to={element.link} activeStyle={{ color: `black` }}
+                  style={{
+                    color: `white`,
+                    textDecoration: `none`
+                  }}>{element.title}
+                </Link>
+              </MenuElement>
+            ))}
+          </Toolbar>
+        </AppBar>
+      );
+  }
 }
 
 export default Header
