@@ -34,7 +34,7 @@ class Looppydoop extends React.Component {
 
 const LoopPage = ({ location }) => {
   let page = "/";
-  let level = 0;
+  let level = 1;
   if (location.state) {
     page = location.state.page;
     level = location.state.level;
