@@ -28,55 +28,36 @@ const MenuElement = styled(Typography)({
 
 class Header extends React.Component {
   render() {
-    if (this.props.level) {
-      return (
-        <AppBar color="primary" position="static">
-          <Toolbar style={{ margin: `0 auto` }}>
-            {navigation.map(element => (
-              <MenuElement variant="h6">
-                {(() => {
-                  if (this.props.active === element.link) {
-                    return (
-                      <Link to="/projects/loop" state={{ level: this.props.level, page: element.link }}
-                        style={{
-                          color: `black`,
-                          textDecoration: `none`,
-                        }}>{element.title}
-                      </Link>);
-                  }
-                  else {
-                    return (
-                      <Link to="/projects/loop" state={{ level: this.props.level, page: element.link }}
-                        style={{
-                          color: `white`,
-                          textDecoration: `none`,
-                        }}>{element.title}
-                      </Link>);
-                  }
-                })()}
-              </MenuElement>
-            ))}
-          </Toolbar>
-        </AppBar>
-      );
-    }
-    else
-      return (
-        <AppBar color="primary" position="static">
-          <Toolbar style={{ margin: `0 auto` }}>
-            {navigation.map(element => (
-              <MenuElement variant="h6">
-                <Link to={element.link} activeStyle={{ color: `black` }}
-                  style={{
-                    color: `white`,
-                    textDecoration: `none`
-                  }}>{element.title}
-                </Link>
-              </MenuElement>
-            ))}
-          </Toolbar>
-        </AppBar>
-      );
+    return (
+      <AppBar color="primary" position="static">
+        <Toolbar style={{ margin: `0 auto` }}>
+          {navigation.map(element => (
+            <>{(() => {
+              if (this.props.handler && this.props.selected === element.link)
+                return (
+                  <MenuElement variant="h6" onClick={() => { this.props.handler(element.link); }} style={{ cursor: 'pointer', color: 'black' }}>
+                    {element.title}
+                  </MenuElement>)
+              else if (this.props.handler)
+                return (
+                  <MenuElement variant="h6" onClick={() => { this.props.handler(element.link); }} style={{ cursor: 'pointer' }}>
+                    {element.title}
+                  </MenuElement>)
+              else
+                return (
+                  <MenuElement variant="h6">
+                    <Link to={element.link} activeStyle={{ color: `black` }}
+                      style={{
+                        color: `white`,
+                        textDecoration: `none`
+                      }}>{element.title}
+                    </Link>
+                  </MenuElement>)
+            })()}</>
+          ))}
+        </Toolbar>
+      </AppBar>
+    );
   }
 }
 

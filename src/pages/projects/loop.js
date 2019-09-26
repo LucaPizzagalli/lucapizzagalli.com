@@ -8,38 +8,38 @@ import AboutPage from "../about";
 import Card from '@material-ui/core/Card';
 
 class Looppydoop extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handler = this.handler.bind(this);
+    this.state = { page: <IndexPage handler={this.handler} /> };
+  }
+  handler(link) {
+    if (link === "/")
+      this.setState({ page: <IndexPage handler={this.handler}/> });
+    else if (link === "/portfolio")
+      this.setState({ page: <PortfolioPage handler={this.handler}/> });
+    else if (link === "/about")
+      this.setState({ page: <AboutPage handler={this.handler}/> });
+    else if (link === "/projects/loop")
+      this.setState({ page: <Looppydoop handler={this.handler}/> });
+  }
   render() {
     return (
-      <Layout level={this.props.level}>
+      <Layout handler={this.props.handler}>
         <h1>My website</h1>
         <p>Well, you are already seeing my website, but, here there is again.</p>
         <Card>
-          {(() => {
-            if (this.props.level + 1 < this.props.deepness)
-              return (<Looppydoop page={this.props.page} level={this.props.level + 1} deepness={this.props.deepness} />);
-            else if (this.props.page === "/")
-              return (<IndexPage level={this.props.deepness} active="/" />);
-            else if (this.props.page === "/portfolio")
-              return (<PortfolioPage level={this.props.deepness} active="/portfolio" />);
-            else if (this.props.page === "/about")
-              return (<AboutPage level={this.props.deepness} active="/about" />);
-            // else
-            //   return (<IndexPage level="2" />);
-          })()}
+          {this.state.page}
         </Card>
       </Layout>
     );
   }
 }
 
-const LoopPage = ({ location }) => {
-  let page = "/";
-  let level = 1;
-  if (location.state) {
-    page = location.state.page;
-    level = location.state.level;
-  }
-  return (<Looppydoop page={page} level={0} deepness={level} />);
+const LoopPage = () => {
+  return (
+    <Looppydoop />
+  );
 }
 
 export default LoopPage

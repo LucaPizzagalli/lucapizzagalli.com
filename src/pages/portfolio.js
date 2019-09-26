@@ -105,11 +105,8 @@ class CardCore extends React.Component {
 
 class PortfolioPage extends React.Component {
   render() {
-    let level = 0;
-    if (this.props.level)
-      level = this.props.level;
     return (
-      <Layout level={level} active={this.props.active}>
+      <Layout handler={this.props.handler} selected="/portfolio">
         <SEO title="Portfolio" />
         <h1>My projects</h1>
         <p>Some of the projects for which I have a nice pic.</p>
@@ -124,10 +121,16 @@ class PortfolioPage extends React.Component {
                         <CardCore preview={preview} />
                       </CardActionArea>);
                   }
+                  else if (preview.link === "/projects/loop" && this.props.handler) {
+                    return (
+                      <CardActionArea onClick={() => this.props.handler(preview.link)}>
+                        <CardCore preview={preview} />
+                      </CardActionArea>);
+                  }
                   else {
                     return (
                       <CardActionArea>
-                        <Link to={preview.link} state={{ level: level+1, page: "/" }} style={{ textDecoration: "none", }}>
+                        <Link to={preview.link} style={{ textDecoration: "none", }}>
                           <CardCore preview={preview} />
                         </Link>
                       </CardActionArea>);

@@ -27,11 +27,8 @@ const ImageMe = () => (
 
 class IndexPage extends React.Component {
   render() {
-    let level = 0;
-    if (this.props.level)
-      level = this.props.level;
     return (
-      <Layout level={level} active={this.props.active}>
+      <Layout handler={this.props.handler} selected="/">
         <SEO title="Luca Pizzagalli" />
         <h1>Hello.</h1>
         <Grid container spacing={10}>

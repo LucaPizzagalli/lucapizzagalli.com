@@ -11,7 +11,7 @@ class Layout extends React.Component {
     return (
       <>
         <CssBaseline />
-        <Header level={this.props.level} active={this.props.active}/>
+        <Header handler={this.props.handler} selected={this.props.selected}/>
         <div
           style={{
             margin: `0 auto`,
