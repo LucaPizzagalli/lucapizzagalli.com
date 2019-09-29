@@ -52,10 +52,4 @@ LoopPage.defaultProps = {
   level: 0
 }
 
-// const LoopPage = () => {
-//   return (
-//     <Looppydoop />
-//   );
-// }
-
 export default LoopPage

@@ -30,7 +30,7 @@ class IndexPage extends React.Component {
       <Layout handler={this.props.handler} selected="/">
         <SEO title="Luca Pizzagalli" />
         <h1>Hello.</h1>
-        <Grid container spacing={10}>
+        <Grid container spacing={6}>
           <Grid item xs={12} md={6}>
             <p>I'm Luca.</p>
             <p>The place you are now in is the website I put together in a bunch of days for declaring to the world that <strong>I'm looking for a job</strong>. A job in <strong>data science</strong>, or something related. Every place in the world is fine.</p>
@@ -41,12 +41,6 @@ class IndexPage extends React.Component {
             </div>
           </Grid>
         </Grid>
-        {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <Image />
-        </div>
-        <div style={{ maxWidth: `300px`, margin: `0 auto` }}>
-          <ImageMe />
-        </div> */}
       </Layout>
     );
   }
