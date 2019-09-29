@@ -20,6 +20,8 @@ import opociiCover from "../images/opociiCover.png"
 import microswimmersCover from "../images/microswimmersCover.png"
 import chemotaxisCover from "../images/chemotaxisCover.png"
 import memoryCardsCover from "../images/memoryCardsCover.png"
+import ue4Cover from "../images/ue4Cover.png"
+import loopCover from "../images/loopCover.png"
 
 const previews = [
   {
@@ -27,18 +29,18 @@ const previews = [
     link: "/static/microswimmersSlides/slides.html",
     staticLink: true,
     image: microswimmersCover,
-    imageAlt: "comparison experiment simulation",
+    imageAlt: "comparison experiment simulation of a micro-swimmer in a confined quasi-2D environment",
     imageTitle: "comparison experiment simulation",
-    excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    excerpt: "For my thesis I developed a mathematical model describing the tumbling motion of a single cell organism in open and confined environment and its numerical implementation.",
     technologies: ["C++", "Python"],
     github: "https://github.com/LucaPizzagalli/motion-microswimmers-simulation"
   },
   {
-    title: "Opocii world",
+    title: "Opocii's world",
     link: "/projects/opocii",
     image: opociiCover,
     imageAlt: "Contemplative Reptile",
-    imageTitle: "cosa",
+    imageTitle: "stuff",
     excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     technologies: ["C"],
   },
@@ -55,7 +57,7 @@ const previews = [
   {
     title: "This same website",
     link: "/projects/loop",
-    image: opociiCover,
+    image: loopCover,
     imageAlt: "Contemplative Reptile",
     imageTitle: "cosa",
     excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
@@ -75,11 +77,11 @@ const previews = [
   {
     title: "Unreal Engine 4 prototype",
     link: "/projects/ue4",
-    image: opociiCover,
+    image: ue4Cover,
     imageAlt: "Contemplative Reptile",
     imageTitle: "cosa",
     excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-    technologies: ["C++"]
+    technologies: ["C++", "UE4"]
   },
 ]
 
@@ -92,7 +94,7 @@ class CardCore extends React.Component {
           alt={this.props.preview.imageAlt}
           height="200"
           image={this.props.preview.image}
-          title="Opocii"
+          title={this.props.preview.imageTitle}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" color="textPrimary" component="h2"> {this.props.preview.title} </Typography>

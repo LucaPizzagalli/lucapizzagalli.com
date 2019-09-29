@@ -7,7 +7,19 @@ import AboutPage from "../about";
 
 import Card from '@material-ui/core/Card';
 
-class Looppydoop extends React.Component {
+const texts = [
+  "Well, you are already seeing my website, but, here there is again.",
+  "Mmm... Sure, same stuff.",
+  "Yeah, it works, it just goes on.",
+  "Yup, nothing new.",
+  "...",
+  "...",
+  "Nice idea to invest in monitor with less bezels and then using them for this.",
+  "Ok, so you like recursion.",
+  "Then I'll not disappoint you:"
+]
+
+class LoopPage extends React.Component {
   constructor(props) {
     super(props);
     this.handler = this.handler.bind(this);
@@ -21,13 +33,13 @@ class Looppydoop extends React.Component {
     else if (link === "/about")
       this.setState({ page: <AboutPage handler={this.handler}/> });
     else if (link === "/projects/loop")
-      this.setState({ page: <Looppydoop handler={this.handler}/> });
+      this.setState({ page: <LoopPage handler={this.handler} level={this.props.level+1}/> });
   }
   render() {
     return (
       <Layout handler={this.props.handler}>
         <h1>My website</h1>
-        <p>Well, you are already seeing my website, but, here there is again.</p>
+        <p>{texts[this.props.level % 9]}</p>
         <Card>
           {this.state.page}
         </Card>
@@ -36,10 +48,14 @@ class Looppydoop extends React.Component {
   }
 }
 
-const LoopPage = () => {
-  return (
-    <Looppydoop />
-  );
+LoopPage.defaultProps = {
+  level: 0
 }
+
+// const LoopPage = () => {
+//   return (
+//     <Looppydoop />
+//   );
+// }
 
 export default LoopPage
