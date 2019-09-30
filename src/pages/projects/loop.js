@@ -14,7 +14,7 @@ const texts = [
   "Yup, nothing new.",
   "...",
   "...",
-  "Nice idea to invest in monitor with less bezels and then using them for this.",
+  "Nice idea to invest in monitor with less bezels and then using it for this.",
   "Ok, so you like recursion.",
   "Then I'll not disappoint you:"
 ]

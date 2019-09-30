@@ -41,16 +41,17 @@ const previews = [
     image: opociiCover,
     imageAlt: "Contemplative Reptile",
     imageTitle: "stuff",
-    excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    excerpt: "3D simulation/game of a population of creatures that grow, eat, kill, die. Made using just a 2D rendering library.",
     technologies: ["C"],
   },
   {
     title: "Chemotaxis simulation",
-    link: "/projects/chemotaxis",
+    link: "https://github.com/LucaPizzagalli/chemotaxis-pathfinding",//"/projects/chemotaxis",
+    staticLink: true,
     image: chemotaxisCover,
     imageAlt: "Contemplative Reptile",
     imageTitle: "cosa",
-    excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    excerpt: "Imitating bacteria a swarm of agents is able to transport mass from a source to a deposit. Each agent can find its way across obstacles using chemotaxis and exchanging a bit of information with other agents it meets along its path.",
     technologies: ["C++"],
     github: "https://github.com/LucaPizzagalli/chemotaxis-pathfinding"
   },
@@ -60,17 +61,18 @@ const previews = [
     image: loopCover,
     imageAlt: "Contemplative Reptile",
     imageTitle: "cosa",
-    excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    excerpt: "Website built with Gatsby, a static site generator for React. Over-killing for this simple portfolio, but a nice learning experience.",
     technologies: ["Html", "Javascript", "React"],
     github: "https://github.com/LucaPizzagalli/LucaPizzagalli.local"
   },
   {
     title: "Memory Cards",
-    link: "/projects/memory",
+    link: "https://github.com/LucaPizzagalli/memory-cards", //"/projects/memory",
+    staticLink: true,
     image: memoryCardsCover,
     imageAlt: "Contemplative Reptile",
     imageTitle: "cosa",
-    excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    excerpt: "Software that allows the user to create flashcards and run study sessions. It interfaces with the text editor/ pdf reader / browser/ etc. for showing the cards and the answers. It keeps track of the progress.",
     technologies: ["Python", "SQL"],
     github: "https://github.com/LucaPizzagalli/memory-cards"
   },
@@ -80,7 +82,7 @@ const previews = [
     image: ue4Cover,
     imageAlt: "Contemplative Reptile",
     imageTitle: "cosa",
-    excerpt: "Opocii are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    excerpt: "Prototype of a 3D editor for building skeletons of a wide variety of shapes, comprehensive of joins and bones. The creatures are later programmable writing the sequences of movements to perform.",
     technologies: ["C++", "UE4"]
   },
 ]
