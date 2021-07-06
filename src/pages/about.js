@@ -1,7 +1,7 @@
 import React from "react";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
@@ -10,7 +10,7 @@ class AboutPage extends React.Component {
   render() {
     return (
       <Layout handler={this.props.handler} selected="/about">
-        <SEO title="Contacts" />
+        <Seo title="Contacts" description="" lang="en" meta={[]} />
         <h1>About me</h1>
         <Button variant="contained" color="primary" href="/curriculumLucaPizzagalli.pdf" target="_blank">Download CV</Button>
         <IconButton href="https://github.com/LucaPizzagalli/">

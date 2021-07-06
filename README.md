@@ -1,6 +1,6 @@
 # Personal website
 
-1.  **Open the source code and start editing!**
+## Open the source code and start editing!
 
     Your site is now running at `http://localhost:8000`!
 
@@ -24,21 +24,7 @@ Once this starts, you can view your site at localhost:9000.
 
 ...
 
-## Deploying to a GitHub pages subdomain at github.io
-
-The easiest way to push a Gatsby app to GitHub Pages is by using a package called gh-pages.
-
-  npm install gh-pages --save-dev
-
-add to package.json
-
-  {
-    "scripts": {
-      "deploy": "gatsby build && gh-pages -d public -b master"
-    }
-  }
-
-After running
+## Deploying GitHub pages
 
   npm run deploy
 

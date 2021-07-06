@@ -1,43 +1,25 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
-
+import Seo from "../components/seo";
 import Grid from '@material-ui/core/Grid';
 
-const ImageMe = () => (
-  <StaticQuery
-    query={graphql`
-        query {
-          placeholderImage: file(relativePath: { eq: "me.png" }) {
-            childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
-  />
-)
 
 class IndexPage extends React.Component {
   render() {
     return (
       <Layout handler={this.props.handler} selected="/">
-        <SEO title="Luca Pizzagalli" />
+        <Seo title="Luca Pizzagalli" description="" lang="en" meta={[]} />
         <h1>Hello.</h1>
-        <Grid container spacing={6}>
+        <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <p>I'm Luca.</p>
             <p>The place you are now in is the website I put together in a bunch of days for declaring to the world that <strong>I'm looking for a job</strong>. A job in <strong>data science</strong>, or something related. Every place in the world is fine.</p>
           </Grid>
           <Grid item xs={12} md={6}>
-            <div style={{ maxWidth: `300px`, margin: "0 auto"}}>
-              <ImageMe />
+            <div style={{ maxWidth: '300px', margin: '0 auto'}}>
+              <StaticImage src="../images/me.png" alt="me" />
             </div>
           </Grid>
         </Grid>

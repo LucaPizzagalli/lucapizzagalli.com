@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 // import Image from "../components/image";
 
 import Grid from '@material-ui/core/Grid';
@@ -111,7 +111,7 @@ class PortfolioPage extends React.Component {
   render() {
     return (
       <Layout handler={this.props.handler} selected="/portfolio">
-        <SEO title="Portfolio" />
+        <Seo title="Portfolio" description="" lang="en" meta={[]} />
         <h1>My projects</h1>
         <p>Some of the projects for which I have a nice pic.</p>
         <Grid container spacing={3}>
