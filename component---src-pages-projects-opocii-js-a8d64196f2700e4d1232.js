@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{244:function(n,e,t){"use strict";t.r(e);var a=t(0),u=t.n(a),c=t(232);e.default=function(){return u.a.createElement(c.a,null,u.a.createElement("p",null,"Page under construction"))}}}]);
+//# sourceMappingURL=component---src-pages-projects-opocii-js-a8d64196f2700e4d1232.js.map
