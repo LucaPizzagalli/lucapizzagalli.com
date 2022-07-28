@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[683],{6193:function(e,t,n){n.r(t);var l=n(7294),r=n(884),a=n(262);t.default=function(){return l.createElement(r.Z,null,l.createElement(a.Z,{title:"Unreal Engine 4 prototype",description:"",lang:"en",meta:[]}),l.createElement("h1",null,"Unreal Engine 4 prototype"),l.createElement("p",null,"Sorry, no pics until i reinstall windows :/"))}}}]);
+//# sourceMappingURL=component---src-pages-projects-ue-4-js-8f9ae928fa69bc828258.js.map

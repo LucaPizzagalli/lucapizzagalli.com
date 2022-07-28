@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[859],{5966:function(e,t,n){n.r(t);var r=n(7294),u=n(884);t.default=function(){return r.createElement(u.Z,null,r.createElement("h1",null,"Under construction"),r.createElement("p",null,"Page under construction."))}}}]);
+//# sourceMappingURL=component---src-pages-projects-microswimmers-js-472e902c380ee347466f.js.map
