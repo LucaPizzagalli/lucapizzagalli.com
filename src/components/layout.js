@@ -1,31 +1,22 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React, { useState } from 'react';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
-
-import Header from "./header"
+import Menu from "./menu"
 import "./layout.css"
 
-class Layout extends React.Component {
-  render() {
-    return (
-      <>
-        <CssBaseline />
-        <Header handler={this.props.handler} selected={this.props.selected} />
-        <Container style={{
-          maxWidth: 1400,
-          padding: `3rem 6% 1rem 6%`,
-        }}>
-          <main>{this.props.children}</main>
-        </Container>
-      </>
-    )
-  }
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+function Layout({ handler, children }) {
+  let [selection, setSelection] = useState("home");
+  return (
+    <>
+      <Menu handler={handler} selected={selection} />
+      <div style={{
+        maxWidth: `80rem`,
+        padding: `3rem 6% 1rem 6%`,
+        margin: `0 auto`,
+      }}>
+        <main>{children}</main>
+      </div>
+    </>
+  )
 }
 
 export default Layout

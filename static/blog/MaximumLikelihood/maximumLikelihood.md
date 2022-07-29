@@ -80,7 +80,7 @@ Let's go back to our problem. It's a uniform distribution, so each card has a pr
 
 *14.*
 
-Exactly 14. Maximum likelihood thinks we took exactly the highest card. It thinks that every single time. If we had instead taken card number 57? "There are obviously 57 cards, sir.", it would have said. If we had taken card one-million-three-hundred-twenty-two? "One-million-three-hundred-twenty-two cards in total in the deck, clearly." **"Do you really think that out of more than one million cards, I took exactly the highest one? Are you really really sure this is the best guess possible?"** "Absolutely." **"Isn't more realistic that there are at least a few more cards than that?"** "Nope."
+Exactly 14. Mr. maximum likelihood thinks we took exactly the highest card. It thinks that every single time. What if we had instead taken card number 57? "There are obviously 57 cards, sir.", it would have said. If we had taken card one-million-three-hundred-twenty-two? "One-million-three-hundred-twenty-two cards in total in the deck, clearly." **"Do you really think that out of more than one million cards, I took exactly the highest one? Are you really really sure this is the best guess possible?"** "Absolutely." **"Isn't more realistic that there are at least a few more cards than that?"** "Nope."
 
 Maximum likelihood is the village idiot.
 You had this complex problem you were working on; you had incomplete information; you developed a theory, but it still has a free parameter; you did experiments; you collected data; just a final, last piece is missing in the puzzle; and then you pick the most retarded guy you could find in town and ask for a solution, and what does he tell you?

@@ -1,20 +1,19 @@
 import React from "react";
 
-import Layout from "../../components/layout";
-import IndexPage from "../index";
-import PortfolioPage from "../portfolio";
-import AboutPage from "../about";
+import Layout from "../components/layout";
+import IndexPage from "./index";
+import ProjectsPage from "./side-projects";
+import AboutPage from "./about";
+import BlogPage from "./blog";
 
-import Card from '@material-ui/core/Card';
-
-const texts = [
-  "Well, you are already seeing my website, but, here there is again.",
+let texts = [
+  "Well, you are already seeing my website, but, here it is again.",
   "Mmm... Sure, same stuff.",
   "Yeah, it works, it just goes on.",
   "Yup, nothing new.",
   "...",
   "...",
-  "Nice idea to invest in monitor with less bezels and then using it for this.",
+  "Hey... still here, I see.",
   "Ok, so you like recursion.",
   "Then I'll not disappoint you:"
 ]
@@ -28,11 +27,13 @@ class LoopPage extends React.Component {
   handler(link) {
     if (link === "/")
       this.setState({ page: <IndexPage handler={this.handler}/> });
-    else if (link === "/portfolio")
-      this.setState({ page: <PortfolioPage handler={this.handler}/> });
-    else if (link === "/about")
-      this.setState({ page: <AboutPage handler={this.handler}/> });
-    else if (link === "/projects/loop")
+    else if (link === "/side-projects")
+      this.setState({ page: <ProjectsPage handler={this.handler}/> });
+      else if (link === "/about")
+        this.setState({ page: <AboutPage handler={this.handler}/> });
+        else if (link === "/blog")
+          this.setState({ page: <BlogPage handler={this.handler}/> });
+    else if (link === "/loop")
       this.setState({ page: <LoopPage handler={this.handler} level={this.props.level+1}/> });
   }
   render() {
@@ -40,9 +41,9 @@ class LoopPage extends React.Component {
       <Layout handler={this.props.handler}>
         <h1>My website</h1>
         <p>{texts[this.props.level % 9]}</p>
-        <Card>
+        <div>
           {this.state.page}
-        </Card>
+        </div>
       </Layout>
     );
   }
