@@ -15,6 +15,7 @@ function BlogPage({ handler }) {
     <Layout handler={handler} selected="/blog">
       <Seo title="blog" description="" lang="en" meta={[]} />
       <h1>Blog</h1>
+      <p>I wrote something once. Let's call it a blog.</p>
       <menu>
         {posts_data.map(data => (
           <li key={data.url}><a href={data.url}>{data.title}</a></li>
