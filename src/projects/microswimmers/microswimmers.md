@@ -1,5 +1,5 @@
 ---
-url: "/static/microswimmersSlides/slides.html"
+url: "/microswimmersSlides/slides.html"
 title: "Micro-swimmers simulation"
 order: 7
 previewImage: "microswimmersCover.png"
