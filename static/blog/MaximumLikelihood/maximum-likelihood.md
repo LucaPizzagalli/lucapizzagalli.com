@@ -1,5 +1,5 @@
 ---
-slug:         "/blog/my-first-post"
+url:         "/blog/maximum-likelihood-is-a-lie"
 title:        Maximum Likelihood is a Lie
 author:       Luca Pizzagalli
 date:         2022-07-27

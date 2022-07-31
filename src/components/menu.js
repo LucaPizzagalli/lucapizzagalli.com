@@ -2,45 +2,54 @@ import { Link } from "gatsby";
 import React from "react";
 
 let navigation = [
-  {
-    title: "Home",
-    url: "/"
-  },
-  {
-    title: "Side Projects",
-    url: "/side-projects"
-  },
-  {
-    title: "Blog",
-    url: "/blog"
-  },
-  {
-    title: "About",
-    url: "/about"
-  }
+    {
+        title: "Home",
+        url: "/",
+        folder: "",
+    },
+    {
+        title: "Side Projects",
+        url: "/projects",
+        folder: "projects",
+    },
+    {
+        title: "Blog",
+        url: "/blog",
+        folder: "blog",
+    },
+    {
+        title: "About",
+        url: "/about",
+        folder: "about",
+    }
 ];
 
-function Menu({ handler, selected }) {
-  return (
-    <menu>
-      {navigation.map(element => (
-        <li key={element.url}>
-          {handler ?
-            <div onClick={() => { handler(element.url);}} style={{ cursor: 'pointer' }}>
-              {element.title}
-            </div>
-            : selected !== element.url ?
-              <Link style={{ color: "#fafafa" }} to={element.url}>
-                {element.title}
-              </Link>
-              :
-              element.title
-          }
-        </li>
-        // <li variant="h6" onClick={() => { this.props.handler(element.url); }} style={{ cursor: 'pointer', color: 'black' }}>
-      ))}
-    </menu>
-  );
+function Menu({ loop, location }) {
+    let folder = location.split('/')[1];
+    return (
+        <menu>
+            {navigation.map(element => (
+                <li key={element.url}>
+                    {loop && loop.level > 0 ?
+                        <div onClick={() => { loop.setUrl(element.url); }}
+                            style={element.folder === folder ?
+                                { cursor: 'pointer', textDecoration: "underline", color: "#01ff70" }
+                                :
+                                { cursor: 'pointer', textDecoration: "underline" }}
+                        >
+                            {element.title}
+                        </div>
+                        :
+                        <Link to={element.url}
+                            style={element.folder === folder ? { color: "#01ff70" } : {}}
+                        >
+                            {element.title}
+                        </Link>
+                    }
+                </li>
+            ))}
+        </menu>
+    );
 }
 
 export default Menu

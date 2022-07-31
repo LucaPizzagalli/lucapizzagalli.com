@@ -1,8 +1,10 @@
-Title:        Maximum Likelihood is a Lie
-Author:       Luca Pizzagalli
-Date:         2022-07-27
-Language:     en
-Comment:      https://fletcher.github.io/MultiMarkdown-6/syntax/index.htmls
+---
+url:         "/gigi"
+title:        Maximum Likelihood is a Lie 3
+author:       Luca Pizzagalli
+date:         2022-07-28
+language:     en
+comment:      https://fletcher.github.io/MultiMarkdown-6/syntax/index.htmls
 CSS:          ../retro.css
 HTML header:  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
               <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -39,6 +41,7 @@ HTML header:  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
                   </filter>
                 </defs>
               </svg>
+---
 
 # Maximum Likelihood is a Lie.
 

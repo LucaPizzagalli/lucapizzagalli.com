@@ -16,11 +16,35 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown`,
-        path: `${__dirname}/src/markdown/`,
+        name: `projects`,
+        path: `${__dirname}/src/projects/`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/blog/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {maxWidth: 1000},
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -44,11 +68,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `luca-pizzagalli-personal-website`,
+        short_name: `luca-pizzagalli`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#111111`,
+        theme_color: `#111111`,
         display: `minimal-ui`,
         icon: `src/images/ico.png`,
       },

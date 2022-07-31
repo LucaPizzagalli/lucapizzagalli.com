@@ -11,9 +11,12 @@
     "gatsby-plugin-offline": "^5.19.0",
     "gatsby-plugin-react-helmet": "^5.19.0",
     "gatsby-plugin-sharp": "^4.19.0",
+    "gatsby-remark-images": "^6.19.0",
+    "gatsby-remark-katex": "^6.19.0",
     "gatsby-source-filesystem": "^4.19.0",
     "gatsby-transformer-remark": "^5.19.0",
     "gatsby-transformer-sharp": "^4.19.0",
+    "katex": "^0.13.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0"
@@ -22,8 +25,10 @@
     "gh-pages": "^4.0.0"
   },
   "keywords": [
-    "portfolio",
-    "data science"
+    "Luca Pizzagalli",
+    "personal website",
+    "data science",
+    "machine learning"
   ],
   "scripts": {
     "build": "gatsby build",
@@ -31,14 +36,13 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/LucaPizzagalli/LucaPizzagalli.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/LucaPizzagalli/LucaPizzagalli.github.io/issues"
   }
 }

@@ -1,28 +1,57 @@
 import React from "react";
+import { graphql, StaticQuery, Link } from 'gatsby'
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
-let posts_data = [
-  {
-    title: "Maximum Likelihood is a Lie.",
-    url: "https://lucapizzagalli.github.io/blog/MaximumLikelihood/maximumLikelihood.html",
-  }
-]
 
-function BlogPage({ handler }) {
-  return (
-    <Layout handler={handler} selected="/blog">
-      <Seo title="blog" description="" lang="en" meta={[]} />
-      <h1>Blog</h1>
-      <p>I wrote something once. Let's call it a blog.</p>
-      <menu>
-        {posts_data.map(data => (
-          <li key={data.url}><a href={data.url}>{data.title}</a></li>
-        ))}
-      </menu>
-    </Layout>
-  );
+function PostList() {
+    return (
+        <StaticQuery
+            query={graphql`
+            query PostList {
+              allMarkdownRemark(
+                filter: {fileAbsolutePath: {regex: "/(blog)/"  }}
+                sort: {order: DESC, fields: [frontmatter___date]}
+              ) {
+                edges {
+                  node {
+                    frontmatter {
+                      url
+                      date
+                      title
+                    }
+                  }
+                }
+              } 
+            }
+          `}
+            render={data => (
+                <ul>
+                    {data.allMarkdownRemark.edges.map(edge => {
+                        let { frontmatter } = edge.node;
+                        return (
+                            <li key={frontmatter.url}>
+                                <Link to={frontmatter.url}>{frontmatter.title}</Link>
+                            </li>
+                        )
+                    })}
+                </ul>
+            )}
+        />
+    )
+}
+
+
+function BlogPage({ loop }) {
+    return (
+        <Layout loop={loop} location="/blog">
+            <Seo title="Blog" description="" lang="en" meta={[]} />
+            <h1>Blog</h1>
+            <p className="main-text">I wrote something once. Let's call it a blog.</p>
+            <PostList />
+        </Layout>
+    );
 }
 
 export default BlogPage

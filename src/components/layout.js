@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Menu from "./menu"
-import "./layout.css"
+import "../style/layout.css"
 
-function Layout({ handler, children }) {
-  let [selection, setSelection] = useState("home");
-  return (
-    <>
-      <Menu handler={handler} selected={selection} />
-      <div style={{
-        maxWidth: `80rem`,
-        padding: `3rem 6% 1rem 6%`,
-        margin: `0 auto`,
-      }}>
-        <main>{children}</main>
-      </div>
-    </>
-  )
+function Layout({ loop, location, children }) {
+    return (
+        <div className="page">
+            <Menu loop={loop} location={location}/>
+                <main>{children}</main>
+        </div>
+    )
 }
 
 export default Layout
