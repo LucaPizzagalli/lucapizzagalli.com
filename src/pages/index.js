@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -18,9 +18,9 @@ function IndexPage({ loop }) {
                         A job in <strong>data science</strong>, or something related. Every place in <em style={{ textDecoration: "line-through" }}>the world</em> <strong>Berlin</strong> is fine.</p>
                 </div>
                 <div>
-                    <div style={{ maxWidth: '300px', margin: '0 auto' }}>
+                    {/* <div style={{ maxWidth: '300px', margin: '0 auto' }}>
                         <StaticImage src="../images/me.png" alt="me" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Layout>
