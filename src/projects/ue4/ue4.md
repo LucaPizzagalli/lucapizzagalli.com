@@ -10,4 +10,4 @@ technologies: ["C++", "UE4"]
 ---
 # Unreal Engine 4 prototype
 
-Sorry, no pics until i reinstall Windows :/
+Sorry, no pics until I reinstall Windows :/
