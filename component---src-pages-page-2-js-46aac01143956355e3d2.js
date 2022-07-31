@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkluca_pizzagalli_website=self.webpackChunkluca_pizzagalli_website||[]).push([[617],{4948:function(e,t,l){l.r(t);var a=l(7294),n=l(1597),c=l(3837),i=l(262);t.default=function(){return a.createElement(c.Z,null,a.createElement(i.Z,{title:"Page two",description:"",lang:"en",meta:[]}),a.createElement("h1",null,"Hi from the second page"),a.createElement("p",null,"Welcome to page 2"),a.createElement(n.Link,{to:"/"},"Go back to the homepage"))}}}]);
-//# sourceMappingURL=component---src-pages-page-2-js-46aac01143956355e3d2.js.map

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkluca_pizzagalli_website=self.webpackChunkluca_pizzagalli_website||[]).push([[683],{6193:function(e,n,l){l.r(n);var t=l(7294),a=l(3837),i=l(262);n.default=function(){return t.createElement(a.Z,null,t.createElement(i.Z,{title:"Unreal Engine 4 prototype",description:"",lang:"en",meta:[]}),t.createElement("h1",null,"Unreal Engine 4 prototype"),t.createElement("p",null,"Sorry, no pics until i reinstall windows :/"))}}}]);
-//# sourceMappingURL=component---src-pages-projects-ue-4-js-a788203316064351442c.js.map

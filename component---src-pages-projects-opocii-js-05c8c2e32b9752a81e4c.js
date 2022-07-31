@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[124],{9422:function(e,t,n){n.r(t);var u=n(7294),a=n(884);t.default=function(){return u.createElement(a.Z,null,u.createElement("p",null,"Page under construction"))}}}]);
-//# sourceMappingURL=component---src-pages-projects-opocii-js-05c8c2e32b9752a81e4c.js.map

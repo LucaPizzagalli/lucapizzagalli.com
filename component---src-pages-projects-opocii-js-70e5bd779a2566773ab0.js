@@ -1,2 +1,0 @@
-(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[124],{7964:function(e,t,n){"use strict";n.r(t);var u=n(7294),a=n(1737);t.default=function(){return u.createElement(a.Z,null,u.createElement("p",null,"Page under construction"))}}}]);
-//# sourceMappingURL=component---src-pages-projects-opocii-js-70e5bd779a2566773ab0.js.map
