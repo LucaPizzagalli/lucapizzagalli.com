@@ -40,11 +40,12 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-images`,
-            options: {maxWidth: 1000},
+            options: {maxWidth: 2000, showCaptions: true},
           },
         ],
       },
     },
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -77,6 +78,12 @@ module.exports = {
         icon: `src/images/ico.png`,
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        path: `${__dirname}/src/images/`,
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

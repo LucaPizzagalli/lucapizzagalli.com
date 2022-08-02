@@ -48,7 +48,7 @@ function BlogPage({ loop }) {
         <Layout loop={loop} location="/blog">
             <Seo title="Blog" description="" lang="en" meta={[]} />
             <h1>Blog</h1>
-            <p className="main-text">I wrote something once. Let's call it a blog.</p>
+            <p>I wrote something once. Let's call it a blog.</p>
             <PostList />
         </Layout>
     );

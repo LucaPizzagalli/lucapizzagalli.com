@@ -51,7 +51,7 @@ function LoopPage({ loop }) {
     return (
         <Layout loop={loop} location="/loop">
             <h1>My website</h1>
-            <p className="main-text">{texts[loop.level % texts.length]}</p>
+            <p>{texts[loop.level % texts.length]}</p>
             <div style={{ border: "3px solid #01ff70" }}>
                 {
                     React.cloneElement(page, { loop: next_loop })

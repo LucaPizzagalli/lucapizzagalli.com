@@ -9,33 +9,33 @@ import Seo from "../components/seo";
 function ProjectCard({ loop, data }) {
     let image = getImage(data.previewImage);
     return (
-        <div className="card">
+        <section className="card">
             {data.url === "nope" ?
                 loop ?
                     <div onClick={() => loop.setUrl("/loop")}
                         style={{ textDecoration: "underline", color: "#01ff70", cursor: "pointer" }}
                     >
-                        <GatsbyImage image={image} alt={data.altText} />
-                        <h2 className="card-title"> {data.title} </h2>
+                        <GatsbyImage image={image} alt={data.altText} style={{marginBottom: "2rem"}}/>
+                        <h2 className="internal-text"> {data.title} </h2>
                     </div>
                     :
                     <Link to={"/loop"}>
-                        <GatsbyImage image={image} alt={data.altText} />
-                        <h2 className="card-title"> {data.title} </h2>
+                        <GatsbyImage image={image} alt={data.altText} style={{marginBottom: "2rem"}} />
+                        <h2 className="internal-text"> {data.title} </h2>
                     </Link>
                 :
                 data.staticLink ?
                     <a href={data.url}>
-                        <GatsbyImage image={image} alt={data.altText} />
-                        <h2 className="card-title"> {data.title} </h2>
+                        <GatsbyImage image={image} alt={data.altText} style={{marginBottom: "2rem"}} />
+                        <h2 className="internal-text"> {data.title} </h2>
                     </a>
                     :
                     <Link to={data.url}>
-                        <GatsbyImage image={image} alt={data.altText} />
-                        <h2 className="card-title"> {data.title} </h2>
+                        <GatsbyImage image={image} alt={data.altText} style={{marginBottom: "2rem"}}/>
+                        <h2 className="internal-text"> {data.title} </h2>
                     </Link>
             }
-            <p style={{ flexGrow: 1 }}>{data.excerpt}</p>
+            <p class="internal-text" style={{ flexGrow: 1 }}>{data.excerpt}</p>
             <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center" }}>
                 {data.technologies.map(tech => (<div key={tech} className="chip" >{tech}</div>))}
                 <div key="empty" style={{ flexGrow: 1 }}></div>
@@ -43,7 +43,7 @@ function ProjectCard({ loop, data }) {
                     <a key="github" href={data.github} style={{ margin: "1rem" }} >GitHub</a>
                 }
             </div>
-        </div>
+        </section>
     );
 }
 

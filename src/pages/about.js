@@ -13,7 +13,7 @@ function AboutPage({ loop }) {
                 <a href="https://www.linkedin.com/in/luca-pizzagalli" >LinkedIn</a>
                 <a href="https://github.com/LucaPizzagalli" >GitHub</a>
             </div>
-            <p className="main-text">Or, you can contact me at <a href="mailto:mail@lucapizzagalli.com">mail@lucapizzagalli.com</a>.</p>
+            <p>Or, you can contact me at <a href="mailto:mail@lucapizzagalli.com">mail@lucapizzagalli.com</a>.</p>
         </Layout>
     );
 }

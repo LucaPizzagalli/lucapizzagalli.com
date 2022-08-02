@@ -66,7 +66,7 @@ And then why do we take the max likelihood, why not the mean for example? Or the
 <span style="font-size: 0.8em;">beautiful shape, you take a better look and, uh, did you see it? Was she staring at you? Naaah, you're</span>
 <span style="font-size: 0.7em;"> imagining it. It's all in your mind. You would like to, that's why. But you're daydreaming. She was </span>
 <span style="font-size: 0.6em;">probably contemplating the trash can behind you. Still, you have a stupid smile on your face now, and, </span>
-<span style="font-size: 0.5em;">hey! She's smiling back! You bravely break the ice, ok, you clumsily break the ice, but it doesn't matter, you're talking not. At first things were a bit awkward, then it all magically started to go smoothly, </span>
+<span style="font-size: 0.5em;">hey! She's smiling back! You bravely break the ice, ok, you clumsily break the ice, but it doesn't matter, you're talking now. At first things were a bit awkward, then it all magically started to go smoothly, </span>
 <span style="font-size: 0.4em;">and now, you can feel the tension growing. You know it's your opportunity, you know you have to take the initiative, you just don't know exactly how. </span>
 <span style="font-size: 0.3em;">You finally take your chances, you make your move and </span>you compute mean, median, mode and all the moments.
 
@@ -80,13 +80,13 @@ Let's go back to our problem. It's a uniform distribution, so each card has a pr
 
 *14.*
 
-Exactly 14. Mr. maximum likelihood thinks we took exactly the highest card. It thinks that every single time. What if we had instead taken card number 57? "There are obviously 57 cards, sir.", it would have said. If we had taken card one-million-three-hundred-twenty-two? "One-million-three-hundred-twenty-two cards in total in the deck, clearly." *"Do you really think that out of more than one million cards, I took exactly the highest one? Are you really really sure this is the best guess possible?"* "Absolutely." *"Isn't more realistic that there are at least a few more cards than that?"* "Nope."
+Exactly 14. Mr. maximum likelihood thinks we took exactly the highest card. It thinks that every single time. What if we had instead taken card number 57? "There are obviously 57 cards, sir.", he would have said. If we had taken card one-million-three-hundred-twenty-two? "One-million-three-hundred-twenty-two cards in total in the deck, clearly." *"Do you really think that out of more than one million cards, I took exactly the highest one? Are you really really sure this is the best guess possible?"* "Absolutely." *"Isn't more realistic that there are at least a few more cards than that?"* "Nope."
 
 Maximum likelihood is the village idiot.
-You had this complex problem you were working on; you had incomplete information; you developed a theory, but it still has a free parameter; you did experiments; you collected data; just a final, last piece is missing in the puzzle; and then you pick the most retarded guy you could find in town and ask for a solution, and what does he tell you?
+You had this complex problem you were working on; you had incomplete information; you developed a theory, but it still had a free parameter; you did experiments; you collected data; just a final, last piece is missing in the puzzle; and then you pick the most retarded guy you could find in town and ask for a solution, and what does he tell you?
 
 *14.*
 
 ---
 
-ok, then for the correct approach we see each other at the next episode.
+ok, then for the correct approach we see each other at the [next episode](/blog/the-bayesian-way).

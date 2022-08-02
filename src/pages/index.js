@@ -12,8 +12,8 @@ function IndexPage({ loop }) {
             <h1>Hello.</h1>
             <div>
                 <div>
-                    <p className="main-text">I'm Luca.</p>
-                    <p className="main-text">
+                    <p>I'm Luca.</p>
+                    <p>
                         The place you are in now is the website I put together in a bunch of days for declaring to the world that <em style={{ textDecoration: "line-through" }}>I'm looking for a job</em> <strong>I found a job</strong>.
                         A job in <strong>data science</strong>, or something related. Every place in <em style={{ textDecoration: "line-through" }}>the world</em> <strong>Berlin</strong> is fine.</p>
                 </div>
