@@ -35,7 +35,7 @@ function ProjectCard({ loop, data }) {
                         <h2 className="internal-text"> {data.title} </h2>
                     </Link>
             }
-            <p class="internal-text" style={{ flexGrow: 1 }}>{data.excerpt}</p>
+            <p className="internal-text" style={{ flexGrow: 1 }}>{data.excerpt}</p>
             <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center" }}>
                 {data.technologies.map(tech => (<div key={tech} className="chip" >{tech}</div>))}
                 <div key="empty" style={{ flexGrow: 1 }}></div>

@@ -9,8 +9,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
       },
     },
     {
@@ -75,14 +75,8 @@ module.exports = {
         background_color: `#111111`,
         theme_color: `#111111`,
         display: `minimal-ui`,
-        icon: `src/images/ico.png`,
+        icon: `src/assets/ico.png`,
       },
-    },
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        path: `${__dirname}/src/images/`,
-      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

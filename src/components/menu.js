@@ -26,29 +26,45 @@ let navigation = [
 
 function Menu({ loop, location }) {
     let folder = location.split('/')[1];
-    return (
-        <menu>
-            {navigation.map(element => (
+    if (loop && loop.level > 0)
+        console.log(loop.level)
+    if (loop && loop.level === 42)
+        return (
+            <menu>{navigation.map(element => (
                 <li key={element.url}>
-                    {loop && loop.level > 0 ?
-                        <div onClick={() => { loop.setUrl(element.url); }}
-                            style={element.folder === folder ?
-                                { cursor: 'pointer', textDecoration: "underline", color: "#01ff70" }
-                                :
-                                { cursor: 'pointer', textDecoration: "underline" }}
-                        >
-                            {element.title}
-                        </div>
-                        :
-                        <Link to={element.url}
-                            style={element.folder === folder ? { color: "#01ff70" } : {}}
-                        >
-                            {element.title}
-                        </Link>
-                    }
+                    <Link to="/the-void">
+                        {element.title}
+                    </Link>
                 </li>
-            ))}
-        </menu>
+            ))}</menu>
+        );
+
+    if (loop && loop.level > 0)
+        return (
+            <menu>{navigation.map(element => (
+                <li key={element.url}>
+                    <div onClick={() => { loop.setUrl(element.url); }}
+                        style={element.folder === folder ?
+                            { cursor: 'pointer', textDecoration: "underline var(--highlight-color)", color: "var(--highlight-color)" }
+                            :
+                            { cursor: 'pointer', textDecoration: "underline var(--highlight-color)" }}
+                    >
+                        {element.title}
+                    </div>
+                </li>
+            ))}</menu>
+        );
+
+    return (
+        <menu>{navigation.map(element => (
+            <li key={element.url}>
+                <Link to={element.url}
+                    style={element.folder === folder ? { color: "var(--highlight-color)" } : {}}
+                >
+                    {element.title}
+                </Link>
+            </li>
+        ))}</menu>
     );
 }
 

@@ -19,16 +19,15 @@ let texts = [
     "...",
     "You won, there is nothing more. You can stop now, congratulation!",
     "Damn.",
-    "You're a stubborn one, you know?",
+    "So you're a stubborn one.",
     "...",
     "Actually, if you now watch outside the screen you'll see something weird.",
     "Did you see it? yep, pretty weird.",
     "...",
-    "Thanks for keeping me company.",
-    "The end.",
-    "...",
-    "...",
-    "...",
+    "Hey! Hey!, something weird is happening, you're going to deep.",
+    "You have to stop it!",
+    "F*** you, I'll try to fix it.",
+    "I'll try to restart it.",
 ]
 
 function LoopPage({ loop }) {
@@ -52,7 +51,7 @@ function LoopPage({ loop }) {
         <Layout loop={loop} location="/loop">
             <h1>My website</h1>
             <p>{texts[loop.level % texts.length]}</p>
-            <div style={{ border: "3px solid #01ff70" }}>
+            <div style={loop.level % texts.length === 17 ? { border: "3px solid var(--highlight-color)", filter: "var(--noise-filter)" } : { border: "3px solid var(--highlight-color)"}}>
                 {
                     React.cloneElement(page, { loop: next_loop })
                 }
