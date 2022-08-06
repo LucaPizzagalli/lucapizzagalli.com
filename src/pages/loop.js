@@ -13,11 +13,11 @@ let texts = [
     "Yup, nothing new.",
     "...",
     "...",
-    "Hey... still here.",
-    "I see.",
+    "Hem... what are you looking for?",
+    "...Still here. I see.",
     "...",
     "...",
-    "You won, there is nothing more. You can stop now, congratulation!",
+    "Congratulation! You won, there is nothing more. You can stop now.",
     "Damn.",
     "So you're a stubborn one.",
     "...",
@@ -26,8 +26,8 @@ let texts = [
     "...",
     "Hey! Hey!, something weird is happening, you're going to deep.",
     "You have to stop it!",
-    "F*** you, I'll try to fix it.",
-    "I'll try to restart it.",
+    "Screw you, I'll try to fix that.",
+    "Maybe if I restart it...",
 ]
 
 function LoopPage({ loop }) {

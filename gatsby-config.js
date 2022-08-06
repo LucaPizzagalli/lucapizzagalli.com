@@ -2,12 +2,14 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://lucapizzagalli.com`,
     title: `Luca Pizzagalli website`,
-    description: `Luca Pizzagalli personal website`,
+    description: `Luca Pizzagalli personal website.`,
     author: `Luca Pizzagalli`,
   },
   plugins: [
+  
     // Header
     `gatsby-plugin-react-helmet`,
+  
     // Sourcing files from filesystem
     {
       resolve: `gatsby-source-filesystem`,
@@ -30,6 +32,7 @@ module.exports = {
         path: `${__dirname}/src/blog/`,
       },
     },
+
     // Images
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
@@ -45,6 +48,7 @@ module.exports = {
         icon: `src/assets/ico.png`,
       },
     },
+
     // Markdown
     {
       resolve: `gatsby-transformer-remark`,
@@ -61,10 +65,10 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: { maxWidth: 2000, showCaptions: true },
           },
+          `gatsby-plugin-catch-links`,
         ],
       },
     },
-    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -93,21 +97,54 @@ module.exports = {
                 title
                 description
                 siteUrl
-                site_url: siteUrl
               }
             }
           }
         `,
-        feeds: [],
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.frontmatter.url,
+                  guid: site.siteMetadata.siteUrl + node.frontmatter.url,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  filter: {fileAbsolutePath: {regex: "/(blog)/"  }}
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    frontmatter {
+                      url
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "RSS Feed of Luca's blog",
+            match: "/blsxsxog/",
+          },
+        ],
       },
     },
+
+    // Analytics
     {
       resolve: `gatsby-plugin-goatcounter`,
       options: {
         code: 'lucapizzagalli',
-
-        // REQUIRED IF USING SELFHOSTED GOATCOUNTER!
-        // selfHostUrl: `https://example.com`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
