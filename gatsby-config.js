@@ -103,6 +103,8 @@ module.exports = {
         `,
         feeds: [
           {
+            output: "/rss.xml",
+            title: "Things by Luca",
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
                 return Object.assign({}, node.frontmatter, {
@@ -131,9 +133,7 @@ module.exports = {
                   }
                 }
               }
-            `,
-            output: "/rss.xml",
-            title: "Luca's things",
+            `
           },
         ],
       },
