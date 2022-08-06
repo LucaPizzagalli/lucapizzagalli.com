@@ -6,7 +6,7 @@ import "katex/dist/katex.min.css"
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
-function Template({ data }) {
+function MarkdownPage({ data }) {
     let { markdownRemark } = data;
     let { frontmatter, html } = markdownRemark;
     return (
@@ -33,4 +33,4 @@ export const pageQuery = graphql`
     }
   }
   `
-export default Template
+export default MarkdownPage

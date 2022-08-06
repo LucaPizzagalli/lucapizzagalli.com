@@ -133,8 +133,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "RSS Feed of Luca's blog",
-            match: "/blsxsxog/",
+            title: "Luca's things",
           },
         ],
       },
