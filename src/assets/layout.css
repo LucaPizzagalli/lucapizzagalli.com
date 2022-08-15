@@ -2,7 +2,7 @@
   --green-filter: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" version="1.1"><filter id="green-filter" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0s 0 0 0 1 0" in="SourceGraphic" /><feComponentTransfer> <feFuncR type="table" tableValues="0.4 0"/> <feFuncG type="table" tableValues="0.4 1"/><feFuncB type="table" tableValues="0.4 0.44"/> <feFuncA type="table" tableValues="0 1"/> </feComponentTransfer><feBlend in2="SourceGraphic" mode="hue"/></filter></svg>#green-filter');
   --noise-filter: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" version="1.1"><filter id="noise-filter" x="-10%" y="-10%" width="120%" height="120%"> <feTurbulence baseFrequency="0.01 0.4" result="turbulence" numOctaves="2" /><feDisplacementMap in="SourceGraphic" in2="turbulence" scale="12" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap></filter></svg>#noise-filter');
   --noise2-filter: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" version="1.1"><filter id="noise2-filter"><feTurbulence baseFrequency="0.60,0.90" /><feColorMatrix type="matrix" values=" .33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 2 0"/><feComposite operator="in" in2="SourceGraphic"/> <feBlend in2="SourceGraphic" mode="multiply" /></filter></svg>#noise2-filter');
-  --base-color: #111;
+  --base-color: #111111;
   --main-color: #fafafa;
   --highlight-color: #01ff70;
 }
@@ -203,6 +203,7 @@ img {
   filter: var(--green-filter) var(--noise-filter) var(--noise2-filter);
   border-style: none;
 }
+
 figcaption {
   color: var(--highlight-color);
   font-style: italic;
@@ -212,7 +213,7 @@ details {
   max-width: 48rem;
   margin: 0 auto 1.3rem auto;
 }
-details > div {
+details > section {
   border: 3px solid var(--highlight-color);
   padding: 2rem;
 }
@@ -220,6 +221,18 @@ details > div {
 summary {
   text-decoration: underline var(--highlight-color);
   cursor: pointer;
+}
+
+section.weird {
+  max-width: 48rem;
+  border: 3px solid var(--highlight-color);
+  background: linear-gradient(#BCED91 49%, transparent 49%),
+        linear-gradient(-45deg, white 33%, transparent 33%) 0 50%,
+        white linear-gradient(45deg, white 33%, #BCED91 33%) 0 50%;
+    background-repeat: repeat-x;
+    background-size: 1px 100%, 40px 40px, 40px 40px;
+  margin: 0 auto 1.3rem auto;
+  padding: 2rem;
 }
 
 blockquote {
