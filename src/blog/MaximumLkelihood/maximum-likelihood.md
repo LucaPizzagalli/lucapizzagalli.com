@@ -19,7 +19,7 @@ On the desk lies a deck with $N$ cards, the cards are numbered from 1 to, you gu
 
 Let's see what our friend maximum likelihood thinks instead. Kidding, it's not our friend. Maximum likelihood is a bitch.
 
-You already know how it works. In general you look for the parameter that maximizes the probability of extracting the sample that you actually extracted.
+You already know how it works. In general you look for the parameter that maximizes the probability of extracting the sample you actually extracted.
 In other words you compute the likelihood and then you take the max.
 
 *This already smells bullshit.*
@@ -33,7 +33,6 @@ And then why do we take the max likelihood, why not the mean for example? Or the
 <span style="font-size: 0.5em;">hey! She's smiling back! You bravely break the ice, ok, you clumsily break the ice, but it doesn't matter, you're talking now. At first things were a bit awkward, then it all magically started to go smoothly, </span>
 <span style="font-size: 0.4em;">and now, you can feel the tension growing. You know it's your opportunity, you know you have to take the initiative, you just don't know exactly how. </span>
 <span style="font-size: 0.3em;">You finally take your chances, you make your move and </span>you compute mean, median, mode and all the moments.
-
 
 But no. Maximum likelihood gives you one number. Just one. Take it or leave it. It's an oracle, a God. If you have faith you take your number and shut up, no question allowed, otherwise, fuck off, heretic.
 
@@ -53,4 +52,4 @@ You had this complex problem you were working on; you had incomplete information
 
 ---
 
-ok, then for the correct approach we see each other at the [next episode](/blog/the-bayesian-way).
+ok, then for the correct approach we see each other in the [next episode](/blog/not-here-yet).

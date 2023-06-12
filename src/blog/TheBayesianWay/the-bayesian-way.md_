@@ -14,14 +14,14 @@ You are a big boy, you already know the bayes theorem, no need for a recap.
 <summary>Actually, maybe...</summary>
 <section>
 
-The idea of bayesian inference is that if you have some theories about a fact of the universe, but you are not sure which theory is the correct one, you can represent your uncertainty by assigning a probability to each theory. If we call one of your theories $A$, $P(A)$ will be how sure you are that $A$ is the correct theory. We call *prior* the distribution of these probabilities.
+The idea of bayesian inference is that if you have some theories about a fact of the universe, but you are not sure which theory is the correct one, you can represent your uncertainty by assigning a probability to each theory. If we your theories $A$, $B$, $C$..., $P(A)$ will be how sure you are that theory $A$ is the correct one. We call *prior* the distribution of these probabilities.
 
 Then an experiment is done, and you get new data $X$. Using the *Bayes theorem* you can find how confident you should be now of a theory, given the new information ($P(A|X)$). The updated probability distribution is called *posterior*.
 
 Here our friend Bayes theorem:
 
 $$
-P(A|X) = \frac{P(X|A) P(A)}{sum of P(X|K) along all possible theories A,B,C,D,E}
+P(A|X) = \frac{P(X|A) P(A)}{\sum\limits_{\tiny{K\in\{A,B,...\}}} P(X|K) P(K)}
 $$
 </section>
 </details>
@@ -30,7 +30,7 @@ How do we apply Bayes to our example?
 
 1. We start with a prior describing the probability that the number of cards is $N=1$, or that is $N=2$, $N=3$...
 2. Using the Bayes theorem we update it with the information that we extracted card number 14.
-3. We'll have the posterior, telling us what's now our best prediction for $N$.
+3. We'll have the posterior, telling us what's now our prediction for $N$.
 
 Easy! Done! No problem at all! Child's game! Let's go home.
 
@@ -62,8 +62,14 @@ What do you do? (Your goal is to maximize the expected number of candies)
 
 And you are right.
 
-He's right. You think again about it, he's actually right. But you were right too. You are both right.
-This cannot be, it's a paradox.
+As you are approaching the box on the left the beaver starts talking to you: *"Let's suppose you'll find X candies in the first box. In the second one you expect to be 2X candies or X/2 candies, fifty-fifty. The expected values of candies in the second box is therefore $1/2 \dot 2X + 1/2 \dot 1/2X = 5/4 X$. Even after the 2% fee you are still better that sticking with the X you found in the first box. Switching is the best choice."*
+
+---
+
+He's right. You think again about it, the beaver is actually right. But you were right too. You are both right. Also, why is a beaver talking to you.
+Anyway, you are both right. This cannot be, it's a paradox.
+
+The earth start shaking, the walls crumble, the magician melts, the beaver explodes.
 
 </section>
 

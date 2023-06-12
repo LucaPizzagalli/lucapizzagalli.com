@@ -2,7 +2,9 @@
 
 ## Develop
 
-    gatsby develop
+```sh
+gatsby develop
+```
 
 Your site is now running at <http://localhost:8000>.
 
@@ -12,11 +14,15 @@ You can also find graphql here: <http://localhost:8000/___graphql>.
 
 Create a production build and serve ti locally.
 
-    gatsby build && gatsby serve
+```sh
+gatsby build && gatsby serve
+```
 
 View the production site locally
 
-    gatsby serve
+```sh
+gatsby serve
+```
 
 Your site is now running at <http://localhost:9000>.
 
@@ -26,4 +32,6 @@ Your site is now running at <http://localhost:9000>.
 
 ## Deploy
 
-    npm run deploy
+```sh
+npm run deploy
+```
