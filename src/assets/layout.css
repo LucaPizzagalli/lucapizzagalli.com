@@ -72,6 +72,8 @@ main {
   position: relative;
 }
 
+/* HEADERS */
+
 h1,
 h2,
 h3,
@@ -104,6 +106,8 @@ h2 {
     font-size: 1.5rem;
   }
 }
+
+/* TEXT */
 
 p {
   width: 100%;
@@ -161,6 +165,22 @@ ol {
   padding: 0.3rem;
 }
 
+/* LAYOUT */
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .grid {
   display: flex;
   flex-direction: row;
@@ -197,10 +217,13 @@ ol {
   height: 100%;
 }
 
+/* PICTURES */
+
 figure {
   margin: 0 auto 1.3rem auto;
   width: min(54rem, 100%);
 }
+
 img {
   /* width: min(54rem, 100%); */
   filter: var(--green-filter) var(--noise-filter) var(--noise2-filter);
@@ -211,6 +234,8 @@ figcaption {
   color: var(--highlight-color);
   font-style: italic;
 }
+
+/* OTHER */
 
 details {
   max-width: 48rem;

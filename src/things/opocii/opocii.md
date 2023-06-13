@@ -1,5 +1,6 @@
 ---
-url: "/projects/opocii"
+url: "/things/opocii"
+slug: "/things/opocii"
 title: "Opocii's world"
 order: 5
 previewImage: "opociiCover.png"

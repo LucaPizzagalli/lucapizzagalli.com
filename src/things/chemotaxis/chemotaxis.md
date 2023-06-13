@@ -1,5 +1,6 @@
 ---
-url: "/projects/chemotaxis"
+url: "/things/chemotaxis"
+slug: "/things/chemotaxis"
 title: "Chemotaxis simulation"
 order: 4
 previewImage: "chemotaxisCover.png"

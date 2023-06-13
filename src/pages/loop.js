@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Layout from "../components/layout";
 import IndexPage from "./index";
-import ProjectsPage from "./projects";
+import ThingsPage from "./things";
 import AboutPage from "./about";
 import BlogPage from "./blog";
 
@@ -36,8 +36,8 @@ function LoopPage({ loop }) {
     let setUrl = (url) => {
         if (url === "/")
             setPage(<IndexPage />);
-        else if (url === "/projects")
-            setPage(<ProjectsPage />);
+        else if (url === "/things")
+            setPage(<ThingsPage />);
         else if (url === "/about")
             setPage(<AboutPage />);
         else if (url === "/blog")

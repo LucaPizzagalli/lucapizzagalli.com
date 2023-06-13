@@ -1,8 +1,9 @@
 ---
-url:         "/blog/the-bayesian-way"
-title:        "The Bayesian Way"
-author:       "Luca Pizzagalli"
-date:         2022-07-28
+url: "/blog/the-bayesian-way"
+slug: "/blog/the-bayesian-way"
+title: "The Bayesian Way"
+author: "Luca Pizzagalli"
+date: 2022-07-28
 ---
 # The Bayesian Way
 

@@ -48,10 +48,10 @@ function ProjectCard({ loop, data }) {
 }
 
 
-function ProjectsPage({ loop }) {
+function ThingsPage({ loop }) {
     return (
-        <Layout loop={loop} location="/projects">
-            <Seo title="Projects" description="" lang="en" meta={[]} />
+        <Layout loop={loop} location="/things">
+            <Seo title="Things" description="" lang="en" meta={[]} />
             <h1>My projects</h1>
             <p>Some of the projects for which I have a nice pic.</p>
             <div className="grid" style={loop && loop.level > 8 ? { margin: "0rem" } : {}}>
@@ -59,7 +59,7 @@ function ProjectsPage({ loop }) {
                     query={graphql`
                             query ProjectList {
                             allMarkdownRemark(
-                              filter: {fileAbsolutePath: {regex: "/(projects)/"  }}
+                              filter: {fileAbsolutePath: {regex: "/(things)/"  }}
                               sort: {order: DESC, fields: [frontmatter___order]}
                             ) {
                               edges {
@@ -105,4 +105,4 @@ function ProjectsPage({ loop }) {
 }
 
 
-export default ProjectsPage
+export default ThingsPage

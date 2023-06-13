@@ -1,5 +1,6 @@
 ---
-url: "/projects/ue4"
+url: "/things/ue4"
+slug: "/things/ue4"
 title: "Unreal Engine 4 prototype"
 order: 2
 previewImage: "ue4Cover.png"

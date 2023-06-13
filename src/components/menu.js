@@ -8,9 +8,9 @@ let navigation = [
         folder: "",
     },
     {
-        title: "Side Projects",
-        url: "/projects",
-        folder: "projects",
+        title: "Things",
+        url: "/things",
+        folder: "things",
     },
     {
         title: "Blog",

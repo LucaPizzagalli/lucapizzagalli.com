@@ -1,17 +1,22 @@
-import React, { useEffect } from 'react';
-import Reveal from 'reveal.js';
+import React, { useEffect } from "react"
+import revealOptions from "./reveal-options"
 
-import 'reveal.js/dist/reveal.css';
+import "reveal.js/dist/reveal.css"
+import "../../assets/slides.css"
 
-const Deck = ({ options, children }) => {
+function Deck({ options, children }) {
   useEffect(() => {
-    Reveal.initialize();
-  });
+    if (typeof window !== 'undefined') {
+      let Reveal = require('reveal.js').default;
+      Reveal.initialize({ ...revealOptions, ...options });
+      return () => { Reveal.destroy();};
+    }
+  }, []);
   return (
     <div className="reveal">
       <div className="slides">{children}</div>
     </div>
   );
-};
+}
 
 export default Deck;

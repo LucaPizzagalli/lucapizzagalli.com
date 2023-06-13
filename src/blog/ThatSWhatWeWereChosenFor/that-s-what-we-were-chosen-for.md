@@ -1,8 +1,9 @@
 ---
-url:         "/blog/that-s-what-we-were-chosen-for"
-title:        "That's what we were chosen for"
-author:       "Luca Pizzagalli"
-date:         2023-05-25
+url: "/blog/that-s-what-we-were-chosen-for"
+slug: "/blog/that-s-what-we-were-chosen-for"
+title: "That's what we were chosen for"
+author: "Luca Pizzagalli"
+date: 2023-05-25
 ---
 # That's what we were chosen for
 ** better story about how freedom solves happiness problem, as helmet / marriage are limitations on the freedom of future people, and future people are different people, so 

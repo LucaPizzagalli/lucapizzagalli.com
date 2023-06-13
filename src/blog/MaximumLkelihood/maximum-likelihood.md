@@ -1,8 +1,9 @@
 ---
-url:          "/blog/maximum-likelihood-is-a-lie"
-title:        "Maximum Likelihood is a Lie"
-date:         "2022-07-27"
-order:        1
+url: "/blog/maximum-likelihood-is-a-lie"
+slug: "/blog/maximum-likelihood-is-a-lie"
+title: "Maximum Likelihood is a Lie"
+date: "2022-07-27"
+order: 1
 ---
 # Maximum Likelihood is a Lie.
 
