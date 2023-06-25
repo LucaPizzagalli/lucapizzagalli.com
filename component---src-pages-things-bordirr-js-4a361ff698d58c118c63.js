@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkluca_pizzagalli_website=self.webpackChunkluca_pizzagalli_website||[]).push([[601],{993:function(e,l,t){t.r(l);var a=t(7294),n=t(3042);l.default=function(){return a.createElement(n.Z,null,a.createElement("section",null,a.createElement("h2",null,"pippo"),a.createElement("h5",null,"Katie Walker @KatCodes")),a.createElement("section",null,a.createElement("h2",null,"wefwefwefwef"),a.createElement("h5",null,"Katie Walker @KatCodes")))}}}]);
+//# sourceMappingURL=component---src-pages-things-bordirr-js-4a361ff698d58c118c63.js.map

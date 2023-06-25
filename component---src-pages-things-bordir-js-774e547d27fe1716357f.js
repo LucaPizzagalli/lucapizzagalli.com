@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkluca_pizzagalli_website=self.webpackChunkluca_pizzagalli_website||[]).push([[646],{6648:function(e,l,t){t.r(l);var a=t(7294);l.default=function(){return a.createElement("section",null,a.createElement("h2",null,"pippo"),a.createElement("h5",null,"Katie Walker @KatCodes"))}}}]);
+//# sourceMappingURL=component---src-pages-things-bordir-js-774e547d27fe1716357f.js.map
