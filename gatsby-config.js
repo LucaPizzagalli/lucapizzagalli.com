@@ -14,8 +14,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets/`,
+        name: `equations`,
+        path: `${__dirname}/src/assets/equations/`,
       },
     },
     {
@@ -34,8 +34,27 @@ module.exports = {
     },
 
     // Images
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
+    `gatsby-transformer-sharp`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -45,7 +64,7 @@ module.exports = {
         background_color: `#111111`,
         theme_color: `#111111`,
         display: `minimal-ui`,
-        icon: `src/assets/ico.png`,
+        icon: `src/assets/images/ico.png`,
       },
     },
 
@@ -69,24 +88,25 @@ module.exports = {
         ],
       },
     },
+
+    // Slides
+    `gatsby-transformer-yaml`,
     {
-      resolve: `gatsby-plugin-sharp`,
+      resolve: `gatsby-transformer-katex`,
       options: {
-        defaults: {
-          formats: [`auto`, `webp`],
-          placeholder: `blurred`,
-          quality: 50,
-          breakpoints: [750, 1080, 1366, 1920],
-          backgroundColor: `transparent`,
-          tracedSVGOptions: {},
-          blurredOptions: {},
-          jpgOptions: {},
-          pngOptions: {},
-          webpOptions: {},
-          avifOptions: {},
-        },
+        process: [
+          {
+            type: `EquationsYaml`,
+            fields: [
+              { equation: "id" },
+              { equation: "eq" },
+            ],
+          },
+        ],
       },
     },
+
+    // Feed
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -120,7 +140,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   filter: {fileAbsolutePath: {regex: "/(blog)/"  }}
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: {frontmatter: {date: DESC}},
                 ) {
                   nodes {
                     excerpt

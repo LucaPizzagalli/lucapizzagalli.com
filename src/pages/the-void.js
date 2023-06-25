@@ -20,7 +20,7 @@ function TheVoidPage() {
             <p>It doesn&#39;t exist anymore.</p>
             <p>You broke it.</p>
             <StaticImage
-                src="../assets/unicorn.png"
+                src="./the-void/unicorn.png"
                 width={"600"}
                 alt="Common animal found inhabiting the void."
                 imgStyle={{filters: "none", backgroundColor: "#ffffff"}} />

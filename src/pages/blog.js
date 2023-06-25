@@ -12,7 +12,7 @@ function PostList() {
             query PostList {
               allMarkdownRemark(
                 filter: {fileAbsolutePath: {regex: "/(blog)/"  }}
-                sort: {order: DESC, fields: [frontmatter___date]}
+                sort: {frontmatter: {date: DESC}}
               ) {
                 edges {
                   node {

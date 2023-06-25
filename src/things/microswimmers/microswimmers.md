@@ -1,5 +1,5 @@
 ---
-url: "/micro_swimmers/"
+url: "/things/micro-swimmers"
 title: "Micro-swimmers simulation"
 order: 7
 previewImage: "microswimmersCover.png"

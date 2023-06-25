@@ -3,8 +3,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({ description, lang, meta, title }) {
-    let { site } = useStaticQuery(
-        graphql`
+    let { site } = useStaticQuery(graphql`
         query {
             site {
             siteMetadata {
@@ -14,8 +13,7 @@ function Seo({ description, lang, meta, title }) {
             }
             }
         }
-    `
-    )
+    `)
 
     let metaDescription = description || site.siteMetadata.description
 

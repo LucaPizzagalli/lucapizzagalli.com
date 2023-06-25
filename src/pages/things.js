@@ -60,7 +60,7 @@ function ThingsPage({ loop }) {
                             query ProjectList {
                             allMarkdownRemark(
                               filter: {fileAbsolutePath: {regex: "/(things)/"  }}
-                              sort: {order: DESC, fields: [frontmatter___order]}
+                              sort: {frontmatter: {order: DESC}}
                             ) {
                               edges {
                                 node {

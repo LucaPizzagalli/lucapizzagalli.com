@@ -1,5 +1,7 @@
 import React from "react"
-import Deck from "../../components/slides/deck"
+import Deck from "../../components/deck"
+
+import "../../assets/style/slides.css"
 
 function Slides() {
   return (
