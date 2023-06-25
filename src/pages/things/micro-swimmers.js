@@ -35,7 +35,7 @@ function MicroSwimmersDeck() {
   }
 
   return (
-    <Deck>
+    <Deck location="/things/microswimmers">
 
       <section class="center" >
         <div style={{ display: "grid" }} data-background-image="">

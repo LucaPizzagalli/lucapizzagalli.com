@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
   
     // Sourcing files from filesystem
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -90,7 +91,6 @@ module.exports = {
     },
 
     // Slides
-    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-transformer-katex`,
       options: {

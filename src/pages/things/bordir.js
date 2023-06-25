@@ -5,7 +5,7 @@ import "../../assets/style/slides.css"
 
 function Slides() {
   return (
-    <Deck>
+    <Deck location="/things/bordir">
       <section>
         <h2>pippo</h2>
         <h5>Katie Walker @KatCodes</h5>

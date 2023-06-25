@@ -5,12 +5,12 @@ import Menu from "./menu"
 import "../assets/style/layout.css"
 
 function Layout({ loop, location, children }) {
-    return (
-        <div className="page">
-            <Menu loop={loop} location={location} />
-            <main>{children}</main>
-        </div>
-    )
+  return (
+    <div className="page">
+      <Menu loop={loop} location={location} />
+      <main>{children}</main>
+    </div>
+  )
 }
 
 export default Layout

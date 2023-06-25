@@ -12,12 +12,12 @@ function ProjectCard({ loop, data }) {
         <section className="card">
             {data.url === "nope" ?
                 loop ?
-                    <div onClick={() => loop.setUrl("/loop")}
-                        style={{ textDecoration: "underline", color: "#01ff70", cursor: "pointer" }}
+                    <a href={() => false} onClick={() => loop.setUrl("/loop")}
+                        style={{ cursor: "pointer" }}
                     >
                         <GatsbyImage image={image} alt={data.altText} style={{marginBottom: "2rem"}}/>
                         <h2 className="internal-text"> {data.title} </h2>
-                    </div>
+                    </a>
                     :
                     <Link to={"/loop"}>
                         <GatsbyImage image={image} alt={data.altText} style={{marginBottom: "2rem"}} />

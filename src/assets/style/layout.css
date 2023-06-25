@@ -264,6 +264,23 @@ blockquote {
   max-width: 44rem;
 }
 
+
+button.menu{
+  color: var(--highlight-color);
+  background-color: transparent;
+  border: .2rem solid;
+  border-radius: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+button.menu:hover,
+button.menu:focus,
+button.menu:active {
+  border-color: var(--main-color);
+  background-color: var(--highlight-color);
+}
+
 /* a.citation{
   font-weight: bold;
   text-decoration: none;

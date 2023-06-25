@@ -2,7 +2,7 @@
 url: "/things/bordir"
 title: "Panoptic Segmentation Model"
 order: 8
-previewImage: "microswimmersCover.png"
+previewImage: "bordirCover.png"
 altText: "------------"
 staticLink: false
 excerpt: "-----------"
