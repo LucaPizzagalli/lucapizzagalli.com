@@ -1,14 +1,14 @@
 import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
+
 import Deck from "../../components/deck"
-import "./micro-swimmers/style.css"
+// import "./micro-swimmers/style.css"
 import ExperimentOpenVideo from "./micro-swimmers/kantsler2013ciliary_cell.webm"
 import ExperimentConfinedVideo from "./micro-swimmers/ostapenko2018curvature_cell.webm"
 import SimulationConfinedVideo from "./micro-swimmers/confined_rendering.webm"
 import SimulationOpenVideo from "./micro-swimmers/diffusion.webm"
 import ThankYouVideo from "./micro-swimmers/thank_you.webm"
-
 
 
 function MicroSwimmersDeck() {
