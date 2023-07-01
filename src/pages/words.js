@@ -47,7 +47,7 @@ function BlogPage({ loop }) {
     return (
         <Layout loop={loop} location="/words">
             <Seo title="Blog" description="" lang="en" meta={[]} />
-            <h1>words</h1>
+            <h1>Words</h1>
             <p>I wrote something once. Let's call it a blog.</p>
             <PostList />
             <p>If you want to receive the new posts I will (not) write, here you have a <a href="/rss.xml">RSS feed</a> and a <a href="/words/newsletter.html">newsletter</a>.</p>

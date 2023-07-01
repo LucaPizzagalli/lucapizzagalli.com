@@ -24,7 +24,7 @@ let navigation = [
   }
 ];
 
-function Menu({ loop, location, foldable = false }) {
+function Menu({ location, loop = false, foldable = false }) {
   let [isHidden, setIsHidden] = useState(true);
 
   let folder = location.split('/')[1];
