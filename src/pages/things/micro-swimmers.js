@@ -4,11 +4,11 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Deck from "../../components/deck"
 // import "./micro-swimmers/style.css"
-import ExperimentOpenVideo from "./micro-swimmers/kantsler2013ciliary_cell.webm"
-import ExperimentConfinedVideo from "./micro-swimmers/ostapenko2018curvature_cell.webm"
-import SimulationConfinedVideo from "./micro-swimmers/confined_rendering.webm"
-import SimulationOpenVideo from "./micro-swimmers/diffusion.webm"
-import ThankYouVideo from "./micro-swimmers/thank_you.webm"
+import ExperimentOpenVideo from "./micro-swimmers/videos/kantsler2013ciliary_cell.webm"
+import ExperimentConfinedVideo from "./micro-swimmers/videos/ostapenko2018curvature_cell.webm"
+import SimulationConfinedVideo from "./micro-swimmers/videos/confined_rendering.webm"
+import SimulationOpenVideo from "./micro-swimmers/videos/diffusion.webm"
+import ThankYouVideo from "./micro-swimmers/videos/thank_you.webm"
 
 
 function MicroSwimmersDeck() {
@@ -41,7 +41,7 @@ function MicroSwimmersDeck() {
         <div style={{ display: "grid" }} data-background-image="">
           <StaticImage style={{ gridArea: "1/1" }}
             layout="fullWidth"
-            src="./micro-swimmers/Sigillo_Universita_di_Trento.png"
+            src="./micro-swimmers/images/Sigillo_Universita_di_Trento.png"
             alt="University of Trento seal." />
           <div style={{ gridArea: "1/1", position: "relative", placeItems: "center", display: "grid" }} >
             <h2>Modelling microbial motion: the case of <i>Chlamydomonas reinhardtii</i></h2>
@@ -68,7 +68,7 @@ function MicroSwimmersDeck() {
         <div class="row">
           <div class="column">
             <StaticImage
-              src="./micro-swimmers/chlamydomonas_reinhardtii.png"
+              src="./micro-swimmers/images/chlamydomonas_reinhardtii.png"
               height="400"
               alt="chlamydomonas reinhardtii moves beating two forward flagella" />
             <p class="citation">Alper Joshua et al. Methods in Enzymology, 2013 </p>
@@ -82,7 +82,7 @@ function MicroSwimmersDeck() {
           </div>
         </div>
         <aside class="notes">
-          Chlamydomonas reinhardtii is a green algae, a single cell eukaryotic organism, 10 miicro meters in size,
+          Chlamydomonas reinhardtii is a green algae, a single cell eukaryotic organism, 10 micro meters in size,
           that lives in soil and fresh water. It is a model organism in biology, used for studying photosynthesis
           and ciliary functions in eukaryotes.
           Recently, Chlamydomonas reinhardtii has drawn attention as a possible source of useful proteins and bio-fuels.
@@ -94,7 +94,7 @@ function MicroSwimmersDeck() {
         <div class="row">
           <div class="column">
             <ul>
-              <li>Puller microswimmer</li>
+              <li>Puller micro-swimmer</li>
               <li>Breast-stroke motion</li>
               <li>Run and tumble: <br /> straight swims alternated with rapid rotations</li>
             </ul>
@@ -138,13 +138,13 @@ function MicroSwimmersDeck() {
         <div class="row">
           <div class="column">
             <StaticImage
-              src="./micro-swimmers/chlamydomonas_reinhardtii_rotated.png"
+              src="./micro-swimmers/images/chlamydomonas_reinhardtii_rotated.png"
               width="400"
               alt="C. reinhardtii with a spherical body and two flagella" />
           </div>
           <div class="column">
             <StaticImage
-              src="./micro-swimmers/dumbbell.png"
+              src="./micro-swimmers/images/dumbbell.png"
               width="400"
               alt="dumbbell model composed of two spheres" />
             <p class="citation">Wysocki Adam et al. Phys. Rev. E, May 2015</p>
@@ -186,7 +186,7 @@ function MicroSwimmersDeck() {
           </div>
           <div class="column">
             <StaticImage
-              src="./micro-swimmers/dumbbell_w.png"
+              src="./micro-swimmers/images/dumbbell_w.png"
               width="200"
               alt="A force is applied on each sphere." />
           </div>
@@ -284,7 +284,7 @@ function MicroSwimmersDeck() {
         <div class="row">
           <div class="column">
             <StaticImage
-              src="./micro-swimmers/open_displacement_kantsler2013ciliary.jpg"
+              src="./micro-swimmers/images/open_displacement_kantsler2013ciliary.jpg"
               height="400"
               alt="Mean square displacement in open space from experiment." />
             <p class="citation"> Vasily Kantsler et al. PNAS, January 2013</p>
@@ -292,8 +292,8 @@ function MicroSwimmersDeck() {
           <div class="column">
             <p>Mean square displacement from experiment in open space</p>
             <ul>
-              <li>Short time: ballistic behaviour</li>
-              <li>Long time: diffusion behaviour</li>
+              <li>Short time: ballistic behavior</li>
+              <li>Long time: diffusion behavior</li>
             </ul>
           </div>
         </div>
@@ -312,7 +312,7 @@ function MicroSwimmersDeck() {
         <div class="row">
           <div class="column">
             <StaticImage
-              src="./micro-swimmers/confined_radial_ostapenko2018curvature.png"
+              src="./micro-swimmers/images/confined_radial_ostapenko2018curvature.png"
               height="340"
               alt="Radial probability in confined space from experiment." />
             <p class="citation"> Tanya Ostapenko et al. Phys. Rev. Lett., February 2018</p>
@@ -371,14 +371,14 @@ function MicroSwimmersDeck() {
           <div class="column">
             <p class="near">Experiment</p>
             <StaticImage
-              src="./micro-swimmers/open_displacement_kantsler2013ciliary.jpg"
+              src="./micro-swimmers/images/open_displacement_kantsler2013ciliary.jpg"
               height="400"
               alt="Mean square displacement in open space from experiment." />
           </div>
           <div class="column fragment fade-in">
             <p class="near">Simulation</p>
             <StaticImage
-              src="./micro-swimmers/open_my_displacement.png"
+              src="./micro-swimmers/images/open_my_displacement.png"
               height="400"
               alt="Mean square displacement in open space from simulation." />
           </div>
@@ -398,7 +398,7 @@ function MicroSwimmersDeck() {
           <div class="column">
             <p class="near">Experiment</p>
             <StaticImage
-              src="./micro-swimmers/confined_radial_ostapenko2018curvature.png"
+              src="./micro-swimmers/images/confined_radial_ostapenko2018curvature.png"
               height="340"
               alt="Radial probability in confined space from experiment." />
             <p class="citation"> Tanya Ostapenko et al. Phys. Rev. Lett., February 2018</p>
@@ -406,7 +406,7 @@ function MicroSwimmersDeck() {
           <div class="column fragment fade-in">
             <p class="near">Simulation</p>
             <StaticImage
-              src="./micro-swimmers/confined_R_radial_probability.png"
+              src="./micro-swimmers/images/confined_R_radial_probability.png"
               height="400"
               alt="Radial probability in confined space from simulation." />
           </div>
@@ -457,14 +457,14 @@ function MicroSwimmersDeck() {
           <div class="column">
             <p class="near">Msd in open space</p>
             <StaticImage
-              src="./micro-swimmers/open_v_0_displacement.png"
+              src="./micro-swimmers/images/open_v_0_displacement.png"
               height="400"
               alt="MSD in open space as a function of speed." />
           </div>
           <div class="column">
             <p class="near"><span dangerouslySetInnerHTML={{ __html: equations.p_r }} /> in confinement</p>
             <StaticImage
-              src="./micro-swimmers/confined_v_0_radial_probability.png"
+              src="./micro-swimmers/images/confined_v_0_radial_probability.png"
               height="400"
               alt="Radial probability in confined space as a function of speed." />
           </div>
@@ -487,14 +487,14 @@ function MicroSwimmersDeck() {
           <div class="column">
             <p class="near">Msd in open space</p>
             <StaticImage
-              src="./micro-swimmers/open_c_displacement.png"
+              src="./micro-swimmers/images/open_c_displacement.png"
               height="400"
               alt="MSD in open space as a function of the position of the rotational axis." />
           </div>
           <div class="column">
             <p class="near"><span dangerouslySetInnerHTML={{ __html: equations.p_r }} /> in confinement</p>
             <StaticImage
-              src="./micro-swimmers/confined_c_radial_probability.png"
+              src="./micro-swimmers/images/confined_c_radial_probability.png"
               height="400"
               alt="Radial probability in confined space as a function of the position of the rotational axis." />
           </div>
@@ -515,7 +515,7 @@ function MicroSwimmersDeck() {
       <section>
         <h2>Rotational Axis</h2>
         <StaticImage
-          src="./micro-swimmers/dumbbell_c.png"
+          src="./micro-swimmers/images/dumbbell_c.png"
           height="300"
           alt="Stronger arm, and thus torque, when the rotational axis is far from the cell's center." />
         <aside class="notes">
@@ -537,14 +537,14 @@ function MicroSwimmersDeck() {
           <div class="column">
             <p class="near">Msd in open space</p>
             <StaticImage
-              src="./micro-swimmers/open_fracT_ttau_displacement.png"
+              src="./micro-swimmers/images/open_fracT_ttau_displacement.png"
               height="400"
               alt="MSD in open space as a function of tumble strength." />
           </div>
           <div class="column">
             <p class="near"><span dangerouslySetInnerHTML={{ __html: equations.p_r }} /> in confinement</p>
             <StaticImage
-              src="./micro-swimmers/confined_fracT_ttau_radial_probability.png"
+              src="./micro-swimmers/images/confined_fracT_ttau_radial_probability.png"
               height="400"
               alt="Radial probability in confined space as a function of tumble strength." />
           </div>
@@ -571,14 +571,14 @@ function MicroSwimmersDeck() {
           <div class="column">
             <p class="near">Msd in open space</p>
             <StaticImage
-              src="./micro-swimmers/open_K_bTmu_displacement.png"
+              src="./micro-swimmers/images/open_K_bTmu_displacement.png"
               height="400"
               alt="MSD in open space as a function of translational noise strength." />
           </div>
           <div class="column">
             <p class="near"><span dangerouslySetInnerHTML={{ __html: equations.p_r }} /> in confinement</p>
             <StaticImage
-              src="./micro-swimmers/confined_K_bTmu_radial_probability.png"
+              src="./micro-swimmers/images/confined_K_bTmu_radial_probability.png"
               height="400"
               alt="Radial probability in confined space as a function of translational noise strength." />
           </div>
@@ -602,14 +602,14 @@ function MicroSwimmersDeck() {
           <div class="column">
             <p class="near">Msd in open space</p>
             <StaticImage
-              src="./micro-swimmers/open_fracK_bTtau_displacement.png"
+              src="./micro-swimmers/images/open_fracK_bTtau_displacement.png"
               height="400"
               alt="MSD in open space as a function of rotational noise strength." />
           </div>
           <div class="column">
             <p class="near"><span dangerouslySetInnerHTML={{ __html: equations.p_r }} /> in confinement</p>
             <StaticImage
-              src="./micro-swimmers/confined_fracK_bTtau_radial_probability.png"
+              src="./micro-swimmers/images/confined_fracK_bTtau_radial_probability.png"
               height="400"
               alt="Radial probability in confined space as a function of rotational noise strength." />
           </div>
@@ -652,7 +652,7 @@ function MicroSwimmersDeck() {
           <div class="column">
             <p class="near">Experiment</p>
             <StaticImage
-              src="./micro-swimmers/diffusion_polin2009chlamydomonas.png"
+              src="./micro-swimmers/images/diffusion_polin2009chlamydomonas.png"
               height="370"
               alt="Linear density after diffusion from experiment." />
             <p class="citation"> Polin Marco et al. Science, Jul 2009</p>
@@ -660,7 +660,7 @@ function MicroSwimmersDeck() {
           <div class="column fragment fade-in">
             <p class="near">Simulation</p>
             <StaticImage
-              src="./micro-swimmers/diffusion_my.png"
+              src="./micro-swimmers/images/diffusion_my.png"
               height="370"
               alt="Linear density after diffusion from simulation." />
           </div>
@@ -716,7 +716,7 @@ function MicroSwimmersDeck() {
           shows a first limitation in the description power of the model.
           The real Chlamydomonas exhibits gravitaxis while for the mathematical model here developed the space is isotropic.
           This introduces the opportunity for future developments and improvements.
-          The model here developed does not exactly describe all the aspects of the behaviour of C. reinhardtii.
+          The model here developed does not exactly describe all the aspects of the behavior of C. reinhardtii.
           However an extension of such model could capture the way C. reinhardtii perceives the environment
           and adapts to the different conditions, particularly reproducing gravitaxis, chemotaxis and phototaxis.
         </aside>

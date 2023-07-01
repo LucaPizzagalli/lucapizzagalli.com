@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import IndexPage from "./index";
 import ThingsPage from "./things";
 import AboutPage from "./about";
-import BlogPage from "./blog";
+import BlogPage from "./words";
 
 let texts = [
     "Well, you are already seeing my website, anyway, here it is again.",
@@ -40,7 +40,7 @@ function LoopPage({ loop }) {
             setPage(<ThingsPage />);
         else if (url === "/about")
             setPage(<AboutPage />);
-        else if (url === "/blog")
+        else if (url === "/words")
             setPage(<BlogPage />);
         else if (url === "/loop")
             setPage(<LoopPage />);

@@ -6,7 +6,7 @@ import Deck from "../../components/deck"
 import "../../assets/style/slides.css"
 
 
-function Slides() {
+function BordirDeck() {
   return (
     <Deck location="/things/bordir">
 
@@ -20,8 +20,16 @@ function Slides() {
       <section>
         <h2>Semantic segmentation</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" layout="constrained" src="./bordir/target.png" style={{height: "30vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/class_segmentation.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/target.png"
+            style={{ height: "30vh", flex: "1 1 1%", }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/class_segmentation.png"
+            style={{ height: "30vh", flex: "1 1 1%", }} />
         </div>
         <p>The semantic segmentation problem has a natural solution.</p>
         <aside class="notes">
@@ -33,8 +41,16 @@ function Slides() {
       <section>
         <h2>Instance Segmentation</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/target.png" style={{height: "30vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/instance_segmentation.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/target.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/instance_segmentation.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
         </div>
         <p>For instance segmentation, some kind of trick is needed.</p>
       </section>
@@ -50,14 +66,22 @@ function Slides() {
         <h2>Mask R-CNN / Yolo</h2>
         <div class="full row">
           <figure>
-            <StaticImage placeholder="blurred" src="./bordir/r-cnn_ugly.png" style={{height: "30vh"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/r-cnn_ugly.png"
+              style={{ height: "30vh", flex: "1 1 1%" }} />
             <figcaption>
               <small><a href="https://doi.org/10.48550/arXiv.1703.06870">doi.org/10.48550/arXiv.1703.06870</a>
                 2017</small>
             </figcaption>
           </figure>
           <figure>
-            <StaticImage placeholder="blurred" src="./bordir/yolo_ugly.png" style={{height: "30vh"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/yolo_ugly.png"
+              style={{ height: "30vh", flex: "1 1 1%" }} />
             <figcaption>
               <small><a href="https://doi.org/10.48550/arXiv.1506.02640">doi.org/10.48550/arXiv.1506.02640</a>
                 2015</small>
@@ -70,8 +94,16 @@ function Slides() {
       <section>
         <h2>Mask R-CNN / Yolo</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/r-cnn_yolo_test.png" style={{height: "30vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/r-cnn_yolo_fail.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/r-cnn_yolo_test.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/r-cnn_yolo_fail.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
         </div>
         <p>Fails for complex intertwined shapes. Ugly.</p>
       </section>
@@ -79,7 +111,11 @@ function Slides() {
       <section>
         <h2>Stardist</h2>
         <figure>
-          <StaticImage placeholder="blurred" src="./bordir/stardist_ugly.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/stardist_ugly.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
           <figcaption>
             <small><a href="https://doi.org/10.48550/arXiv.1806.03535">doi.org/10.48550/arXiv.1806.03535</a>
               2018</small>
@@ -91,8 +127,16 @@ function Slides() {
       <section>
         <h2>Stardist</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/stardist_test.png" style={{height: "28vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/stardist_fail.png" style={{height: "28vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/stardist_test.png"
+            style={{ height: "28vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/stardist_fail.png"
+            style={{ height: "28vh", flex: "1 1 1%" }} />
         </div>
         <p>Works ony for simple shapes with well defined centers. Ugly.</p>
       </section>
@@ -100,7 +144,11 @@ function Slides() {
       <section>
         <h2>Cellpose</h2>
         <figure>
-          <StaticImage placeholder="blurred" src="./bordir/cellpose_ugly.png" style={{width: "100%"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/cellpose_ugly.png"
+            style={{ width: "100%" }} />
           <figcaption>
             <small><a href="https://doi.org/10.1038/s41592-020-01018-x">doi.org/10.1038/s41592-020-01018-x</a>
               2020</small>
@@ -116,8 +164,16 @@ function Slides() {
       <section>
         <h2>Cellpose</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/cellpose_test_1.png" style={{height: "30vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/cellpose_fail_1.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/cellpose_test_1.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/cellpose_fail_1.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
         </div>
         <p>Arbitrary concept of center. Local change has global impacts.</p>
         <aside class="notes">
@@ -128,8 +184,16 @@ function Slides() {
       <section>
         <h2>Cellpose</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/cellpose_test_2.png" style={{height: "30vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/cellpose_fail_2.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/cellpose_test_2.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/cellpose_fail_2.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
         </div>
         <p>Local change has global impacts. Vanishing gradient. Kinda not ugly.</p>
         <aside class="notes">
@@ -141,7 +205,11 @@ function Slides() {
       <section>
         <h2>Panoptic-DeepLab</h2>
         <figure>
-          <StaticImage placeholder="blurred" src="./bordir/deeplab_ugly.png" style={{width: "100%"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/deeplab_ugly.png"
+            style={{ width: "100%" }} />
           <figcaption>
             <small><a href="https://doi.org/10.48550/arXiv.1806.03535">doi.org/10.48550/arXiv.1806.03535</a>
               2018</small>
@@ -153,8 +221,16 @@ function Slides() {
       <section>
         <h2>Panoptic-DeepLab</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/deeplab_test.png" style={{height: "30vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/deeplab_fail.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/deeplab_test.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/deeplab_fail.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
         </div>
         <p>Global object understanding is needed. Fails if centers are next to each other.</p>
       </section>
@@ -162,9 +238,21 @@ function Slides() {
       <section>
         <h2>MaskFormer</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/maskformer_ugly_1.png" style={{height: "30vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/arrow.png"  style={{height: "5vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/maskformer_ugly_2.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/maskformer_ugly_1.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/arrow.png"
+            style={{ height: "5vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/maskformer_ugly_2.png"
+            style={{ height: "30vh", flex: "2 1 1%" }} />
         </div>
         <p>Predicts directly multiple masks.</p>
       </section>
@@ -172,27 +260,43 @@ function Slides() {
       <section>
         <h2>MaskFormer</h2>
         <figure>
-          <StaticImage placeholder="blurred" src="./bordir/maskformer_fail_1.png" style={{width: "100%"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/maskformer_fail_1.png"
+            style={{ width: "100%" }} />
           <figcaption>
             <small><a href="https://doi.org/10.48550/arXiv.2107.06278">doi.org/10.48550/arXiv.2107.06278</a> 2021</small>
           </figcaption>
         </figure>
-          <p>Complicated model. Global image understanding needed.</p>
+        <p>Complicated model. Global image understanding needed.</p>
       </section>
 
       <section>
         <h2>MaskFormer</h2>
         <div class="full full row">
-          <StaticImage placeholder="blurred" src="./bordir/maskformer_test_2.png" style={{height: "30vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/maskformer_fail_2.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/maskformer_test_2.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/maskformer_fail_2.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
         </div>
-        <p>Similar objects -> same mask. I guess.</p>
+        <p>Similar objects -&gt; same mask. I guess.</p>
       </section>
 
       <section>
         <h2>Facebook Segment Anything Model</h2>
         <figure>
-          <StaticImage placeholder="blurred" src="./bordir/facebook_ugly_1.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/facebook_ugly_1.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
           <figcaption>
             <small><a href="https://doi.org/10.48550/arXiv.2304.02643">doi.org/10.48550/arXiv.2304.02643</a>
               2023</small>
@@ -209,7 +313,11 @@ function Slides() {
       <section>
         <h2>Facebook Segment Anything Model</h2>
         <figure>
-          <StaticImage placeholder="blurred" src="./bordir/facebook_ugly_2.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/facebook_ugly_2.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
           <figcaption>
             <small><a href="https://doi.org/10.48550/arXiv.2304.02643">doi.org/10.48550/arXiv.2304.02643</a>
               2023</small>
@@ -221,8 +329,16 @@ function Slides() {
       <section>
         <h2>Facebook Segment Anything Model</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/facebook_test_1.png" style={{height: "30vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/facebook_fail_1.png" style={{height: "30vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/facebook_test_1.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/facebook_fail_1.png"
+            style={{ height: "30vh", flex: "1 1 1%" }} />
         </div>
         <p>Grid can miss small objects. Lots of computation. Ugly.</p>
       </section>
@@ -230,8 +346,16 @@ function Slides() {
       <section>
         <h2>Facebook Segment Anything Model</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/facebook_test_2.png" style={{height: "26vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/facebook_fail_2.png" style={{height: "26vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/facebook_test_2.png"
+            style={{ height: "26vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/facebook_fail_2.png"
+            style={{ height: "26vh", flex: "1 1 1%" }} />
         </div>
         <p>Apparently it's not perfect for complex shapes.</p>
       </section>
@@ -240,7 +364,7 @@ function Slides() {
         <h2>Ok, my proposal</h2>
       </section>
       <section data-background-image="images/slides/autism.png">
-        <div style={{color: "black", fontWeight: "bolder", WebkitTextStroke: "1px var(--highlight-color)"}}>
+        <div style={{ color: "black", fontWeight: "bolder", WebkitTextStroke: "1px var(--highlight-color)" }}>
           <h2>Border direction is all you need</h2>
           <p>Just predict the direction to the closest border.</p>
         </div>
@@ -253,18 +377,30 @@ function Slides() {
       <section>
         <h2>Postprocessing</h2>
         <p>Border direction is enough information for reconstructing the objects.</p>
-        <div class="column">
+        <div class="column" style={{ alignItems: "stretch" }}>
           <div class="row">
-            <StaticImage placeholder="blurred" src="./bordir/vectors_1.png" style={{height: "10vh"}} />
-            <p style={{flexGrow: "1"}}>Parallel vectors -> same object</p>
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/vectors_1.png"
+              style={{ height: "10vh"  }} />
+            <p style={{ flexGrow: "1" }}>Parallel vectors -&gt; same object</p>
           </div>
           <div class="row">
-            <StaticImage placeholder="blurred" src="./bordir/vectors_2.png" style={{height: "10vh"}} />
-            <p style={{flexGrow: "1"}}>Diverging vectors -> same object</p>
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/vectors_2.png"
+              style={{ height: "10vh"  }} />
+            <p style={{ flexGrow: "1" }}>Diverging vectors -&gt; same object</p>
           </div>
           <div class="row">
-            <StaticImage placeholder="blurred" src="./bordir/vectors_3.png" style={{height: "10vh"}} />
-            <p style={{flexGrow: "1"}}>Converging vectors -> different objects</p>
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/vectors_3.png"
+              style={{ height: "10vh"  }} />
+            <p style={{ flexGrow: "1" }}>Converging vectors -&gt; different objects</p>
           </div>
         </div>
         <aside class="notes">
@@ -289,9 +425,21 @@ function Slides() {
       <section>
         <h2>Not just border detection</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/border_test.png" style={{height: "25vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/border_error.png" style={{height: "25vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/border_fail.png" style={{height: "25vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/border_test.png"
+            style={{ height: "25vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/border_error.png"
+            style={{ height: "25vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/border_fail.png"
+            style={{ height: "25vh", flex: "1 1 1%" }} />
         </div>
         <p>Fragile. Mis-prediction in a few pixels can cause cascading error.</p>
         <aside class="notes">
@@ -305,9 +453,21 @@ function Slides() {
         <section>
           <h2>Not just border detection</h2>
           <div class="full row">
-            <StaticImage placeholder="blurred" src="./bordir/border_test.png" style={{height: "25vh"}} />
-            <StaticImage placeholder="blurred" src="./bordir/gradient_error.png" style={{height: "25vh"}} />
-            <StaticImage placeholder="blurred" src="./bordir/gradient_success.png" style={{height: "25vh"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/border_test.png"
+              style={{ height: "25vh", flex: "1 1 1%" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/gradient_error.png"
+              style={{ height: "25vh", flex: "1 1 1%" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/gradient_success.png"
+              style={{ height: "25vh", flex: "1 1 1%" }} />
           </div>
           <p>Robust. Redundancy of information allows prediction stability.</p>
           <aside class="notes">
@@ -323,8 +483,16 @@ function Slides() {
         <section>
           <h2>A Better Definition</h2>
           <div class="full row">
-            <StaticImage placeholder="blurred" src="./bordir/direction_fail_1.png" style={{height: "25vh"}} />
-            <StaticImage placeholder="blurred" src="./bordir/direction_fail_2.png" style={{height: "25vh"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/direction_fail_1.png"
+              style={{ height: "25vh", flex: "1 1 1%" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/direction_fail_2.png"
+              style={{ height: "25vh", flex: "1 1 1%" }} />
           </div>
           <p>The simplest definition of border direction is "unstable".</p>
         </section>
@@ -332,13 +500,34 @@ function Slides() {
         <section>
           <h2>A Better Definition</h2>
           <div class="full row">
-            <StaticImage placeholder="blurred" src="./bordir/definition_instance.png" style={{height: "18vh"}} />
-            <StaticImage placeholder="blurred" src="./bordir/arrow.png"  style={{height: "5vh"}} />
-            <StaticImage placeholder="blurred" src="./bordir/definition_pyramids.png" style={{height: "18vh"}} />
-            <StaticImage placeholder="blurred" src="./bordir/arrow.png"  style={{height: "5vh"}} />
-            <StaticImage placeholder="blurred" src="./bordir/definition_gradient_y.png" style={{height: "18vh"}} />
-            <StaticImage placeholder="blurred" src="./bordir/arrow.png"  style={{height: "5vh"}} />
-            <StaticImage placeholder="blurred" src="./bordir/definition_gradient.png" style={{height: "18vh"}} />
+            <StaticImage placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/definition_instance.png"
+              style={{ height: "18vh", flex: "3 1 1%" }} />
+            <StaticImage placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/arrow.png"
+              style={{ height: "5vh", flex: "1 1 1%" }} />
+            <StaticImage placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/definition_pyramids.png"
+              style={{ height: "18vh", flex: "3 1 1%" }} />
+            <StaticImage placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/arrow.png"
+              style={{ height: "5vh", flex: "1 1 1%" }} />
+            <StaticImage placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/definition_gradient_y.png"
+              style={{ height: "18vh", flex: "3 1 1%" }} />
+            <StaticImage placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/arrow.png"
+              style={{ height: "5vh", flex: "1 1 1%" }} />
+            <StaticImage placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/definition_gradient.png"
+              style={{ height: "18vh", flex: "3 1 1%" }} />
           </div>
           <p>Gradient of the distance-to-border field.</p>
         </section>
@@ -350,7 +539,7 @@ function Slides() {
       </section>
 
       <section data-background-image="images/slides/dummy_dataset.png">
-        <h2 style={{color: "black", fontWeight: "bolder", WebkitTextStroke: "1px var(--highlight-color)"}}>
+        <h2 style={{ color: "black", fontWeight: "bolder", WebkitTextStroke: "1px var(--highlight-color)" }}>
           Synthetic dataset
         </h2>
       </section>
@@ -358,50 +547,158 @@ function Slides() {
       <section>
         <h2>Bordir</h2>
         <div class="full row">
-          <StaticImage placeholder="blurred" src="./bordir/step_input.png" style={{height: "18vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/arrow.png" style={{height: "5vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/step_network.png" style={{height: "18vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/arrow.png" style={{height: "5vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/step_gradient.png" style={{height: "18vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/arrow.png" style={{height: "5vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/step_postprocessing.png" style={{height: "16vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/arrow.png" style={{height: "5vh"}} />
-          <StaticImage placeholder="blurred" src="./bordir/step_unknown.png" style={{height: "16vh"}} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/step_input.png"
+            style={{ height: "18vh", flex: "3 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/arrow.png"
+            style={{ height: "5vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/step_network.png"
+            style={{ height: "18vh", flex: "3 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/arrow.png"
+            style={{ height: "5vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/step_gradient.png"
+            style={{ height: "18vh", flex: "3 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/arrow.png"
+            style={{ height: "5vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/step_postprocessing.png"
+            style={{ height: "16vh", flex: "3 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/arrow.png"
+            style={{ height: "5vh", flex: "1 1 1%" }} />
+          <StaticImage
+            placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/step_unknown.png"
+            style={{ height: "16vh", flex: "3 1 1%" }} />
         </div>
         <p>Classic ResNet as network.</p>
       </section>
 
-      <section style={{width: "100%"}}>
-        <div class="full row" style={{width: "100%"}} >
+      <section style={{ width: "100%" }}>
+        <div class="full row" style={{ width: "100%" }} >
           <div class="column">
-            <StaticImage placeholder="blurred" src="./bordir/ex1_input.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex1_output.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex1_error.png" style={{height: "100%", margin: "0"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex1_input.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex1_output.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex1_error.png"
+              style={{ height: "100%", margin: "0" }} />
           </div>
           <div class="column">
-            <StaticImage placeholder="blurred" src="./bordir/ex2_input.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex2_output.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex2_error.png" style={{height: "100%", margin: "0"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex2_input.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex2_output.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex2_error.png"
+              style={{ height: "100%", margin: "0" }} />
           </div>
           <div class="column">
-            <StaticImage placeholder="blurred" src="./bordir/ex3_input.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex3_output.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex3_error.png" style={{height: "100%", margin: "0"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex3_input.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex3_output.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex3_error.png"
+              style={{ height: "100%", margin: "0" }} />
           </div>
           <div class="column">
-            <StaticImage placeholder="blurred" src="./bordir/ex4_input.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex4_output.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex4_error.png" style={{height: "100%", margin: "0"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex4_input.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex4_output.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex4_error.png"
+              style={{ height: "100%", margin: "0" }} />
           </div>
           <div class="column">
-            <StaticImage placeholder="blurred" src="./bordir/ex5_input.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex5_output.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex5_error.png" style={{height: "100%", margin: "0"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex5_input.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex5_output.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex5_error.png"
+              style={{ height: "100%", margin: "0" }} />
           </div>
           <div class="column">
-            <StaticImage placeholder="blurred" src="./bordir/ex6_input.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex6_output.png" style={{height: "100%", margin: "0"}} />
-            <StaticImage placeholder="blurred" src="./bordir/ex6_error.png" style={{height: "100%", margin: "0"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex6_input.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex6_output.png"
+              style={{ height: "100%", margin: "0" }} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/ex6_error.png"
+              style={{ height: "100%", margin: "0" }} />
           </div>
         </div>
         <p>Predictions on the test set.</p>
@@ -469,30 +766,49 @@ function Slides() {
 
         <section>
           <div class="row">
-            <StaticImage placeholder="blurred" src="./bordir/metric_target.png" style={{height: "40vh"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/metric_target.png"
+              style={{ height: "40vh", flex: "1 1 1%" }} />
             <p>Two classes: object and background. We have a target...</p>
           </div>
         </section>
 
         <section>
           <div class="row">
-            <StaticImage placeholder="blurred" src="./bordir/metric_prediction.png" style={{height: "40vh"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/metric_prediction.png"
+              style={{ height: "40vh", flex: "1 1 1%" }} />
             <p>...and the model prediction. What are the errors?</p>
           </div>
         </section>
 
         <section>
           <div class="row">
-            <StaticImage placeholder="blurred" src="./bordir/metric_class_error.png" style={{height: "40vh"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/metric_class_error.png"
+              style={{ height: "40vh", flex: "1 1 1%" }} />
             <div class="column">
-              <p style={{flexGrow: "1"}}>Class errors</p>
+              <p style={{ flexGrow: "1" }}>Class errors</p>
               <div class="row">
-                <StaticImage placeholder="blurred" src="./bordir/metrics_class_error_1.png" style={{height: "3vh", margin: "2rem"}} />
-                <p style={{flexGrow: "1"}}>false positive</p>
+                <StaticImage
+                  placeholder="blurred"
+                  objectFit="contain" src="./bordir/images/metrics_class_error_1.png"
+                  style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
+                <p style={{ flexGrow: "1" }}>false positive</p>
               </div>
               <div class="row">
-                <StaticImage placeholder="blurred" src="./bordir/metrics_class_error_2.png" style={{height: "3vh", margin: "2rem"}} />
-                <p style={{flexGrow: "1"}}>false negative</p>
+                <StaticImage
+                  placeholder="blurred"
+                  objectFit="contain"
+                  src="./bordir/images/metrics_class_error_2.png"
+                  style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
+                <p style={{ flexGrow: "1" }}>false negative</p>
               </div>
             </div>
           </div>
@@ -500,36 +816,60 @@ function Slides() {
 
         <section>
           <div class="row">
-            <StaticImage placeholder="blurred" src="./bordir/metric_instance_error.png" style={{height: "40vh"}} />
+            <StaticImage placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/metric_instance_error.png"
+              style={{ height: "40vh", flex: "1 1 1%" }} />
             <div class="column">
-              <p style={{flexGrow: "1"}}>Instance errors</p>
+              <p style={{ flexGrow: "1" }}>Instance errors</p>
               <div class="row">
-                <StaticImage placeholder="blurred" src="./bordir/metrics_merge_error.png" style={{height: "3vh", margin: "2rem"}} />
-                <p style={{flexGrow: "1"}}>merge error</p>
+                <StaticImage placeholder="blurred"
+                  objectFit="contain"
+                  src="./bordir/images/metrics_merge_error.png"
+                  style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
+                <p style={{ flexGrow: "1" }}>merge error</p>
               </div>
               <div class="row">
-                <StaticImage placeholder="blurred" src="./bordir/metrics_split_error.png" style={{height: "3vh", margin: "2rem"}} />
-                <p style={{flexGrow: "1"}}>split error</p>
+                <StaticImage placeholder="blurred"
+                  objectFit="contain"
+                  src="./bordir/images/metrics_split_error.png"
+                  style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
+                <p style={{ flexGrow: "1" }}>split error</p>
               </div>
             </div>
           </div>
         </section>
 
         <section>
-          <StaticImage placeholder="blurred" src="./bordir/metric_recursive_error.png" style={{height: "40vh"}} />
+          <StaticImage placeholder="blurred"
+            objectFit="contain"
+            src="./bordir/images/metric_recursive_error.png"
+            style={{ height: "40vh", flex: "1 1 1%" }} />
         </section>
 
         <section>
           <div class="row">
-            <StaticImage placeholder="blurred" src="./bordir/metric_correct.png" style={{height: "40vh"}} />
+            <StaticImage
+              placeholder="blurred"
+              objectFit="contain"
+              src="./bordir/images/metric_correct.png"
+              style={{ height: "40vh", flex: "1 1 1%" }} />
             <div class="column">
               <div class="row">
-                <StaticImage placeholder="blurred" src="./bordir/metrics_correct_class_1.png" style={{height: "3vh", margin: "2rem"}} />
-                <p style={{flexGrow: "1"}}>true positive</p>
+                <StaticImage
+                  placeholder="blurred"
+                  objectFit="contain"
+                  src="./bordir/images/metrics_correct_class_1.png"
+                  style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
+                <p style={{ flexGrow: "1" }}>true positive</p>
               </div>
               <div class="row">
-                <StaticImage placeholder="blurred" src="./bordir/metrics_correct_class_2.png" style={{height: "3vh", margin: "2rem"}} />
-                <p style={{flexGrow: "1"}}>true negative</p>
+                <StaticImage
+                  placeholder="blurred"
+                  objectFit="contain"
+                  src="./bordir/images/metrics_correct_class_2.png"
+                  style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
+                <p style={{ flexGrow: "1" }}>true negative</p>
               </div>
             </div>
           </div>
@@ -572,4 +912,4 @@ function Slides() {
   );
 }
 
-export default Slides
+export default BordirDeck

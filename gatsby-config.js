@@ -23,14 +23,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `things`,
-        path: `${__dirname}/src/things/`,
+        path: `${__dirname}/src/pages/things/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/blog/`,
+        name: `words`,
+        path: `${__dirname}/src/pages/words/`,
       },
     },
 
@@ -139,7 +139,7 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  filter: {fileAbsolutePath: {regex: "/(blog)/"  }}
+                  filter: {fileAbsolutePath: {regex: "/(words)/"  }}
                   sort: {frontmatter: {date: DESC}},
                 ) {
                   nodes {

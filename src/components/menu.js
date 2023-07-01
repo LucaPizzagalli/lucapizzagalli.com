@@ -13,9 +13,9 @@ let navigation = [
     folder: "things",
   },
   {
-    title: "Blog",
-    url: "/blog",
-    folder: "blog",
+    title: "Words",
+    url: "/words",
+    folder: "words",
   },
   {
     title: "About",

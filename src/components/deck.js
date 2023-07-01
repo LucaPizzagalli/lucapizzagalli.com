@@ -1,9 +1,12 @@
 import React, { useEffect } from "react"
 
-import revealOptions from "./reveal-options"
 import Menu from "./menu"
 
 import "reveal.js/dist/reveal.css"
+
+let revealOptions = {
+  hash: true,
+}
 
 function Deck({ options, children, location }) {
   useEffect(() => {
