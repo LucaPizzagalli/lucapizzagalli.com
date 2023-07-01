@@ -16,14 +16,14 @@ function TheVoidPage() {
             color: "#cf268a",
             filters: "none",
         }}>
-            <h1>My website</h1>
+            <h1 style={{margin: "6rem auto 4rem auto"}}>My website</h1>
             <p>It doesn&#39;t exist anymore.</p>
             <p>You broke it.</p>
             <StaticImage
-                src="./the-void/unicorn.png"
-                width={"600"}
+                src="./the-void/images/unicorn.png"
+                loading="eager"
                 alt="Common animal found inhabiting the void."
-                imgStyle={{filters: "none", backgroundColor: "#ffffff"}} />
+                style={{width: "60vh"}}/>
         </div>
     );
 }

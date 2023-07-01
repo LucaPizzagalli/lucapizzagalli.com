@@ -1,27 +1,24 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import "katex/dist/katex.min.css"
+import "katex/dist/katex.min.css";
 
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import HeadTags from "../components/head-tags";
 
 function MarkdownPage({ data }) {
-    let { markdownRemark } = data;
-    let { frontmatter, html } = markdownRemark;
-    return (
-        <Layout location={frontmatter.url}>
-            <Seo title={frontmatter.title} description={frontmatter.excerpt} lang="en" meta={[]} />
-
-            <div
-                dangerouslySetInnerHTML={{ __html: html }}
-                // style={{display: "flex", flexDirection: "column"}}
-            />
-        </Layout>
-    )
+  let { frontmatter, html } = data.markdownRemark;
+  return (
+    <Layout location={frontmatter.url}>
+      <div
+        dangerouslySetInnerHTML={{ __html: html }}
+      // style={{display: "flex", flexDirection: "column"}}
+      />
+    </Layout>
+  )
 }
 
-export const pageQuery = graphql`
+export let pageQuery = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
@@ -33,4 +30,8 @@ export const pageQuery = graphql`
     }
   }
   `
+export function Head({ data }) {
+  let frontmatter = data.markdownRemark.frontmatter;
+  return <HeadTags title={frontmatter.title} description={frontmatter.excerpt} />;
+}
 export default MarkdownPage

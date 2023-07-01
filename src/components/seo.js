@@ -1,55 +1,42 @@
 import React from "react"
-import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, meta, title }) {
-    let { site } = useStaticQuery(graphql`
-        query {
-            site {
-            siteMetadata {
-                title
-                description
-                author
-            }
-            }
+function Seo({ title, description, pathname }) {
+  let data = useStaticQuery(graphql`
+    query Seo {
+      site {
+        siteMetadata {
+            siteUrl
+            title
+            description
+            author
         }
-    `)
+      }
+    }
+  `);
+  let { title: defaultTitle, description: defaultDescription, image, siteUrl, } = data.site.siteMetadata;
+  let seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image}`,
+    url: `${siteUrl}${pathname || ``}`,
+  };
 
-    let metaDescription = description || site.siteMetadata.description
-
-    return (
-        <Helmet
-            htmlAttributes={{
-                lang,
-            }}
-            title={title}
-            titleTemplate={`%s | ${site.siteMetadata.title}`}
-            meta={[
-                {
-                    name: `description`,
-                    content: metaDescription,
-                },
-                {
-                    property: `og:title`,
-                    content: title,
-                },
-                {
-                    property: `og:description`,
-                    content: metaDescription,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-            ].concat(meta)}
-        >
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"> <defs>
-        <filter id="retro-image-filter" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB"> <feColorMatrix type="matrix" values=" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0s 0 0 0 1 0" in="SourceGraphic" /> <feComponentTransfer> <feFuncR type="table" tableValues="0.4 0"/> <feFuncG type="table" tableValues="0.4 1"/> <feFuncB type="table" tableValues="0.4 0.44"/> <feFuncA type="table" tableValues="0 1"/> </feComponentTransfer> <feBlend in2="SourceGraphic" mode="hue"/> </filter>
-        <filter id="noise2-filter" x="-10%" y="-10%" width="120%" height="120%"> <feTurbulence baseFrequency="0.01 0.4" result="turbulence" numOctaves="2" /> <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="12" xChannelSelector="R" yChannelSelector="R"> </feDisplacementMap> </filter>
-        <filter id="noise-filter"> <feTurbulence baseFrequency="0.60,0.90" /> <feColorMatrix type="matrix" values=" .33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 2 0"/> <feComposite operator="in" in2="SourceGraphic"/> <feBlend in2="SourceGraphic" mode="multiply" /> </filter>
-    </defs> </svg>
-    </Helmet>
-    )
+  return (
+    <>
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:url" content={seo.url} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+      <meta name="twitter:creator" content={seo.twitterUsername} />
+      <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👤</text></svg>" />
+    </>
+  );
 }
+
 
 export default Seo

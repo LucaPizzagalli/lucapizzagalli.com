@@ -1,13 +1,12 @@
 import React from "react";
 
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import HeadTags from "../components/head-tags";
 
 
 function IndexPage({ loop }) {
   return (
     <Layout loop={loop} location="/">
-      <Seo title="Luca Pizzagalli" description="" lang="en" meta={[]} />
       <h1>Hello.</h1>
       <div>
         <div>
@@ -25,4 +24,8 @@ function IndexPage({ loop }) {
   );
 }
 
+
+export function Head(){
+  return <HeadTags title="Luca Pizzagalli" description="" />;
+}
 export default IndexPage

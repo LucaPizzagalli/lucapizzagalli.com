@@ -6,10 +6,6 @@ module.exports = {
     author: `Luca Pizzagalli`,
   },
   plugins: [
-  
-    // Header
-    `gatsby-plugin-react-helmet`,
-  
     // Sourcing files from filesystem
     `gatsby-transformer-yaml`,
     {

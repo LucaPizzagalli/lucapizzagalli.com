@@ -1,9 +1,9 @@
 import React from "react";
-import { graphql, StaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import HeadTags from "../components/head-tags";
 
 
 function ProjectCard({ loop, data }) {
@@ -49,60 +49,60 @@ function ProjectCard({ loop, data }) {
 
 
 function ThingsPage({ loop }) {
+  let data = useStaticQuery(graphql`
+  query ProjectList {
+    allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(things)/"  }}
+      sort: {frontmatter: {order: DESC}}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            url
+            coverTitle
+            order
+            previewImage {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FULL_WIDTH
+                )
+              }
+            }
+            altText
+            staticLink
+            excerpt
+            technologies
+            github
+          }
+        }
+      }
+    } 
+  }
+`)
+
   return (
     <Layout loop={loop} location="/things">
-      <Seo title="Things" description="" lang="en" meta={[]} />
       <h1>My projects</h1>
       <p>Some of the projects for which I have a nice pic.</p>
       <div className="grid" style={loop && loop.level > 8 ? { margin: "0rem" } : {}}>
-        <StaticQuery
-          query={graphql`
-              query ProjectList {
-                allMarkdownRemark(
-                  filter: {fileAbsolutePath: {regex: "/(things)/"  }}
-                  sort: {frontmatter: {order: DESC}}
-                ) {
-                  edges {
-                    node {
-                      frontmatter {
-                        url
-                        coverTitle
-                        order
-                        previewImage {
-                          childImageSharp {
-                            gatsbyImageData(
-                              layout: FULL_WIDTH
-                            )
-                          }
-                        }
-                        altText
-                        staticLink
-                        excerpt
-                        technologies
-                        github
-                      }
-                    }
-                  }
-                } 
-              }
-            `}
-          render={data => (
-            data.allMarkdownRemark.edges.map(edge => {
-              let { frontmatter } = edge.node;
-              return (
-                <div key={frontmatter.url} className="grid-item"
-                  style={loop && loop.level > 8 ? { width: "100%" } : {}}
-                >
-                  <ProjectCard loop={loop} data={frontmatter} />
-                </div>
-              )
-            })
-          )}
-        />
+        {data.allMarkdownRemark.edges.map(edge => {
+          let { frontmatter } = edge.node;
+          return (
+            <div key={frontmatter.url} className="grid-item"
+              style={loop && loop.level > 8 ? { width: "100%" } : {}}
+            >
+              <ProjectCard loop={loop} data={frontmatter} />
+            </div>
+          )
+        })
+        }
       </div>
     </Layout>
   );
 }
 
 
+export function Head(){
+  return <HeadTags title="Things" description="" />;
+}
 export default ThingsPage

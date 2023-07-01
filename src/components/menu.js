@@ -30,7 +30,7 @@ function Menu({ location, loop = false, foldable = false }) {
   let folder = location.split('/')[1];
 
 
-  if (loop && loop.level === 42)
+  if (loop && loop.level === 36)
     return (
       <menu>{navigation.map(element => (
         <li key={element.url}>

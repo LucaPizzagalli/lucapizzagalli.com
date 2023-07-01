@@ -2,6 +2,12 @@
 
 <http://lucapizzagalli.com>.
 
+## Install
+
+```sh
+npm install --force
+```
+
 ## Develop
 
 ```sh

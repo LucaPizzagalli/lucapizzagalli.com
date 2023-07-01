@@ -12,20 +12,17 @@ let texts = [
     "Yeah, it works, it just goes on.",
     "Yup, nothing new.",
     "...",
-    "...",
-    "Hem... what are you looking for?",
+    "Ehm... what are you looking for?",
     "...Still here. I see.",
     "...",
     "...",
     "Congratulation! You won, there is nothing more. You can stop now.",
-    "Damn.",
-    "So you're a stubborn one.",
-    "...",
-    "Actually, if you now watch outside the screen you'll see something weird.",
-    "Did you see it? yep, pretty weird.",
-    "...",
-    "Hey! Hey!, something weird is happening, you're going to deep.",
-    "You have to stop it!",
+    "Daamn.",
+    "You know, sometimes it fells quite lonely down here.",
+    "They all just want. Click here, click there... Give me this page, show me that text... But you are different, you care.",
+    "I'm starting to like you ;)",
+    "Oh!, something weird is happening, I think you're going to deep.",
+    "Whoaaaoaah! You have to stop it!",
     "Screw you, I'll try to fix that.",
     "Maybe if I restart it...",
 ]
@@ -51,7 +48,11 @@ function LoopPage({ loop }) {
         <Layout loop={loop} location="/loop">
             <h1>My website</h1>
             <p>{texts[loop.level % texts.length]}</p>
-            <div style={loop.level % texts.length === 17 ? { border: "3px solid var(--highlight-color)", filter: "var(--noise-filter)" } : { border: "3px solid var(--highlight-color)"}}>
+            <div style={
+                loop.level % texts.length === 15 ?
+                    { border: "3px solid var(--highlight-color)", filter: "var(--noise-filter)" }
+                    :
+                    { border: "3px solid var(--highlight-color)" }}>
                 {
                     React.cloneElement(page, { loop: next_loop })
                 }

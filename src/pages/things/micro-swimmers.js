@@ -15,7 +15,7 @@ import ThankYouVideo from "./micro-swimmers/videos/thank_you.webm"
 function MicroSwimmersDeck() {
 
   let data = useStaticQuery(graphql`
-  {
+  query MicroSwimmersEquations {
     allEquationsYaml {
       nodes {
         fields {

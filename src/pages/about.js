@@ -1,12 +1,11 @@
 import React from "react";
 
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import HeadTags from "../components/head-tags";
 
 function AboutPage({ loop }) {
     return (
         <Layout loop={loop} location="/about">
-            <Seo title="Contacts" description="" lang="en" meta={[]} />
             <h1>About me</h1>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around", margin: "0 auto 8rem auto", width: "100%", maxWidth: "48rem" }}>
                 <a href="/curriculumLucaPizzagalli.pdf" target="_blank" >Curriculum</a>
@@ -18,4 +17,7 @@ function AboutPage({ loop }) {
     );
 }
 
+export function Head(){
+    return <HeadTags title="Contacts" description="" />;
+  }
 export default AboutPage
