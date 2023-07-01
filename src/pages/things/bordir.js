@@ -21,12 +21,12 @@ function BordirDeck() {
         <h2>Semantic segmentation</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/target.png"
             style={{ height: "30vh", flex: "1 1 1%", }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/class_segmentation.png"
             style={{ height: "30vh", flex: "1 1 1%", }} />
@@ -42,12 +42,12 @@ function BordirDeck() {
         <h2>Instance Segmentation</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/target.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/instance_segmentation.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -67,7 +67,7 @@ function BordirDeck() {
         <div class="full row">
           <figure>
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/r-cnn_ugly.png"
               style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -78,7 +78,7 @@ function BordirDeck() {
           </figure>
           <figure>
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/yolo_ugly.png"
               style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -95,12 +95,12 @@ function BordirDeck() {
         <h2>Mask R-CNN / Yolo</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/r-cnn_yolo_test.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/r-cnn_yolo_fail.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -112,7 +112,7 @@ function BordirDeck() {
         <h2>Stardist</h2>
         <figure>
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/stardist_ugly.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -128,12 +128,12 @@ function BordirDeck() {
         <h2>Stardist</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/stardist_test.png"
             style={{ height: "28vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/stardist_fail.png"
             style={{ height: "28vh", flex: "1 1 1%" }} />
@@ -145,7 +145,7 @@ function BordirDeck() {
         <h2>Cellpose</h2>
         <figure>
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/cellpose_ugly.png"
             style={{ width: "100%" }} />
@@ -165,12 +165,12 @@ function BordirDeck() {
         <h2>Cellpose</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/cellpose_test_1.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/cellpose_fail_1.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -185,12 +185,12 @@ function BordirDeck() {
         <h2>Cellpose</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/cellpose_test_2.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/cellpose_fail_2.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -206,7 +206,7 @@ function BordirDeck() {
         <h2>Panoptic-DeepLab</h2>
         <figure>
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/deeplab_ugly.png"
             style={{ width: "100%" }} />
@@ -222,12 +222,12 @@ function BordirDeck() {
         <h2>Panoptic-DeepLab</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/deeplab_test.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/deeplab_fail.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -239,17 +239,17 @@ function BordirDeck() {
         <h2>MaskFormer</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/maskformer_ugly_1.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/arrow.png"
             style={{ height: "5vh"}} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/maskformer_ugly_2.png"
             style={{ height: "30vh", flex: "2 1 1%" }} />
@@ -261,7 +261,7 @@ function BordirDeck() {
         <h2>MaskFormer</h2>
         <figure>
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/maskformer_fail_1.png"
             style={{ width: "100%" }} />
@@ -276,12 +276,12 @@ function BordirDeck() {
         <h2>MaskFormer</h2>
         <div class="full full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/maskformer_test_2.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/maskformer_fail_2.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -293,7 +293,7 @@ function BordirDeck() {
         <h2>Facebook Segment Anything Model</h2>
         <figure>
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/facebook_ugly_1.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -314,7 +314,7 @@ function BordirDeck() {
         <h2>Facebook Segment Anything Model</h2>
         <figure>
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/facebook_ugly_2.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -330,12 +330,12 @@ function BordirDeck() {
         <h2>Facebook Segment Anything Model</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/facebook_test_1.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/facebook_fail_1.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
@@ -347,12 +347,12 @@ function BordirDeck() {
         <h2>Facebook Segment Anything Model</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/facebook_test_2.png"
             style={{ height: "26vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/facebook_fail_2.png"
             style={{ height: "26vh", flex: "1 1 1%" }} />
@@ -380,7 +380,7 @@ function BordirDeck() {
         <div class="column" style={{ alignItems: "stretch" }}>
           <div class="row">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/vectors_1.png"
               style={{ height: "10vh"  }} />
@@ -388,7 +388,7 @@ function BordirDeck() {
           </div>
           <div class="row">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/vectors_2.png"
               style={{ height: "10vh"  }} />
@@ -396,7 +396,7 @@ function BordirDeck() {
           </div>
           <div class="row">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/vectors_3.png"
               style={{ height: "10vh"  }} />
@@ -426,17 +426,17 @@ function BordirDeck() {
         <h2>Not just border detection</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/border_test.png"
             style={{ height: "25vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/border_error.png"
             style={{ height: "25vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/border_fail.png"
             style={{ height: "25vh", flex: "1 1 1%" }} />
@@ -454,17 +454,17 @@ function BordirDeck() {
           <h2>Not just border detection</h2>
           <div class="full row">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/border_test.png"
               style={{ height: "25vh", flex: "1 1 1%" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/gradient_error.png"
               style={{ height: "25vh", flex: "1 1 1%" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/gradient_success.png"
               style={{ height: "25vh", flex: "1 1 1%" }} />
@@ -484,12 +484,12 @@ function BordirDeck() {
           <h2>A Better Definition</h2>
           <div class="full row">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/direction_fail_1.png"
               style={{ height: "25vh", flex: "1 1 1%" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/direction_fail_2.png"
               style={{ height: "25vh", flex: "1 1 1%" }} />
@@ -500,31 +500,31 @@ function BordirDeck() {
         <section>
           <h2>A Better Definition</h2>
           <div class="full row">
-            <StaticImage placeholder="blurred"
+            <StaticImage loading="eager"
               objectFit="contain"
               src="./bordir/images/definition_instance.png"
               style={{ height: "18vh", flex: "3 1 1%" }} />
-            <StaticImage placeholder="blurred"
+            <StaticImage loading="eager"
               objectFit="contain"
               src="./bordir/images/arrow.png"
               style={{ height: "5vh", flex: "1 1 1%" }} />
-            <StaticImage placeholder="blurred"
+            <StaticImage loading="eager"
               objectFit="contain"
               src="./bordir/images/definition_pyramids.png"
               style={{ height: "18vh", flex: "3 1 1%" }} />
-            <StaticImage placeholder="blurred"
+            <StaticImage loading="eager"
               objectFit="contain"
               src="./bordir/images/arrow.png"
               style={{ height: "5vh", flex: "1 1 1%" }} />
-            <StaticImage placeholder="blurred"
+            <StaticImage loading="eager"
               objectFit="contain"
               src="./bordir/images/definition_gradient_y.png"
               style={{ height: "18vh", flex: "3 1 1%" }} />
-            <StaticImage placeholder="blurred"
+            <StaticImage loading="eager"
               objectFit="contain"
               src="./bordir/images/arrow.png"
               style={{ height: "5vh", flex: "1 1 1%" }} />
-            <StaticImage placeholder="blurred"
+            <StaticImage loading="eager"
               objectFit="contain"
               src="./bordir/images/definition_gradient.png"
               style={{ height: "18vh", flex: "3 1 1%" }} />
@@ -548,47 +548,47 @@ function BordirDeck() {
         <h2>Bordir</h2>
         <div class="full row">
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/step_input.png"
             style={{ height: "18vh", flex: "3 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/arrow.png"
             style={{ height: "5vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/step_network.png"
             style={{ height: "18vh", flex: "3 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/arrow.png"
             style={{ height: "5vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/step_gradient.png"
             style={{ height: "18vh", flex: "3 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/arrow.png"
             style={{ height: "5vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/step_postprocessing.png"
             style={{ height: "16vh", flex: "3 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/arrow.png"
             style={{ height: "5vh", flex: "1 1 1%" }} />
           <StaticImage
-            placeholder="blurred"
+            loading="eager"
             objectFit="contain"
             src="./bordir/images/step_unknown.png"
             style={{ height: "16vh", flex: "3 1 1%" }} />
@@ -600,102 +600,102 @@ function BordirDeck() {
         <div class="full row" style={{ width: "100%" }} >
           <div class="column">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex1_input.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex1_output.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex1_error.png"
               style={{ height: "100%", margin: "0" }} />
           </div>
           <div class="column">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex2_input.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex2_output.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex2_error.png"
               style={{ height: "100%", margin: "0" }} />
           </div>
           <div class="column">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex3_input.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex3_output.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex3_error.png"
               style={{ height: "100%", margin: "0" }} />
           </div>
           <div class="column">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex4_input.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex4_output.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex4_error.png"
               style={{ height: "100%", margin: "0" }} />
           </div>
           <div class="column">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex5_input.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex5_output.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex5_error.png"
               style={{ height: "100%", margin: "0" }} />
           </div>
           <div class="column">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex6_input.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex6_output.png"
               style={{ height: "100%", margin: "0" }} />
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/ex6_error.png"
               style={{ height: "100%", margin: "0" }} />
@@ -767,7 +767,7 @@ function BordirDeck() {
         <section>
           <div class="row">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/metric_target.png"
               style={{ height: "40vh", flex: "1 1 1%" }} />
@@ -778,7 +778,7 @@ function BordirDeck() {
         <section>
           <div class="row">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/metric_prediction.png"
               style={{ height: "40vh", flex: "1 1 1%" }} />
@@ -789,7 +789,7 @@ function BordirDeck() {
         <section>
           <div class="row">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/metric_class_error.png"
               style={{ height: "40vh", flex: "1 1 1%" }} />
@@ -797,14 +797,14 @@ function BordirDeck() {
               <p style={{ flexGrow: "1" }}>Class errors</p>
               <div class="row">
                 <StaticImage
-                  placeholder="blurred"
+                  loading="eager"
                   objectFit="contain" src="./bordir/images/metrics_class_error_1.png"
                   style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
                 <p style={{ flexGrow: "1" }}>false positive</p>
               </div>
               <div class="row">
                 <StaticImage
-                  placeholder="blurred"
+                  loading="eager"
                   objectFit="contain"
                   src="./bordir/images/metrics_class_error_2.png"
                   style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
@@ -816,21 +816,21 @@ function BordirDeck() {
 
         <section>
           <div class="row">
-            <StaticImage placeholder="blurred"
+            <StaticImage loading="eager"
               objectFit="contain"
               src="./bordir/images/metric_instance_error.png"
               style={{ height: "40vh", flex: "1 1 1%" }} />
             <div class="column">
               <p style={{ flexGrow: "1" }}>Instance errors</p>
               <div class="row">
-                <StaticImage placeholder="blurred"
+                <StaticImage loading="eager"
                   objectFit="contain"
                   src="./bordir/images/metrics_merge_error.png"
                   style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
                 <p style={{ flexGrow: "1" }}>merge error</p>
               </div>
               <div class="row">
-                <StaticImage placeholder="blurred"
+                <StaticImage loading="eager"
                   objectFit="contain"
                   src="./bordir/images/metrics_split_error.png"
                   style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
@@ -841,7 +841,7 @@ function BordirDeck() {
         </section>
 
         <section>
-          <StaticImage placeholder="blurred"
+          <StaticImage loading="eager"
             objectFit="contain"
             src="./bordir/images/metric_recursive_error.png"
             style={{ height: "40vh", flex: "1 1 1%" }} />
@@ -850,14 +850,14 @@ function BordirDeck() {
         <section>
           <div class="row">
             <StaticImage
-              placeholder="blurred"
+              loading="eager"
               objectFit="contain"
               src="./bordir/images/metric_correct.png"
               style={{ height: "40vh", flex: "1 1 1%" }} />
             <div class="column">
               <div class="row">
                 <StaticImage
-                  placeholder="blurred"
+                  loading="eager"
                   objectFit="contain"
                   src="./bordir/images/metrics_correct_class_1.png"
                   style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
@@ -865,7 +865,7 @@ function BordirDeck() {
               </div>
               <div class="row">
                 <StaticImage
-                  placeholder="blurred"
+                  loading="eager"
                   objectFit="contain"
                   src="./bordir/images/metrics_correct_class_2.png"
                   style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />

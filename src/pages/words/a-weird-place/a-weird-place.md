@@ -1,7 +1,7 @@
 ---
-url: "/words/the-bayesian-way"
-slug: "/words/the-bayesian-way"
-title: "The Bayesian Way"
+url: "/words/a-weird-place"
+slug: "/words/a-weird-place"
+title: "A weird place"
 author: "Luca Pizzagalli"
 date: 2022-07-28
 ---
