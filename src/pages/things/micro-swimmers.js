@@ -3,7 +3,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 
 import Deck from "../../components/deck"
-// import "./micro-swimmers/style.css"
+
+import * as style from "./micro-swimmers/style.module.css"
 import ExperimentOpenVideo from "./micro-swimmers/videos/kantsler2013ciliary_cell.webm"
 import ExperimentConfinedVideo from "./micro-swimmers/videos/ostapenko2018curvature_cell.webm"
 import SimulationConfinedVideo from "./micro-swimmers/videos/confined_rendering.webm"
@@ -35,6 +36,7 @@ function MicroSwimmersDeck() {
   }
 
   return (
+    <div className={style}>
     <Deck location="/things/microswimmers">
 
       <section class="center" >
@@ -751,6 +753,7 @@ function MicroSwimmersDeck() {
         </aside>
       </section>
     </Deck>
+    </div>
   );
 }
 
