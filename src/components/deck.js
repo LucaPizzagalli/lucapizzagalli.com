@@ -3,6 +3,7 @@ import React, { useEffect } from "react"
 import Menu from "./menu"
 
 import "reveal.js/dist/reveal.css"
+import "../assets/style/slides.css"
 
 let revealOptions = {
   hash: true,

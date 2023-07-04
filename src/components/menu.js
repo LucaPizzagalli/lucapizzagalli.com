@@ -25,7 +25,7 @@ let navigation = [
 ];
 
 function Menu({ location, loop = false, foldable = false }) {
-  let [isHidden, setIsHidden] = useState(true);
+  let [isHidden, setIsHidden] = useState(foldable);
 
   let folder = location.split('/')[1];
 
@@ -57,39 +57,34 @@ function Menu({ location, loop = false, foldable = false }) {
       ))}</menu>
     );
 
-  if (!foldable)
-    return (
-      <menu>{navigation.map(element => (
-        <li key={element.url}>
-          <Link to={element.url}
-            style={element.folder === folder ? { color: "var(--highlight-color)" } : {}}
-          >
-            {element.title}
-          </Link>
-        </li>
-      ))}</menu>
-    );
-
   if (isHidden)
     return (
       <menu style={{ minWidth: "20px" }}>
-        <button class="menu" onClick={() => { setIsHidden(false) }}>
-          <span hidden>menu</span>
+        <button class="menu" onClick={() => setIsHidden(false)}>
+          <span hidden>Open Menu</span>
         </button>
       </menu>
     );
 
-  return (
-    <menu>{navigation.map(element => (
-      <li key={element.url}>
-        <Link to={element.url}
-          style={element.folder === folder ? { color: "var(--highlight-color)" } : {}}
-        >
-          {element.title}
-        </Link>
-      </li>
-    ))}</menu>
-  );
+    return (
+      <menu>
+        {foldable &&
+          <button class="menu" onClick={() => setIsHidden(true)}>
+            <span hidden>Close Menu</span>
+          </button>
+        }
+        {navigation.map(element => (
+          <li key={element.url}>
+            <Link to={element.url}
+              style={element.folder === folder ? { color: "var(--highlight-color)" } : {}}
+            >
+              {element.title}
+            </Link>
+          </li>
+        ))}
+      </menu>
+    );
+
 }
 
 export default Menu

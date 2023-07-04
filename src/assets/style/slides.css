@@ -21,9 +21,7 @@
   color: var(--main-color);
 }
 
-/*********************************************
- * HEADERS
- *********************************************/
+/* Headers */
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -39,7 +37,6 @@
 
 .reveal h1 {
   font-size: 4.0rem;
-  color: var(--highlight-color);
 }
 
 .reveal h2 {
@@ -126,18 +123,31 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
-/*********************************************
- * NAVIGATION CONTROLS
- *********************************************/
+/* Navigation */
+
 .reveal .controls {
   color: var(--highlight-color);
 }
 
-/*********************************************
- * PROGRESS BAR
- *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.6);
   color: var(--highlight-color);
 }
 
+/* Layout */
+
+.reveal .medium-content {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal .big-content {
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

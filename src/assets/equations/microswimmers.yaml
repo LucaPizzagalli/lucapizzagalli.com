@@ -39,55 +39,55 @@ equation:
       $ \boldsymbol{T}(\boldsymbol{r},\boldsymbol{e}, t) = \boldsymbol{T}_w(\boldsymbol{r},\boldsymbol{e}) + \boldsymbol{T}_t(t) $
   - "id": "parameter_variables"
     "eq": >
-      <tr><td>$\tiny{a_b}$</td></tr>
-      <tr><td>$\tiny{a_j}$</td></tr>
-      <tr><td>$\tiny{l}$</td></tr>
-      <tr><td>$\tiny{c}$</td></tr>
-      <tr><td>$\tiny{v_0}$</td></tr>
-      <tr><td>$\tiny{k_b T \mu}$</td></tr>
-      <tr><td>$\tiny{\frac{\tau_p}{k_b T}}$</td></tr>
-      <tr><td>$\tiny{\frac{\tau}{k_b T}}$</td></tr>
-      <tr><td>$\tiny{\epsilon}$</td></tr>
-      <tr><td>$\tiny{\mu [ t_{\text{s}} ]}$</td></tr>
-      <tr><td>$\tiny{\mu [\frac{T_t}{\tau} ]}$</td></tr>
-      <tr><td>$\tiny{\sigma [ \frac{T_t}{\tau} ]}$</td></tr>
-      <tr><td>$\tiny{\mu [ t_{\text{t}} ]}$</td></tr>
-      <tr><td>$\tiny{\sigma [ t_{\text{t}} ]}$</td></tr>
+      <tr><td>$a_b$</td></tr>
+      <tr><td>$a_j$</td></tr>
+      <tr><td>$l$</td></tr>
+      <tr><td>$c$</td></tr>
+      <tr><td>$v_0$</td></tr>
+      <tr><td>$k_b T \mu$</td></tr>
+      <tr><td>$\frac{\tau_p}{k_b T}$</td></tr>
+      <tr><td>$\frac{\tau}{k_b T}$</td></tr>
+      <tr><td>$\epsilon$</td></tr>
+      <tr><td>$\mu [ t_{\text{s}} ]$</td></tr>
+      <tr><td>$\mu [\frac{T_t}{\tau} ]$</td></tr>
+      <tr><td>$\sigma [ \frac{T_t}{\tau} ]$</td></tr>
+      <tr><td>$\mu [ t_{\text{t}} ]$</td></tr>
+      <tr><td>$\sigma [ t_{\text{t}} ]$</td></tr>
   - "id": "parameter_values"
     "eq": >
-      <tr><td>$\tiny{5.0}$</td><td>$\tiny{\mu m}$</td></tr>
-      <tr><td>$\tiny{7.5}$</td><td>$\tiny{\mu m}$</td></tr>
-      <tr><td>$\tiny{7.5}$</td><td>$\tiny{\mu m}$</td></tr>
-      <tr><td>$\tiny{0.0}$</td><td>$\tiny{\mu m}$</td></tr>
-      <tr><td style="color:red"><b>$\tiny{60 - 110}$</b></td><td>$\tiny{\mu m/s}$</td></tr>
-      <tr><td style="color:red"><b>$\tiny{??}$</b></td><td>$\tiny{\mu m^2/s}$</td></tr>
-      <tr><td style="color:red"><b>$\tiny{??}$</b></td><td>$\tiny{s}$</td></tr>
-      <tr><td>$\tiny{0.15}$</td><td>$\tiny{s}$</td></tr>
-      <tr><td>$\tiny{10}$</td><td>$\tiny{1}$</td></tr>
-      <tr><td>$\tiny{11.2}$</td><td>$\tiny{s}$</td></tr>
-      <tr><td>$\tiny{0.75}$</td><td>$\tiny{rad / s}$</td></tr>
-      <tr><td>$\tiny{0.75}$</td><td>$\tiny{rad / s}$</td></tr>
-      <tr><td>$\tiny{2.0}$</td><td>$\tiny{s}$</td></tr>
-      <tr><td>$\tiny{1.5}$</td><td>$\tiny{s}$</td></tr>
+      <tr><td>$5.0$</td><td>$\mu m$</td></tr>
+      <tr><td>$7.5$</td><td>$\mu m$</td></tr>
+      <tr><td>$7.5$</td><td>$\mu m$</td></tr>
+      <tr><td>$0.0$</td><td>$\mu m$</td></tr>
+      <tr><td><b style="color:red">$60 - 110$</b></td><td>$\mu m/s$</td></tr>
+      <tr><td><b style="color:red">$??$</b></td><td>$\mu m^2/s$</td></tr>
+      <tr><td><b style="color:red">$??$</b></td><td>$s$</td></tr>
+      <tr><td>$0.15$</td><td>$s$</td></tr>
+      <tr><td>$10$</td><td>$1$</td></tr>
+      <tr><td>$11.2$</td><td>$s$</td></tr>
+      <tr><td>$0.75$</td><td>$rad / s$</td></tr>
+      <tr><td>$0.75$</td><td>$rad / s$</td></tr>
+      <tr><td>$2.0$</td><td>$s$</td></tr>
+      <tr><td>$1.5$</td><td>$s$</td></tr>
   - "id": "radial_probability"
     "eq": >
       $ P(r) = \frac{\frac{h(r)}{2 \pi r \Delta r}}{\int_{0}^{R}\frac{h(r')}{2 \pi r' \Delta r} d r'} $
   - "id": "parameter_values_2"
     "eq": >
-      <tr><td>$\tiny{5.0}$</td><td>$\tiny{\mu m}$</td></tr>
-      <tr><td>$\tiny{7.5}$ </td><td> $\tiny{\mu m}$</td></tr>
-      <tr><td>$\tiny{7.5}$</td><td>$\tiny{\mu m}$</td></tr>
-      <tr><td>$\tiny{0.0}$</td><td>$\tiny{\mu m}$</td></tr>
-      <tr><td>$\tiny{10}$</td><td>$\tiny{1}$</td></tr>
-      <tr><td><b>$\tiny{70}$</b></td><td>$\tiny{\mu m/s}$</td></tr>
-      <tr><td><b>$\tiny{14}$</b></td><td>$\tiny{\mu m^2/s}$</td></tr>
-      <tr><td><b>$\tiny{2.0}$</b></td><td>$\tiny{s}$ </td></tr>
-      <tr><td>$\tiny{2.0}$</td><td>$\tiny{s}$</td></tr>
-      <tr><td>$\tiny{11.2}$</td><td>$\tiny{s}$</td></tr>
-      <tr><td>$\tiny{0.75}$</td><td>$\tiny{rad / s}$</td></tr>
-      <tr><td>$\tiny{0.75}$ </td><td>$\tiny{rad / s}$</td></tr>
-      <tr><td>$\tiny{2.0}$</td><td>$\tiny{s}$</td></tr>
-      <tr><td>$\tiny{1.5}$ </td><td>$\tiny{s}$</td></tr>
+      <tr><td>$5.0$</td><td>$\mu m$</td></tr>
+      <tr><td>$7.5$ </td><td> $\mu m$</td></tr>
+      <tr><td>$7.5$</td><td>$\mu m$</td></tr>
+      <tr><td>$0.0$</td><td>$\mu m$</td></tr>
+      <tr><td>$10$</td><td>$1$</td></tr>
+      <tr><td><b>$70$</b></td><td>$\mu m/s$</td></tr>
+      <tr><td><b>$14$</b></td><td>$\mu m^2/s$</td></tr>
+      <tr><td><b>$2.0$</b></td><td>$s$ </td></tr>
+      <tr><td>$2.0$</td><td>$s$</td></tr>
+      <tr><td>$11.2$</td><td>$s$</td></tr>
+      <tr><td>$0.75$</td><td>$rad / s$</td></tr>
+      <tr><td>$0.75$ </td><td>$rad / s$</td></tr>
+      <tr><td>$2.0$</td><td>$s$</td></tr>
+      <tr><td>$1.5$ </td><td>$s$</td></tr>
   - "id": "p_r"
     "eq": >
       $ P(r) $
@@ -96,3 +96,12 @@ equation:
       $ \boldsymbol{F}(\boldsymbol{r}_1,\boldsymbol{e}_1,\boldsymbol{r}_1,\boldsymbol{e}_2) = \\
       -\nabla U_{bb}(\boldsymbol{r}_{1, b},\boldsymbol{r}_{2, b}) - \nabla U_{ff}(\boldsymbol{r}_{1, f},\boldsymbol{r}_{2, f}) \\
       - \nabla U_{bf}(\boldsymbol{r}_{1, b},\boldsymbol{r}_{2, f}) - \nabla U_{bf}(\boldsymbol{r}_{1, f},\boldsymbol{r}_{2, b}) $
+  - "id": "_11_2_s"
+    "eq": >
+      $ 11.2 s $
+  - "id": "_2_s"
+    "eq": >
+      $ 2 s $
+  - "id": "_0_75_rad_s"
+    "eq": >
+      $ 0.75 rad/s $

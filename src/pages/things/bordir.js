@@ -3,8 +3,6 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Deck from "../../components/deck"
 
-import "../../assets/style/slides.css"
-
 
 function BordirDeck() {
   return (
@@ -72,8 +70,7 @@ function BordirDeck() {
               src="./bordir/images/r-cnn_ugly.png"
               style={{ height: "30vh", flex: "1 1 1%" }} />
             <figcaption>
-              <small><a href="https://doi.org/10.48550/arXiv.1703.06870">doi.org/10.48550/arXiv.1703.06870</a>
-                2017</small>
+              <a href="https://doi.org/10.48550/arXiv.1703.06870">doi.org/10.48550/arXiv.1703.06870</a> 2017
             </figcaption>
           </figure>
           <figure>
@@ -83,8 +80,7 @@ function BordirDeck() {
               src="./bordir/images/yolo_ugly.png"
               style={{ height: "30vh", flex: "1 1 1%" }} />
             <figcaption>
-              <small><a href="https://doi.org/10.48550/arXiv.1506.02640">doi.org/10.48550/arXiv.1506.02640</a>
-                2015</small>
+              <a href="https://doi.org/10.48550/arXiv.1506.02640">doi.org/10.48550/arXiv.1506.02640</a> 2015
             </figcaption>
           </figure>
         </div>
@@ -117,8 +113,7 @@ function BordirDeck() {
             src="./bordir/images/stardist_ugly.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <figcaption>
-            <small><a href="https://doi.org/10.48550/arXiv.1806.03535">doi.org/10.48550/arXiv.1806.03535</a>
-              2018</small>
+            <a href="https://doi.org/10.48550/arXiv.1806.03535">doi.org/10.48550/arXiv.1806.03535</a> 2018
           </figcaption>
         </figure>
         <p>Predicts full object shape for every pixel. NMS.</p>
@@ -150,8 +145,7 @@ function BordirDeck() {
             src="./bordir/images/cellpose_ugly.png"
             style={{ width: "100%" }} />
           <figcaption>
-            <small><a href="https://doi.org/10.1038/s41592-020-01018-x">doi.org/10.1038/s41592-020-01018-x</a>
-              2020</small>
+            <a href="https://doi.org/10.1038/s41592-020-01018-x">doi.org/10.1038/s41592-020-01018-x</a> 2020
           </figcaption>
         </figure>
         <p>Diffusion simulation form object center. Predicts gradient, aka "path" to center.</p>
@@ -211,8 +205,7 @@ function BordirDeck() {
             src="./bordir/images/deeplab_ugly.png"
             style={{ width: "100%" }} />
           <figcaption>
-            <small><a href="https://doi.org/10.48550/arXiv.1806.03535">doi.org/10.48550/arXiv.1806.03535</a>
-              2018</small>
+            <a href="https://doi.org/10.48550/arXiv.1806.03535">doi.org/10.48550/arXiv.1806.03535</a> 2018
           </figcaption>
         </figure>
         <p>Predicts centers and vector distance to center.</p>
@@ -247,7 +240,7 @@ function BordirDeck() {
             loading="eager"
             objectFit="contain"
             src="./bordir/images/arrow.png"
-            style={{ height: "5vh"}} />
+            style={{ height: "5vh" }} />
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -266,7 +259,7 @@ function BordirDeck() {
             src="./bordir/images/maskformer_fail_1.png"
             style={{ width: "100%" }} />
           <figcaption>
-            <small><a href="https://doi.org/10.48550/arXiv.2107.06278">doi.org/10.48550/arXiv.2107.06278</a> 2021</small>
+            <a href="https://doi.org/10.48550/arXiv.2107.06278">doi.org/10.48550/arXiv.2107.06278</a> 2021
           </figcaption>
         </figure>
         <p>Complicated model. Global image understanding needed.</p>
@@ -298,8 +291,7 @@ function BordirDeck() {
             src="./bordir/images/facebook_ugly_1.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <figcaption>
-            <small><a href="https://doi.org/10.48550/arXiv.2304.02643">doi.org/10.48550/arXiv.2304.02643</a>
-              2023</small>
+            <a href="https://doi.org/10.48550/arXiv.2304.02643">doi.org/10.48550/arXiv.2304.02643</a> 2023
           </figcaption>
         </figure>
         <p>Needs extra input. E.g. point. Generates mask containing the point.</p>
@@ -319,8 +311,7 @@ function BordirDeck() {
             src="./bordir/images/facebook_ugly_2.png"
             style={{ height: "30vh", flex: "1 1 1%" }} />
           <figcaption>
-            <small><a href="https://doi.org/10.48550/arXiv.2304.02643">doi.org/10.48550/arXiv.2304.02643</a>
-              2023</small>
+            <a href="https://doi.org/10.48550/arXiv.2304.02643">doi.org/10.48550/arXiv.2304.02643</a> 2023
           </figcaption>
         </figure>
         <p>Uses grid. Generates one mask for each grid point. NMS.</p>
@@ -383,7 +374,7 @@ function BordirDeck() {
               loading="eager"
               objectFit="contain"
               src="./bordir/images/vectors_1.png"
-              style={{ height: "10vh"  }} />
+              style={{ height: "10vh" }} />
             <p style={{ flexGrow: "1" }}>Parallel vectors -&gt; same object</p>
           </div>
           <div class="row">
@@ -391,7 +382,7 @@ function BordirDeck() {
               loading="eager"
               objectFit="contain"
               src="./bordir/images/vectors_2.png"
-              style={{ height: "10vh"  }} />
+              style={{ height: "10vh" }} />
             <p style={{ flexGrow: "1" }}>Diverging vectors -&gt; same object</p>
           </div>
           <div class="row">
@@ -399,7 +390,7 @@ function BordirDeck() {
               loading="eager"
               objectFit="contain"
               src="./bordir/images/vectors_3.png"
-              style={{ height: "10vh"  }} />
+              style={{ height: "10vh" }} />
             <p style={{ flexGrow: "1" }}>Converging vectors -&gt; different objects</p>
           </div>
         </div>
