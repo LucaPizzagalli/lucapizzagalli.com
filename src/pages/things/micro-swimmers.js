@@ -38,7 +38,7 @@ function MicroSwimmersDeck() {
 
   return (
     <div className="moseppia">
-      <Deck location="/things/microswimmers">
+      <Deck location="/things/microswimmers" backgroundColor="#F0F1EB">
 
         <section className="center" data-background-image={SealTrentoUniversity}>
           <div style={{ gridArea: "1/1", position: "relative", placeItems: "center", display: "grid" }} >

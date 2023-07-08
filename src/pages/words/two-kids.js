@@ -9,7 +9,7 @@ import "./two-kids/white.css"
 function TwoKidsDeck() {
   return (
     <div className="white">
-      <Deck location="/words/two-kids">
+      <Deck location="/words/two-kids" backgroundColor="#FFFFFF">
 
         <section>
           <StaticImage
