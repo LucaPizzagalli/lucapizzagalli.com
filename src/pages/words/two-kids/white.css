@@ -1,4 +1,11 @@
+/* Text */
 
 .white .reveal {
     background: #FFFFFF;
+}
+
+/* Links */
+
+.white a {
+    color: #000000;
 }

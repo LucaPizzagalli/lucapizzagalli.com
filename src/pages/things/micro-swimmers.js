@@ -378,7 +378,7 @@ function MicroSwimmersDeck() {
                   <source src={SimulationConfinedVideo} />
                 </video>
                 <figcaption>
-                  Code available at: 
+                  Code available at:&nbsp;
                   <a href="https://github.com/LucaPizzagalli/swimmers-brownian-simulation">
                     github.com/LucaPizzagalli/swimmers-brownian-simulation
                   </a>

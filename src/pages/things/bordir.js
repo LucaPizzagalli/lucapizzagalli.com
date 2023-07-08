@@ -874,7 +874,7 @@ function BordirDeck() {
           <thead>
             <tr>
               <th>Metric</th>
-              <th>Value (&percnt;)</th>
+              <th>Value (&#37;)</th>
             </tr>
           </thead>
           <tbody>

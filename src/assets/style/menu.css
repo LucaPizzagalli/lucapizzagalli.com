@@ -48,7 +48,7 @@ button.menu:active {
     background-color: var(--highlight-color);
 }
 
-/* Foldable */
+/* Circle */
 
 .menu-half-circle {
     width: var(--menu-circle-size);
@@ -135,6 +135,8 @@ button.menu:active {
     }
 }
 
+/* Line */
+
 .menu-line {
     box-sizing: border-box;
     height: 13px;
@@ -181,11 +183,21 @@ button.menu:active {
     }
 }
 
+/* Slide */
+
 .slide-in {
     position: absolute;
     animation: animation-menu-slide;
     animation-duration: var(--menu-animation-time);
     animation-fill-mode: both;
+}
+
+menu>li>a {
+    text-decoration: underline var(--highlight-color) !important;
+}
+
+menu>li::marker {
+    color: var(--highlight-color) !important;
 }
 
 @keyframes animation-menu-slide {
@@ -203,7 +215,7 @@ button.menu:active {
 }
 
 .menu-text-box {
-    width: 50vw;
+    width: 15rem;
     height: 500px;
     left: 0;
     position: fixed;

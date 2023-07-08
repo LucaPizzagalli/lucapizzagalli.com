@@ -67,17 +67,6 @@ function Menu({ location, loop = false, foldable = false }) {
       </div>
     );
 
-  // if (isHidden)
-  //   return (
-  //     <div className="website-menu">
-  //       <menu>
-  //         <button class="menu" onClick={() => setIsHidden(false)}>
-  //           <span hidden>Open Menu</span>
-  //         </button>
-  //       </menu>
-  //     </div>
-  //   );
-
   if (foldable)
     return (
       <div key={isHidden} className={isHidden ? 'reverse' : ''} style={{ backgroundColor: "inherit" }}>
@@ -85,7 +74,7 @@ function Menu({ location, loop = false, foldable = false }) {
         <div className="menu-half-circle right" onClick={() => setIsHidden(false)} />
         <div className="menu-circle-box" onClick={() => setIsHidden(false)} />
         <button className="menu-line" onClick={() => setIsHidden(true)}>
-          {/* <div className="menu-inner-line" /> */}
+          <div className="menu-inner-line" />
           <span hidden>Close Menu</span>
         </button>
         <div className="menu-text-box"></div>
