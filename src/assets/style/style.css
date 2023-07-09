@@ -7,8 +7,6 @@
   --highlight-color: #01ff70;
 }
 
-
-
 html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
@@ -127,6 +125,7 @@ em {
 a {
   color: var(--main-color);
   text-decoration: underline var(--highlight-color);
+  text-underline-offset: .2rem;
 }
 
 a:visited {
@@ -149,7 +148,9 @@ li {
   margin: 1rem 0 1rem 0;
 }
 
-::marker {
+li::marker {
+  content: "• ";
+  font-size: 1.2rem;
   color: var(--highlight-color);
 }
 
@@ -196,6 +197,7 @@ details>section {
 
 summary {
   text-decoration: underline var(--highlight-color);
+  text-underline-offset: .2rem;
   cursor: pointer;
 }
 
@@ -218,13 +220,6 @@ blockquote {
   text-decoration: none;
 }
 
-blockquote {
-  border-left: 3px solid var(--highlight-color);
-  padding-left: 1rem;
-  margin: 0 auto 1.3rem auto;
-  max-width: 44rem;
-}
-
 code {
   font-family: Menlo, Monaco, "Courier New", monospace;
   background-color: #333;
@@ -242,24 +237,4 @@ pre {
   max-width: 44rem;
 }
 
-mjx-container[display] {
-  background-color: #333;
-  border-left: 3px solid var(--highlight-color);
-  border-bottom: 3px solid var(--highlight-color);
-  padding: 1.7rem;
-  margin: 0 auto 1.3rem auto !important;
-  width: 41rem;
-}
-
-
-
-details {
-  margin: 0 auto 1.3rem auto;
-  max-width: 48rem;
-}
-
-summary {
-  text-decoration: underline;
-  text-decoration-color: var(--highlight-color);
-  cursor: pointer;
-} */
+*/

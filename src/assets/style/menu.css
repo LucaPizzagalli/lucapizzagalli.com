@@ -5,35 +5,36 @@
 
 /* Layout */
 
+.website-menu-wrapper {
+    top: 0;
+    left: 0;
+    margin: 1% 1% 1% 3%;
+    position: absolute;
+    padding: 3px;
+    width: 100%;
+    border-color: var(--highlight-color);
+    color: var(--highlight-color);
+}
+
 .website-menu {
     position: absolute;
     top: 0;
     left: 0;
     margin: 0;
-    padding: 1rem .5rem 1rem .5rem;
+    padding: 1rem 0 1rem 0;
     line-height: 1.6;
 }
 
 @media (max-width: 60em) {
     .website-menu {
-        padding: .1rem .5rem 1rem .5rem;
+        padding: .1rem 0 1rem 0;
     }
 }
 
 menu {
     margin: 0;
     padding: 0;
-}
-
-.website-menu-wrapper {
-    top: 0;
-    left: 0;
-    margin: 1% 3% 1% 3%;
-    position: absolute;
-    padding: 3px;
-    width: 100%;
-    border-color: var(--highlight-color);
-    color: var(--highlight-color);
+    list-style-position: inside;
 }
 
 /* Circle */
@@ -159,17 +160,17 @@ menu {
 
     30% {
         left: calc(-2% + var(--menu-circle-size) / 2 - 2px);
-        width: calc(4% + 5rem);
+        width: calc(4% + 6.2rem);
     }
 
     40% {
         left: -2%;
-        width: calc(4% + 5rem);
+        width: calc(4% + 6.2rem);
     }
 
     100% {
         left: -2%;
-        width: calc(4% + 5rem);
+        width: calc(4% + 6.2rem);
     }
 }
 
