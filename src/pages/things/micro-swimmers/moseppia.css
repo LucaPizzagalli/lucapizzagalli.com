@@ -8,7 +8,7 @@
 
 .moseppia.reveal {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: normal;
     color: var(--moseppia-main-color);
     background: var(--moseppia-base-color);
@@ -83,8 +83,6 @@
 /* Pictures */
 
 .moseppia figcaption {
-    margin: 0 0;
-    line-height: 1;
     font-size: 0.5em;
     color: #444444;
 }
@@ -109,6 +107,10 @@
 
 .moseppia .small .katex {
     font-size: 0.7em;
+}
+
+.moseppia .big .katex {
+    font-size: 1.5em;
 }
 
 /* Navigation controls */

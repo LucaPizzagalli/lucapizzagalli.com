@@ -95,7 +95,7 @@ function MicroSwimmersDeck() {
               <li>Run and tumble: <br /> straight swims alternated with rapid rotations</li>
             </ul>
             <figure>
-              <video width="440" loop autoplay="autoplay" controls muted>
+              <video width="440" loop autoPlay="autoplay" controls muted>
                 <source src={ExperimentOpenVideo} />
                 <track />
               </video>
@@ -171,8 +171,8 @@ function MicroSwimmersDeck() {
       <section className="center">
         <h2>Equations of motion</h2>
         <div className="medium-content">
-          <p dangerouslySetInnerHTML={{ __html: equations.motion_r }} />
-          <p dangerouslySetInnerHTML={{ __html: equations.motion_eta }} />
+          <p className="big" dangerouslySetInnerHTML={{ __html: equations.motion_r }} />
+          <p className="big" dangerouslySetInnerHTML={{ __html: equations.motion_eta }} />
         </div>
         <aside className="notes">
           I use the over-damped Langevin equation for describing the evolution in time of the position r of the dumbbell.
@@ -196,7 +196,7 @@ function MicroSwimmersDeck() {
             loading="eager"
             objectFit="contain"
             src="./micro-swimmers/images/dumbbell_w.png"
-            width="200"
+            style={{ height: "28vh" }}
             alt="A force is applied on each sphere." />
         </div>
         <p>Truncated Lennard-Jones potential:</p>
@@ -214,8 +214,8 @@ function MicroSwimmersDeck() {
         <section>
           <h2>Direction</h2>
           <div className="medium-content">
-            <p dangerouslySetInnerHTML={{ __html: equations.direction_e }} />
-            <p dangerouslySetInnerHTML={{ __html: equations.direction_xi }} />
+            <p className="big" dangerouslySetInnerHTML={{ __html: equations.direction_e }} />
+            <p className="big" dangerouslySetInnerHTML={{ __html: equations.direction_xi }} />
           </div>
           <aside className="notes">
             The direction e also changes in time, following this equations.
@@ -244,7 +244,7 @@ function MicroSwimmersDeck() {
       <section>
         <h2>Tumble</h2>
         <div className="big-content">
-          <p dangerouslySetInnerHTML={{ __html: equations.tumble }} />
+          <p className="big" dangerouslySetInnerHTML={{ __html: equations.tumble }} />
           <ul>
             <li>Time between two tumbles: exponential distribution with average <span dangerouslySetInnerHTML={{ __html: equations._11_2_s }} /></li>
             <li>Tumble duration: Gaussian distribution with average <span dangerouslySetInnerHTML={{ __html: equations._2_s }} /></li>
@@ -296,24 +296,26 @@ function MicroSwimmersDeck() {
 
       <section>
         <h3>Experimental Validation</h3>
-        <div className="row">
-          <figure>
-            <StaticImage
-              loading="eager"
-              objectFit="contain"
-              src="./micro-swimmers/images/open_displacement_kantsler2013ciliary.jpg"
-              height="400"
-              alt="Mean square displacement in open space from experiment." />
-            <figcaption>
-              Vasily Kantsler et al. PNAS, January 2013
-            </figcaption>
-          </figure>
-          <div className="column">
-            <p>Mean square displacement from experiment in open space</p>
-            <ul>
-              <li>Short time: ballistic behavior</li>
-              <li>Long time: diffusion behavior</li>
-            </ul>
+        <div className="big-content">
+          <div className="row">
+            <figure>
+              <StaticImage
+                loading="eager"
+                objectFit="contain"
+                src="./micro-swimmers/images/open_displacement_kantsler2013ciliary.jpg"
+                style={{ height: "40vh" }}
+                alt="Mean square displacement in open space from experiment." />
+              <figcaption>
+                Vasily Kantsler et al. PNAS, January 2013
+              </figcaption>
+            </figure>
+            <div className="column">
+              <p>Mean square displacement from experiment in open space</p>
+              <ul>
+                <li>Short time: ballistic behavior</li>
+                <li>Long time: diffusion behavior</li>
+              </ul>
+            </div>
           </div>
         </div>
         <aside className="notes">
@@ -328,21 +330,23 @@ function MicroSwimmersDeck() {
 
       <section>
         <h3>Experimental Validation</h3>
-        <div className="row">
-          <figure>
-            <StaticImage
-              loading="eager"
-              objectFit="contain"
-              src="./micro-swimmers/images/confined_radial_ostapenko2018curvature.png"
-              height="340"
-              alt="Radial probability in confined space from experiment." />
-            <figcaption>
-              Tanya Ostapenko et al. Phys. Rev. Lett., February 2018
-            </figcaption>
-          </figure>
-          <div className="column">
-            <p>Radial probability <span dangerouslySetInnerHTML={{ __html: equations.p_r }} /> in confined environment</p>
-            <p dangerouslySetInnerHTML={{ __html: equations.radial_probability }} />
+        <div className="big-content">
+          <div className="row">
+            <figure>
+              <StaticImage
+                loading="eager"
+                objectFit="contain"
+                src="./micro-swimmers/images/confined_radial_ostapenko2018curvature.png"
+                style={{ height: "35vh" }}
+                alt="Radial probability in confined space from experiment." />
+              <figcaption>
+                Tanya Ostapenko et al. Phys. Rev. Lett., February 2018
+              </figcaption>
+            </figure>
+            <div className="column">
+              <p>Radial probability <span dangerouslySetInnerHTML={{ __html: equations.p_r }} /> in confined environment</p>
+              <p dangerouslySetInnerHTML={{ __html: equations.radial_probability }} />
+            </div>
           </div>
         </div>
         <aside className="notes">
@@ -361,7 +365,7 @@ function MicroSwimmersDeck() {
           <div className="column" style={{ flex: "1 1 1%" }} >
             <p>Experiment</p>
             <figure>
-              <video loop autoplay="autoplay" controls muted style={{ height: "40vh" }}>
+              <video loop autoPlay="autoplay" controls muted style={{ height: "40vh" }}>
                 <source src={ExperimentConfinedVideo} />
                 <track />
               </video>
@@ -373,11 +377,10 @@ function MicroSwimmersDeck() {
           <div className="column" style={{ flex: "1 1 1%" }} >
             <p>Simulation</p>
             <figure>
-              <video loop autoplay="autoplay" controls muted style={{ height: "40vh" }}>
+              <video loop autoPlay="autoplay" controls muted style={{ height: "40vh" }}>
                 <source src={SimulationConfinedVideo} />
               </video>
               <figcaption>
-                Code available at:&nbsp;
                 <a href="https://github.com/LucaPizzagalli/swimmers-brownian-simulation">
                   github.com/LucaPizzagalli/swimmers-brownian-simulation
                 </a>
@@ -404,7 +407,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/open_displacement_kantsler2013ciliary.jpg"
-              height="400"
+              style={{ height: "40vh" }}
               alt="Mean square displacement in open space from experiment." />
           </div>
           <div className="column fragment fade-in">
@@ -413,7 +416,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/open_my_displacement.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="Mean square displacement in open space from simulation." />
           </div>
         </div>
@@ -436,7 +439,7 @@ function MicroSwimmersDeck() {
                 loading="eager"
                 objectFit="contain"
                 src="./micro-swimmers/images/confined_radial_ostapenko2018curvature.png"
-                height="340"
+                style={{ height: "35vh" }}
                 alt="Radial probability in confined space from experiment." />
               <figcaption>
                 Tanya Ostapenko et al. Phys. Rev. Lett., February 2018
@@ -449,7 +452,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/confined_R_radial_probability.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="Radial probability in confined space from simulation." />
           </div>
         </div>
@@ -502,7 +505,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/open_v_0_displacement.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="MSD in open space as a function of speed." />
           </div>
           <div className="column">
@@ -511,7 +514,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/confined_v_0_radial_probability.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="Radial probability in confined space as a function of speed." />
           </div>
         </div>
@@ -536,7 +539,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/open_c_displacement.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="MSD in open space as a function of the position of the rotational axis." />
           </div>
           <div className="column">
@@ -545,7 +548,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/confined_c_radial_probability.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="Radial probability in confined space as a function of the position of the rotational axis." />
           </div>
         </div>
@@ -564,12 +567,14 @@ function MicroSwimmersDeck() {
 
       <section>
         <h2>Rotational Axis</h2>
-        <StaticImage
-          loading="eager"
-          objectFit="contain"
-          src="./micro-swimmers/images/dumbbell_c.png"
-          height="300"
-          alt="Stronger arm, and thus torque, when the rotational axis is far from the cell's center." />
+        <div className="medium-content">
+          <StaticImage
+            loading="eager"
+            objectFit="contain"
+            src="./micro-swimmers/images/dumbbell_c.png"
+            style={{ height: "30vh" }}
+            alt="Stronger arm, and thus torque, when the rotational axis is far from the cell's center." />
+        </div>
         <aside className="notes">
           Another interesting dependence is the one between the location c of the rotation axis along the length of the cell
           and the radial probability P(r).
@@ -592,7 +597,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/open_fracT_ttau_displacement.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="MSD in open space as a function of tumble strength." />
           </div>
           <div className="column">
@@ -601,7 +606,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/confined_fracT_ttau_radial_probability.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="Radial probability in confined space as a function of tumble strength." />
           </div>
         </div>
@@ -630,7 +635,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/open_K_bTmu_displacement.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="MSD in open space as a function of translational noise strength." />
           </div>
           <div className="column">
@@ -639,7 +644,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/confined_K_bTmu_radial_probability.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="Radial probability in confined space as a function of translational noise strength." />
           </div>
         </div>
@@ -665,7 +670,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/open_fracK_bTtau_displacement.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="MSD in open space as a function of rotational noise strength." />
           </div>
           <div className="column">
@@ -674,7 +679,7 @@ function MicroSwimmersDeck() {
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/confined_fracK_bTtau_radial_probability.png"
-              height="400"
+              style={{ height: "40vh" }}
               alt="Radial probability in confined space as a function of rotational noise strength." />
           </div>
         </div>
@@ -693,7 +698,8 @@ function MicroSwimmersDeck() {
 
 
       <section data-background-video={SimulationOpenVideo} data-background-video-loop="true">
-        <div style={{ backgroundColor: "rgba(0, 0, 0, .7)" }}>
+        <div className="column"
+          style={{ backgroundColor: "rgba(0, 0, 0, .7)" }}>
           <h2 className="white">Collective Behavior</h2>
           <p className="white">Four components for the force:</p>
           <p className="white" dangerouslySetInnerHTML={{ __html: equations.collective_f }} />
@@ -713,27 +719,27 @@ function MicroSwimmersDeck() {
         <h3>Diffusion</h3>
         <p>Linear density of a diffusion of <i>C. reinhardtii</i> in a test tube, 1 minute after centrifugation.</p>
         <div className="row">
-          <div className="column">
+          <div className="column" style={{ flex: "1 1 50%", }}>
             <p>Experiment</p>
             <figure>
               <StaticImage
                 loading="eager"
                 objectFit="contain"
                 src="./micro-swimmers/images/diffusion_polin2009chlamydomonas.png"
-                height="370"
+                style={{ height: "34vh" }}
                 alt="Linear density after diffusion from experiment." />
               <figcaption>
                 Polin Marco et al. Science, Jul 2009
               </figcaption>
             </figure>
           </div>
-          <div className="column fragment fade-in">
+          <div className="column fragment fade-in" style={{ flex: "1 1 50%", }}>
             <p>Simulation</p>
             <StaticImage
               loading="eager"
               objectFit="contain"
               src="./micro-swimmers/images/diffusion_my.png"
-              height="370"
+              style={{ height: "36vh" }}
               alt="Linear density after diffusion from simulation." />
           </div>
         </div>
@@ -835,11 +841,11 @@ function MicroSwimmersDeck() {
               objectFit="contain"
               src="./micro-swimmers/images/cute_chlamydomonas_3.jpeg"
               style={{ flex: "1 1 60%", height: "34vh", }}
-              alt="chlamydomonas reinhardtii moves beating two forward flagella" />
+              alt="Chlamydomonas reinhardtii moves beating two forward flagella." />
             <ul style={{ flex: "1 1 40%", }}>
-              <li>chemotaxis</li>
-              <li>gravitaxis</li>
-              <li>phototaxis</li>
+              <li>Chemotaxis</li>
+              <li>Gravitaxis</li>
+              <li>Phototaxis</li>
             </ul>
           </div>
         </div>

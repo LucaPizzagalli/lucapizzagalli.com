@@ -6,6 +6,7 @@ import "katex/dist/katex.min.css";
 import Layout from "../components/layout";
 import HeadTags from "../components/head-tags";
 
+
 function MarkdownPage({ data }) {
   let { frontmatter, html } = data.markdownRemark;
   return (
@@ -17,6 +18,7 @@ function MarkdownPage({ data }) {
     </Layout>
   )
 }
+
 
 export let pageQuery = graphql`
   query($id: String!) {
@@ -34,4 +36,4 @@ export function Head({ data }) {
   let frontmatter = data.markdownRemark.frontmatter;
   return <HeadTags title={frontmatter.title} description={frontmatter.excerpt} />;
 }
-export default MarkdownPage
+export default MarkdownPage;

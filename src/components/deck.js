@@ -1,14 +1,17 @@
-import React, { useEffect } from "react"
+import React, { useEffect } from "react";
 
-import Menu from "./menu"
+import Menu from "./menu";
 
-import "reveal.js/dist/reveal.css"
-import "../assets/style/slides.css"
+import "reveal.js/dist/reveal.css";
+import "../assets/style/slides.css";
+
 
 let revealOptions = {
   hash: true,
+  fragmentInURL: false,
   autoPlayMedia: true,
-}
+};
+
 
 function Deck({ options, children, location, deckTheme = "" }) {
   useEffect(() => {
@@ -28,5 +31,6 @@ function Deck({ options, children, location, deckTheme = "" }) {
     </>
   );
 }
+
 
 export default Deck;

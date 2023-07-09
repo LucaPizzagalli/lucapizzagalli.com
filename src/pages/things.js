@@ -1,6 +1,6 @@
 import React from "react";
-import { graphql, useStaticQuery, Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery, Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout";
 import HeadTags from "../components/head-tags";
@@ -105,4 +105,4 @@ function ThingsPage({ loop }) {
 export function Head(){
   return <HeadTags title="Things" description="" />;
 }
-export default ThingsPage
+export default ThingsPage;

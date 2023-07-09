@@ -1,5 +1,6 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+
 
 function TheVoidPage() {
     return (
@@ -28,4 +29,5 @@ function TheVoidPage() {
     );
 }
 
-export default TheVoidPage
+
+export default TheVoidPage;

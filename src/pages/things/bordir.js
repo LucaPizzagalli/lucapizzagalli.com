@@ -3,6 +3,9 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Deck from "../../components/deck"
 
+import Autism from "./bordir/images/autism.png"
+import SyntheticDataset from "./bordir/images/synthetic_dataset.png"
+
 
 function BordirDeck() {
   return (
@@ -17,20 +20,22 @@ function BordirDeck() {
 
       <section>
         <h2>Semantic segmentation</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
             src="./bordir/images/target.png"
-            style={{ height: "30vh", flex: "1 1 1%", }} />
+            style={{ height: "30vh", flex: "1 1 1%", }}
+            alt="Various objects." />
           <StaticImage
             loading="eager"
             objectFit="contain"
             src="./bordir/images/class_segmentation.png"
-            style={{ height: "30vh", flex: "1 1 1%", }} />
+            style={{ height: "30vh", flex: "1 1 1%", }}
+            alt="Same image but each object has a color corresponding to its class." />
         </div>
         <p>The semantic segmentation problem has a natural solution.</p>
-        <aside class="notes">
+        <aside className="notes">
           Encode each class in a different way,
           so we can predict the class for every pixel.
         </aside>
@@ -38,23 +43,25 @@ function BordirDeck() {
 
       <section>
         <h2>Instance Segmentation</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
             src="./bordir/images/target.png"
-            style={{ height: "30vh", flex: "1 1 1%" }} />
+            style={{ height: "30vh", flex: "1 1 1%" }}
+            alt="Various objects." />
           <StaticImage
             loading="eager"
             objectFit="contain"
             src="./bordir/images/instance_segmentation.png"
-            style={{ height: "30vh", flex: "1 1 1%" }} />
+            style={{ height: "30vh", flex: "1 1 1%" }}
+            alt="Same image but each object has a different index." />
         </div>
         <p>For instance segmentation, some kind of trick is needed.</p>
       </section>
       <section data-transition="slide-in zoom-out">
         <h2>Existing solutions</h2>
-        <aside class="notes">
+        <aside className="notes">
           Let's see how other people approached the problem,
           and what kind of tricks they are using in their pre/post processing.
         </aside>
@@ -62,13 +69,14 @@ function BordirDeck() {
 
       <section>
         <h2>Mask R-CNN / Yolo</h2>
-        <div class="full row">
+        <div className="row">
           <figure>
             <StaticImage
               loading="eager"
               objectFit="contain"
               src="./bordir/images/r-cnn_ugly.png"
-              style={{ height: "30vh", flex: "1 1 1%" }} />
+              style={{ height: "30vh", flex: "1 1 1%" }}
+              alt="Boxes around objects." />
             <figcaption>
               <a href="https://doi.org/10.48550/arXiv.1703.06870">doi.org/10.48550/arXiv.1703.06870</a> 2017
             </figcaption>
@@ -78,7 +86,8 @@ function BordirDeck() {
               loading="eager"
               objectFit="contain"
               src="./bordir/images/yolo_ugly.png"
-              style={{ height: "30vh", flex: "1 1 1%" }} />
+              style={{ height: "30vh", flex: "1 1 1%" }}
+              alt="Boxes around objects." />
             <figcaption>
               <a href="https://doi.org/10.48550/arXiv.1506.02640">doi.org/10.48550/arXiv.1506.02640</a> 2015
             </figcaption>
@@ -89,17 +98,19 @@ function BordirDeck() {
 
       <section>
         <h2>Mask R-CNN / Yolo</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
             src="./bordir/images/r-cnn_yolo_test.png"
-            style={{ height: "30vh", flex: "1 1 1%" }} />
+            style={{ height: "30vh", flex: "1 1 1%" }}
+            alt="Two objects next to each other in diagonal." />
           <StaticImage
             loading="eager"
             objectFit="contain"
             src="./bordir/images/r-cnn_yolo_fail.png"
-            style={{ height: "30vh", flex: "1 1 1%" }} />
+            style={{ height: "30vh", flex: "1 1 1%" }}
+            alt="Same two objects, but with two boxes around them, almost overlapping." />
         </div>
         <p>Fails for complex intertwined shapes. Ugly.</p>
       </section>
@@ -121,7 +132,7 @@ function BordirDeck() {
 
       <section>
         <h2>Stardist</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -149,7 +160,7 @@ function BordirDeck() {
           </figcaption>
         </figure>
         <p>Diffusion simulation form object center. Predicts gradient, aka "path" to center.</p>
-        <aside class="notes">It needs the concept of center. The model requires a global
+        <aside className="notes">It needs the concept of center. The model requires a global
           understanding of the object in order to identify the center.
           Some object simply don't have a center, this can cause instability
           in the target.</aside>
@@ -157,7 +168,7 @@ function BordirDeck() {
 
       <section>
         <h2>Cellpose</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -170,14 +181,14 @@ function BordirDeck() {
             style={{ height: "30vh", flex: "1 1 1%" }} />
         </div>
         <p>Arbitrary concept of center. Local change has global impacts.</p>
-        <aside class="notes">
+        <aside className="notes">
           Model needs global understanding of the object in order to identify the center.
         </aside>
       </section>
 
       <section>
         <h2>Cellpose</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -190,7 +201,7 @@ function BordirDeck() {
             style={{ height: "30vh", flex: "1 1 1%" }} />
         </div>
         <p>Local change has global impacts. Vanishing gradient. Kinda not ugly.</p>
-        <aside class="notes">
+        <aside className="notes">
           The model requires a global
           understanding of the object in order to identify topology.
         </aside>
@@ -213,7 +224,7 @@ function BordirDeck() {
 
       <section>
         <h2>Panoptic-DeepLab</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -230,7 +241,7 @@ function BordirDeck() {
 
       <section>
         <h2>MaskFormer</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -267,7 +278,7 @@ function BordirDeck() {
 
       <section>
         <h2>MaskFormer</h2>
-        <div class="full full row">
+        <div className="full row">
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -295,7 +306,7 @@ function BordirDeck() {
           </figcaption>
         </figure>
         <p>Needs extra input. E.g. point. Generates mask containing the point.</p>
-        <aside class="notes">
+        <aside className="notes">
           It's playing a different game. it's an interactive model,
           it needs a token "hint" in the input. For full segmentation of an
           image it creates a grid of input points, and then it does NMS.
@@ -319,7 +330,7 @@ function BordirDeck() {
 
       <section>
         <h2>Facebook Segment Anything Model</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -336,7 +347,7 @@ function BordirDeck() {
 
       <section>
         <h2>Facebook Segment Anything Model</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -354,12 +365,12 @@ function BordirDeck() {
       <section data-transition="slide-in zoom-out">
         <h2>Ok, my proposal</h2>
       </section>
-      <section data-background-image="images/slides/autism.png">
+      <section data-background-image={Autism}>
         <div style={{ color: "black", fontWeight: "bolder", WebkitTextStroke: "1px var(--highlight-color)" }}>
           <h2>Border direction is all you need</h2>
           <p>Just predict the direction to the closest border.</p>
         </div>
-        <aside class="notes">
+        <aside className="notes">
           Very simple idea. A bit anti-climatic, even.
           Predict the direction to the closest border.
         </aside>
@@ -368,8 +379,8 @@ function BordirDeck() {
       <section>
         <h2>Postprocessing</h2>
         <p>Border direction is enough information for reconstructing the objects.</p>
-        <div class="column" style={{ alignItems: "stretch" }}>
-          <div class="row">
+        <div className="column" style={{ alignItems: "stretch" }}>
+          <div className="row">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -377,7 +388,7 @@ function BordirDeck() {
               style={{ height: "10vh" }} />
             <p style={{ flexGrow: "1" }}>Parallel vectors -&gt; same object</p>
           </div>
-          <div class="row">
+          <div className="row">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -385,7 +396,7 @@ function BordirDeck() {
               style={{ height: "10vh" }} />
             <p style={{ flexGrow: "1" }}>Diverging vectors -&gt; same object</p>
           </div>
-          <div class="row">
+          <div className="row">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -394,7 +405,7 @@ function BordirDeck() {
             <p style={{ flexGrow: "1" }}>Converging vectors -&gt; different objects</p>
           </div>
         </div>
-        <aside class="notes">
+        <aside className="notes">
           The information is enough to reconstruct the object shape.
           parallel vectors bla bla.
         </aside>
@@ -415,7 +426,7 @@ function BordirDeck() {
 
       <section>
         <h2>Not just border detection</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -433,7 +444,7 @@ function BordirDeck() {
             style={{ height: "25vh", flex: "1 1 1%" }} />
         </div>
         <p>Fragile. Mis-prediction in a few pixels can cause cascading error.</p>
-        <aside class="notes">
+        <aside className="notes">
           Detecting directly borders is very fragile. Mis-predictions in a few
           pixels can cause a cascade error.
         </aside>
@@ -443,7 +454,7 @@ function BordirDeck() {
 
         <section>
           <h2>Not just border detection</h2>
-          <div class="full row">
+          <div className="row">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -461,7 +472,7 @@ function BordirDeck() {
               style={{ height: "25vh", flex: "1 1 1%" }} />
           </div>
           <p>Robust. Redundancy of information allows prediction stability.</p>
-          <aside class="notes">
+          <aside className="notes">
             With border direction prediction the information about the position
             of the border is replicated and distributed in the whole 2d area, not
             only in the 1d border. There is redundancy and this makes the model
@@ -473,7 +484,7 @@ function BordirDeck() {
 
         <section>
           <h2>A Better Definition</h2>
-          <div class="full row">
+          <div className="row">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -490,7 +501,7 @@ function BordirDeck() {
 
         <section>
           <h2>A Better Definition</h2>
-          <div class="full row">
+          <div className="row">
             <StaticImage loading="eager"
               objectFit="contain"
               src="./bordir/images/definition_instance.png"
@@ -529,7 +540,7 @@ function BordirDeck() {
         <h2>Let's see the prototype</h2>
       </section>
 
-      <section data-background-image="images/slides/dummy_dataset.png">
+      <section data-background-image={SyntheticDataset}>
         <h2 style={{ color: "black", fontWeight: "bolder", WebkitTextStroke: "1px var(--highlight-color)" }}>
           Synthetic dataset
         </h2>
@@ -537,7 +548,7 @@ function BordirDeck() {
 
       <section>
         <h2>Bordir</h2>
-        <div class="full row">
+        <div className="row">
           <StaticImage
             loading="eager"
             objectFit="contain"
@@ -588,8 +599,8 @@ function BordirDeck() {
       </section>
 
       <section style={{ width: "100%" }}>
-        <div class="full row" style={{ width: "100%" }} >
-          <div class="column">
+        <div className="row" style={{ width: "100%" }} >
+          <div className="column">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -606,7 +617,7 @@ function BordirDeck() {
               src="./bordir/images/ex1_error.png"
               style={{ height: "100%", margin: "0" }} />
           </div>
-          <div class="column">
+          <div className="column">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -623,7 +634,7 @@ function BordirDeck() {
               src="./bordir/images/ex2_error.png"
               style={{ height: "100%", margin: "0" }} />
           </div>
-          <div class="column">
+          <div className="column">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -640,7 +651,7 @@ function BordirDeck() {
               src="./bordir/images/ex3_error.png"
               style={{ height: "100%", margin: "0" }} />
           </div>
-          <div class="column">
+          <div className="column">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -657,7 +668,7 @@ function BordirDeck() {
               src="./bordir/images/ex4_error.png"
               style={{ height: "100%", margin: "0" }} />
           </div>
-          <div class="column">
+          <div className="column">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -674,7 +685,7 @@ function BordirDeck() {
               src="./bordir/images/ex5_error.png"
               style={{ height: "100%", margin: "0" }} />
           </div>
-          <div class="column">
+          <div className="column">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -711,7 +722,7 @@ function BordirDeck() {
         <section>
           <p>True positive is when intersection over union is above a threshold.</p>
           https://kharshit.github.io/blog/2019/09/20/evaluation-metrics-for-object-detection-and-segmentation
-          <aside class="notes">
+          <aside className="notes">
             I suppose the advantage is that the metrics are intuitive.
             I guess.
           </aside>
@@ -719,7 +730,7 @@ function BordirDeck() {
 
         <section>
           <p>Problem 1: arbitrary threshold is involved</p>
-          <aside class="notes">
+          <aside className="notes">
             Also, under 50% it makes no sense anymore
             as you could have multiple true positive for a single data point.
             Commonly used thresholds are 50% and 95%. Sometimes it's not even
@@ -731,7 +742,7 @@ function BordirDeck() {
 
         <section>
           <p>Problem 2: Integration is not intuitive anymore.</p>
-          <aside class="notes">
+          <aside className="notes">
             Also, the size of the integration step still lives
             room for arbitrariness. And then if you compute the "average precision",
             you have to integrate over the model threshold, so you have a
@@ -741,7 +752,7 @@ function BordirDeck() {
 
         <section>
           <p>Very different kind of errors have the same metric.</p>
-          <aside class="notes">
+          <aside className="notes">
             It fells like we need more dimensions to
             better represent the system.
           </aside>
@@ -756,7 +767,7 @@ function BordirDeck() {
         </section>
 
         <section>
-          <div class="row">
+          <div className="row">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -767,7 +778,7 @@ function BordirDeck() {
         </section>
 
         <section>
-          <div class="row">
+          <div className="row">
             <StaticImage
               loading="eager"
               objectFit="contain"
@@ -778,22 +789,22 @@ function BordirDeck() {
         </section>
 
         <section>
-          <div class="row">
+          <div className="row">
             <StaticImage
               loading="eager"
               objectFit="contain"
               src="./bordir/images/metric_class_error.png"
               style={{ height: "40vh", flex: "1 1 1%" }} />
-            <div class="column">
+            <div className="column">
               <p style={{ flexGrow: "1" }}>Class errors</p>
-              <div class="row">
+              <div className="row">
                 <StaticImage
                   loading="eager"
                   objectFit="contain" src="./bordir/images/metrics_class_error_1.png"
                   style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
                 <p style={{ flexGrow: "1" }}>false positive</p>
               </div>
-              <div class="row">
+              <div className="row">
                 <StaticImage
                   loading="eager"
                   objectFit="contain"
@@ -806,21 +817,21 @@ function BordirDeck() {
         </section>
 
         <section>
-          <div class="row">
+          <div className="row">
             <StaticImage loading="eager"
               objectFit="contain"
               src="./bordir/images/metric_instance_error.png"
               style={{ height: "40vh", flex: "1 1 1%" }} />
-            <div class="column">
+            <div className="column">
               <p style={{ flexGrow: "1" }}>Instance errors</p>
-              <div class="row">
+              <div className="row">
                 <StaticImage loading="eager"
                   objectFit="contain"
                   src="./bordir/images/metrics_merge_error.png"
                   style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
                 <p style={{ flexGrow: "1" }}>merge error</p>
               </div>
-              <div class="row">
+              <div className="row">
                 <StaticImage loading="eager"
                   objectFit="contain"
                   src="./bordir/images/metrics_split_error.png"
@@ -839,14 +850,14 @@ function BordirDeck() {
         </section>
 
         <section>
-          <div class="row">
+          <div className="row">
             <StaticImage
               loading="eager"
               objectFit="contain"
               src="./bordir/images/metric_correct.png"
               style={{ height: "40vh", flex: "1 1 1%" }} />
-            <div class="column">
-              <div class="row">
+            <div className="column">
+              <div className="row">
                 <StaticImage
                   loading="eager"
                   objectFit="contain"
@@ -854,7 +865,7 @@ function BordirDeck() {
                   style={{ height: "3vh", flex: "1 1 1%", margin: "2rem" }} />
                 <p style={{ flexGrow: "1" }}>true positive</p>
               </div>
-              <div class="row">
+              <div className="row">
                 <StaticImage
                   loading="eager"
                   objectFit="contain"
@@ -890,9 +901,9 @@ function BordirDeck() {
               <td>split error</td>
               <td>6.209</td>
             </tr>
-            <td>merge error</td>
-            <td>2.652</td>
             <tr>
+              <td>merge error</td>
+              <td>2.652</td>
             </tr>
           </tbody>
         </table>

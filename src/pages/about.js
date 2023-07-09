@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import HeadTags from "../components/head-tags";
 
+
 function AboutPage({ loop }) {
     return (
         <Layout loop={loop} location="/about">
@@ -17,7 +18,8 @@ function AboutPage({ loop }) {
     );
 }
 
+
 export function Head(){
     return <HeadTags title="Contacts" description="" />;
   }
-export default AboutPage
+export default AboutPage;

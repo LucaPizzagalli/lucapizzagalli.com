@@ -1,5 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+
 
 function Seo({ title, description, pathname }) {
   let data = useStaticQuery(graphql`
@@ -39,4 +40,4 @@ function Seo({ title, description, pathname }) {
 }
 
 
-export default Seo
+export default Seo;

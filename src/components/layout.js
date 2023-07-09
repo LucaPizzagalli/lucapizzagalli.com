@@ -16,4 +16,4 @@ function Layout({ loop, location, children }) {
 }
 
 
-export default Layout
+export default Layout;

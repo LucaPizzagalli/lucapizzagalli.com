@@ -1,5 +1,6 @@
-import React from "react"
-import Seo from "./seo"
+import React from "react";
+import Seo from "./seo";
+
 
 function HeadTags({ title, description, pathname, children }) {
   return (
@@ -11,4 +12,4 @@ function HeadTags({ title, description, pathname, children }) {
 }
 
 
-export default HeadTags
+export default HeadTags;

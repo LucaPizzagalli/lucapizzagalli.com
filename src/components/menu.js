@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import "../assets/style/menu.css";
 
+
 let navigation = [
   {
     title: "Home",
@@ -25,6 +26,7 @@ let navigation = [
     folder: "about",
   }
 ];
+
 
 function Menu({ location, loop = false, foldable = false, menuTheme="" }) {
   let [isHidden, setIsHidden] = useState(foldable);
@@ -122,4 +124,4 @@ function Menu({ location, loop = false, foldable = false, menuTheme="" }) {
 
 }
 
-export default Menu
+export default Menu;

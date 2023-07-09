@@ -1,7 +1,8 @@
-import React from "react"
+import React from "react";
 
 import Layout from "../components/layout";
 import HeadTags from "../components/head-tags";
+
 
 function NotFoundPage() {
     return (
@@ -16,4 +17,4 @@ function NotFoundPage() {
 export function Head(){
     return <HeadTags title="404: Not found" description="" />;
 }
-export default NotFoundPage
+export default NotFoundPage;

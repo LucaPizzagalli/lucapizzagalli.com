@@ -28,4 +28,4 @@ function IndexPage({ loop }) {
 export function Head(){
   return <HeadTags title="Luca Pizzagalli" description="" />;
 }
-export default IndexPage
+export default IndexPage;

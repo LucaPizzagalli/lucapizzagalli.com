@@ -57,4 +57,4 @@ function BlogPage({ loop }) {
 export function Head(){
   return <HeadTags title="Words" description="" />;
 }
-export default BlogPage
+export default BlogPage;
