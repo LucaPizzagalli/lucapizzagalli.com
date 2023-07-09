@@ -26,7 +26,7 @@ let navigation = [
   }
 ];
 
-function Menu({ location, loop = false, foldable = false }) {
+function Menu({ location, loop = false, foldable = false, menuTheme="" }) {
   let [isHidden, setIsHidden] = useState(foldable);
 
   let folder = location.split('/')[1];
@@ -69,21 +69,14 @@ function Menu({ location, loop = false, foldable = false }) {
 
   if (foldable)
     return (
-      <div key={isHidden} className={isHidden ? 'reverse' : ''} style={{ backgroundColor: "inherit" }}>
-        <div className="menu-half-circle left" />
-        <div className="menu-half-circle right" onClick={() => setIsHidden(false)} />
-        <div className="menu-circle-box" onClick={() => setIsHidden(false)} />
-        <button className="menu-line" onClick={() => setIsHidden(true)}>
-          <div className="menu-inner-line" />
-          <span hidden>Close Menu</span>
-        </button>
-        <div className="menu-text-box"></div>
-        <div className="website-menu">
-          <menu className="slide-in">
+      <div key={isHidden}
+        className={menuTheme + ' website-menu-wrapper ' + (isHidden ? 'reverse' : '')} >
+        <div className="website-menu sliding-text-wrapper">
+          <menu className="sliding-text">
             {navigation.map(element => (
               <li key={element.url}>
                 <Link to={element.url}
-                  style={element.folder === folder ? { color: "var(--highlight-color)" } : {}}
+                  style={element.folder === folder ? { color: "inherit" } : {}}
                 >
                   {element.title}
                 </Link>
@@ -91,6 +84,23 @@ function Menu({ location, loop = false, foldable = false }) {
             ))}
           </menu>
         </div>
+        <button className="menu-circle"
+            onClick={() => setIsHidden(false)}>
+          <div className="menu-half-circle-wrapper"
+            style={{ clipPath: "inset(0 50% 0 0)" }}>
+            <div className="menu-half-circle left-animated"
+              style={{ animationName: "animation-circle-left" }} />
+          </div>
+          <div className="menu-half-circle-wrapper"
+            style={{ clipPath: "inset(0 0 0 50%)" }}>
+            <div className="menu-half-circle right-animated"
+              style={{ animationName: "animation-circle-right" }} />
+          </div>
+        </button>
+        <button className="menu-line" onClick={() => setIsHidden(true)}>
+          <div className="menu-inner-line" />
+          <span hidden>Close Menu</span>
+        </button>
       </div>
     );
 

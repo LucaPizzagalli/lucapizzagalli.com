@@ -10,7 +10,7 @@ let revealOptions = {
   autoPlayMedia: true,
 }
 
-function Deck({ options, children, location, backgroundColor="#111111" }) {
+function Deck({ options, children, location, deckTheme = "" }) {
   useEffect(() => {
     // if (typeof window !== 'undefined') {
     let Reveal = require('reveal.js').default;
@@ -21,12 +21,10 @@ function Deck({ options, children, location, backgroundColor="#111111" }) {
   }, [options]);
   return (
     <>
-      <div className="reveal deck">
+      <div className={'reveal deck ' + deckTheme}>
         <div className="slides">{children}</div>
       </div>
-      <div className="menu-page" style={{ position: "absolute", backgroundColor: backgroundColor}}>
-        <Menu location={location} foldable={true} />
-      </div>
+      <Menu location={location} foldable={true} menuTheme={deckTheme} />
     </>
   );
 }

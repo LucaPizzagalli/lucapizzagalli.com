@@ -3,19 +3,20 @@
     --menu-animation-time: 900ms;
 }
 
+/* Layout */
+
 .website-menu {
-    margin: 0;
-    padding: 0;
     position: absolute;
-    top: 1rem;
-    left: 2rem;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 1rem .5rem 1rem .5rem;
     line-height: 1.6;
 }
 
 @media (max-width: 60em) {
     .website-menu {
-        top: 0;
-        left: .5rem;
+        padding: .1rem .5rem 1rem .5rem;
     }
 }
 
@@ -24,73 +25,74 @@ menu {
     padding: 0;
 }
 
-.menu-page {
-    width: 100%;
+.website-menu-wrapper {
+    top: 0;
+    left: 0;
     margin: 1% 3% 1% 3%;
     position: absolute;
-    top: 3px;
-    left: 3px;
-}
-
-button.menu {
-    width: var(--menu-circle-size);
-    height: var(--menu-circle-size);
+    padding: 3px;
+    width: 100%;
+    border-color: var(--highlight-color);
     color: var(--highlight-color);
-    background-color: transparent;
-    border: 3px solid;
-    border-radius: 50%;
-}
-
-button.menu:hover,
-button.menu:focus,
-button.menu:active {
-    border-color: var(--main-color);
-    background-color: var(--highlight-color);
 }
 
 /* Circle */
 
-.menu-half-circle {
+.menu-circle {
+    position: absolute;
+    top: 0;
+    left: -2%;
     width: var(--menu-circle-size);
     height: var(--menu-circle-size);
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    border-color: inherit;
+}
+
+.menu-half-circle-wrapper {
     position: absolute;
-    top: -3px;
+    top: 0;
     left: 0;
-    border: 3px solid var(--highlight-color);
+    width: 100%;
+    height: 100%;
+    animation: animation-menu-half-circle-wrapper;
+    animation-duration: var(--menu-animation-time);
+    animation-timing-function: steps(1, jump-end);
+    animation-fill-mode: both;
+    border-color: inherit;
+}
+
+@keyframes animation-menu-half-circle-wrapper {
+    0% {
+        z-index: 1;
+    }
+
+    40% {
+        z-index: -1;
+    }
+
+    100% {
+        z-index: -1;
+    }
+}
+
+.menu-half-circle {
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: inherit;
     border-radius: 50%;
     border-bottom-color: transparent;
     border-left-color: transparent;
-}
-
-.left {
-    animation-name: animation-circle-left;
-    animation-duration: var(--menu-animation-time);
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-}
-
-.right {
-    animation-name: animation-circle-right;
     animation-duration: var(--menu-animation-time);
     animation-timing-function: linear;
     animation-fill-mode: both;
 }
 
 @keyframes animation-circle-left {
-    0% {
-        transform: rotate(0.125turn);
-    }
-
-    30% {
-        transform: rotate(1.125turn);
-    }
-
-    100% {
-        transform: rotate(1.125turn);
-    }
-}
-
-@keyframes animation-circle-right {
     0% {
         transform: rotate(0.625turn);
     }
@@ -108,45 +110,31 @@ button.menu:active {
     }
 }
 
-.menu-circle-box {
-    width: calc(var(--menu-circle-size) / 2 + 2px);
-    height: calc(var(--menu-circle-size) + 2px);
-    position: absolute;
-    top: -4px;
-    left: calc(var(--menu-circle-size) / 2 - 1px);
-    background-color: inherit;
-    animation: animation-menu-circle-box;
-    animation-duration: var(--menu-animation-time);
-    animation-timing-function: steps(2, jump-none);
-    animation-fill-mode: both;
-}
-
-@keyframes animation-menu-circle-box {
+@keyframes animation-circle-right {
     0% {
-        opacity: 0;
+        transform: rotate(0.125turn);
     }
 
-    30% {
-        opacity: 1;
+    15% {
+        transform: rotate(0.625turn);
     }
 
     100% {
-        opacity: 1;
+        transform: rotate(0.625turn);
     }
 }
 
 /* Line */
 
 .menu-line {
-    box-sizing: border-box;
-    height: 13px;
     position: absolute;
-    top: -8px;
-    left: calc(var(--menu-circle-size) / 2 - 2px);
-    background-color: inherit;
+    background-color: transparent;
+    top: -5px;
     padding: 0;
     margin: 0;
-    border: 0;
+    height: 13px;
+    border-style: none;
+    border-color: inherit;
     animation: animation-menu-line;
     animation-duration: var(--menu-animation-time);
     animation-timing-function: linear;
@@ -158,46 +146,49 @@ button.menu:active {
     height: 3px;
     width: 100%;
     margin: 5px 0 5px 0;
-    background-color: var(--highlight-color);
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-color: inherit;
 }
 
 @keyframes animation-menu-line {
     0% {
-        left: calc(var(--menu-circle-size) / 2 - 2px);
+        left: calc(-2% + var(--menu-circle-size) / 2 - 2px);
         width: 0;
     }
 
     30% {
-        left: calc(var(--menu-circle-size) / 2 - 2px);
-        width: 8rem;
+        left: calc(-2% + var(--menu-circle-size) / 2 - 2px);
+        width: calc(4% + 5rem);
     }
 
     40% {
-        left: 0;
-        width: 8rem;
+        left: -2%;
+        width: calc(4% + 5rem);
     }
 
     100% {
-        left: 0;
-        width: 8rem;
+        left: -2%;
+        width: calc(4% + 5rem);
     }
 }
 
-/* Slide */
+/* Sliding Text */
 
-.slide-in {
+.sliding-text-wrapper {
     position: absolute;
+    top: 3px; /* same as page border */
+    left: 3px; /* same as page border */
+    z-index: 1;
+    clip-path: inset(0 0 0 -100%);
+    color: inherit;
+}
+
+.sliding-text {
+    color: inherit;
     animation: animation-menu-slide;
     animation-duration: var(--menu-animation-time);
     animation-fill-mode: both;
-}
-
-menu>li>a {
-    text-decoration: underline var(--highlight-color) !important;
-}
-
-menu>li::marker {
-    color: var(--highlight-color) !important;
 }
 
 @keyframes animation-menu-slide {
@@ -212,16 +203,6 @@ menu>li::marker {
     100% {
         transform: translateY(0);
     }
-}
-
-.menu-text-box {
-    width: 15rem;
-    height: 500px;
-    left: 0;
-    position: fixed;
-    transform: translateY(-503px);
-    background-color: inherit;
-    z-index: 1;
 }
 
 .reverse * {
