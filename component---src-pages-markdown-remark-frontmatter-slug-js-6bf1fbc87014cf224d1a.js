@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkluca_pizzagalli_website=self.webpackChunkluca_pizzagalli_website||[]).push([[647],{4927:function(e,t,a){a.r(t);var l=a(7294),n=a(3837),r=a(262);t.default=function(e){let{data:t}=e,{markdownRemark:a}=t,{frontmatter:i,html:c}=a;return l.createElement(n.Z,{location:i.url},l.createElement(r.Z,{title:i.title,description:i.excerpt,lang:"en",meta:[]}),l.createElement("div",{dangerouslySetInnerHTML:{__html:c}}))}}}]);
-//# sourceMappingURL=component---src-pages-markdown-remark-frontmatter-slug-js-6bf1fbc87014cf224d1a.js.map
