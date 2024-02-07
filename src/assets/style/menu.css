@@ -62,31 +62,6 @@ menu {
     border-color: inherit;
 }
 
-.menu-inner-circle {
-    border-style: solid;
-    border-width: calc((var(--menu-circle-size)) / 2 - 3px);
-    border-color: inherit;
-    border-radius: 50%;
-    animation: animation-menu-inner-circle;
-    animation-duration: var(--menu-animation-time);
-    animation-timing-function: steps(1, jump-start);
-    animation-fill-mode: both;
-}
-
-.menu-circle:hover>.menu-inner-circle {
-    visibility: hidden !important;
-}
-
-@keyframes animation-menu-inner-circle {
-    0% {
-        visibility: visible;
-    }
-
-    100% {
-        visibility: hidden;
-    }
-}
-
 .menu-half-circle-wrapper {
     position: absolute;
     top: 0;
@@ -94,31 +69,6 @@ menu {
     width: 100%;
     height: 100%;
     border-color: inherit;
-    animation: animation-menu-half-circle-wrapper;
-    animation-duration: var(--menu-animation-time);
-    animation-timing-function: steps(1, jump-start);
-    animation-fill-mode: both;
-}
-
-.menu-circle:hover>.menu-half-circle-wrapper {
-    visibility: visible !important;
-}
-
-@keyframes animation-menu-half-circle-wrapper {
-    0% {
-        z-index: 1;
-        visibility: hidden;
-    }
-
-    40% {
-        z-index: 1;
-        visibility: visible;
-    }
-
-    100% {
-        z-index: -1;
-        visibility: visible;
-    }
 }
 
 .menu-half-circle {
@@ -210,32 +160,11 @@ menu {
 .menu-inner-line {
     width: 100%;
     border-top-style: solid;
-    border-bottom-style: solid;
     border-color: inherit;
-    animation: animation-menu-inner-line;
-    animation-duration: var(--menu-animation-time);
-    animation-timing-function: steps(1, jump-end);
-    animation-fill-mode: both;
+    height: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 0;
 }
-
-.menu-line:hover>.menu-inner-line {
-    height: 3px !important;
-    border-top-width: 3px !important;
-    border-bottom-width: 0 !important;
-}
-
-@keyframes animation-menu-inner-line {
-    0% {
-        height: 3px;
-        border-top-width: 3px;
-        border-bottom-width: 0;
-    }
-
-    100% {
-        border-style: dashed;
-    }
-}
-
 /* Sliding Text */
 
 .sliding-text-wrapper {
