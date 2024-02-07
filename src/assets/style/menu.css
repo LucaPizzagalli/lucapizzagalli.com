@@ -8,7 +8,7 @@
 .website-menu-wrapper {
     top: 0;
     left: 0;
-    margin: 1% 1% 1% 3%;
+    margin: 1% 3% 1% 3%;
     position: absolute;
     padding: 3px;
     width: 100%;
@@ -22,7 +22,14 @@
     left: 0;
     margin: 0;
     padding: 1rem 0 1rem 0;
+    width: 100%;
     line-height: 1.6;
+}
+
+menu {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
 }
 
 @media (max-width: 60em) {
@@ -31,10 +38,13 @@
     }
 }
 
-menu {
-    margin: 0;
-    padding: 0;
-    list-style-position: inside;
+@media (max-width: 40em) {
+    .website-menu>menu {
+        margin-left: -1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
 
 /* Circle */
@@ -52,30 +62,62 @@ menu {
     border-color: inherit;
 }
 
+.menu-inner-circle {
+    border-style: solid;
+    border-width: calc((var(--menu-circle-size)) / 2 - 3px);
+    border-color: inherit;
+    border-radius: 50%;
+    animation: animation-menu-inner-circle;
+    animation-duration: var(--menu-animation-time);
+    animation-timing-function: steps(1, jump-start);
+    animation-fill-mode: both;
+}
+
+.menu-circle:hover>.menu-inner-circle {
+    visibility: hidden !important;
+}
+
+@keyframes animation-menu-inner-circle {
+    0% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
 .menu-half-circle-wrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    border-color: inherit;
     animation: animation-menu-half-circle-wrapper;
     animation-duration: var(--menu-animation-time);
-    animation-timing-function: steps(1, jump-end);
+    animation-timing-function: steps(1, jump-start);
     animation-fill-mode: both;
-    border-color: inherit;
+}
+
+.menu-circle:hover>.menu-half-circle-wrapper {
+    visibility: visible !important;
 }
 
 @keyframes animation-menu-half-circle-wrapper {
     0% {
         z-index: 1;
+        visibility: hidden;
     }
 
     40% {
-        z-index: -1;
+        z-index: 1;
+        visibility: visible;
     }
 
     100% {
         z-index: -1;
+        visibility: visible;
     }
 }
 
@@ -143,15 +185,6 @@ menu {
     z-index: 2;
 }
 
-.menu-inner-line {
-    height: 3px;
-    width: 100%;
-    margin: 5px 0 5px 0;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-color: inherit;
-}
-
 @keyframes animation-menu-line {
     0% {
         left: calc(-2% + var(--menu-circle-size) / 2 - 2px);
@@ -174,12 +207,41 @@ menu {
     }
 }
 
+.menu-inner-line {
+    width: 100%;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: inherit;
+    animation: animation-menu-inner-line;
+    animation-duration: var(--menu-animation-time);
+    animation-timing-function: steps(1, jump-end);
+    animation-fill-mode: both;
+}
+
+.menu-line:hover>.menu-inner-line {
+    height: 3px !important;
+    border-top-width: 3px !important;
+    border-bottom-width: 0 !important;
+}
+
+@keyframes animation-menu-inner-line {
+    0% {
+        height: 3px;
+        border-top-width: 3px;
+        border-bottom-width: 0;
+    }
+
+    100% {
+        border-style: dashed;
+    }
+}
+
 /* Sliding Text */
 
 .sliding-text-wrapper {
     position: absolute;
-    top: 3px; /* same as page border */
-    left: 3px; /* same as page border */
+    top: 3px;
+    left: 3px;
     z-index: 1;
     clip-path: inset(0 0 0 -100%);
     color: inherit;

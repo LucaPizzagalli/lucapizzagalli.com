@@ -86,8 +86,9 @@ function Menu({ location, loop = false, foldable = false, menuTheme="" }) {
             ))}
           </menu>
         </div>
-        <button className="menu-circle"
+        <button className="menu-circle column"
             onClick={() => setIsHidden(false)}>
+          <div className="menu-inner-circle" />
           <div className="menu-half-circle-wrapper"
             style={{ clipPath: "inset(0 50% 0 0)" }}>
             <div className="menu-half-circle left-animated"
@@ -99,7 +100,7 @@ function Menu({ location, loop = false, foldable = false, menuTheme="" }) {
               style={{ animationName: "animation-circle-right" }} />
           </div>
         </button>
-        <button className="menu-line" onClick={() => setIsHidden(true)}>
+        <button className="menu-line column" onClick={() => setIsHidden(true)}>
           <div className="menu-inner-line" />
           <span hidden>Close Menu</span>
         </button>

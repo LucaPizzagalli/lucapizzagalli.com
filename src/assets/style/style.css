@@ -23,13 +23,13 @@ html {
   box-sizing: inherit;
 }
 
-@media screen and (max-width: 64rem) {
+@media (max-width: 60rem) {
   html {
     font-size: 17px;
   }
 }
 
-@media screen and (max-width: 48rem) {
+@media (max-width: 40rem) {
   html {
     font-size: 16px;
   }
@@ -77,12 +77,6 @@ h1 {
   text-align: center;
 }
 
-@media (max-width: 60em) {
-  h1 {
-    font-size: 3rem;
-  }
-}
-
 h2 {
   font-size: 2rem;
   margin: 5rem auto 2rem auto;
@@ -91,6 +85,18 @@ h2 {
 }
 
 @media (max-width: 60em) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 40em) {
+  h1 {
+    font-size: 3rem;
+  }
   h2 {
     font-size: 1.5rem;
   }
