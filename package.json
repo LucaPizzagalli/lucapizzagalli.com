@@ -5,10 +5,10 @@
   "version": "0.2.0",
   "author": "Luca Pizzagalli",
   "dependencies": {
-    "gatsby": "^5.11.0",
+    "gatsby": "^5.15.0",
     "gatsby-plugin-catch-links": "^5.11.0",
-    "gatsby-plugin-feed": "^5.11.0",
     "gatsby-plugin-goatcounter": "^0.4.0",
+    "gatsby-plugin-feed": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-sharp": "^5.11.0",
@@ -19,13 +19,13 @@
     "gatsby-transformer-remark": "^6.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
     "gatsby-transformer-yaml": "^5.11.0",
-    "katex": "^0.16.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "reveal.js": "^4.5.0"
+    "katex": "^0.16.22",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "reveal.js": "^5.2.1"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^6.3.0"
   },
   "keywords": [
     "Luca Pizzagalli",
