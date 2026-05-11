@@ -1,5 +1,4 @@
 import Menu from "./Menu";
-import "./Layout.css";
 
 export default function Layout(props) {
   return (

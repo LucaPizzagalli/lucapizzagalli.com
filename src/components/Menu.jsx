@@ -1,5 +1,5 @@
 import { A, useLocation, useNavigate } from "@solidjs/router";
-import { Show } from "solid-js";
+import { Show, createSignal } from "solid-js";
 import "./Menu.css";
 import {
   INNER_FOLDER,
@@ -19,6 +19,7 @@ const navigation = [
 export default function Menu(props) {
   const location = useLocation();
   const navigate = useNavigate();
+  const [isHidden, setIsHidden] = createSignal(props.foldable);
 
   const isLoopAware = () => !props.outsideLoop && location.pathname === "/loop";
 
@@ -33,30 +34,83 @@ export default function Menu(props) {
     else setLoopInner(URL_TO_INNER[item.url] ?? "home");
   };
 
+  const renderItem = (element) => {
+    const style = () =>
+      element.folder === activeFolder()
+        ? { color: "var(--menu-active-color, var(--highlight-color))" }
+        : {};
+    return (
+      <li>
+        <Show
+          when={isLoopAware()}
+          fallback={<A href={element.url} style={style()}>{element.title}</A>}
+        >
+          <a href={element.url} onClick={handleClick(element)} style={style()}>
+            {element.title}
+          </a>
+        </Show>
+      </li>
+    );
+  };
+
+  if (props.foldable) {
+    // `Show keyed` remounts the wrapper whenever the value flips, which
+    // restarts the CSS animations (open vs close). A plain class toggle would
+    // not, because the animation has already played on the existing element.
+    return (
+      <Show when={isHidden() ? "closed" : "open"} keyed>
+        {(state) => (
+          <div
+            class={
+              (props.menuTheme || "") +
+              " website-menu-wrapper " +
+              (state === "closed" ? "reverse" : "")
+            }
+          >
+            <div class="website-menu sliding-text-wrapper">
+              <menu class="sliding-text">{navigation.map(renderItem)}</menu>
+            </div>
+            <button
+              class="menu-circle column"
+              onClick={() => setIsHidden(false)}
+              aria-label="open menu"
+            >
+              <div class="menu-inner-circle" />
+              <div
+                class="menu-half-circle-wrapper"
+                style={{ "clip-path": "inset(0 50% 0 0)" }}
+              >
+                <div
+                  class="menu-half-circle left-animated"
+                  style={{ "animation-name": "animation-circle-left" }}
+                />
+              </div>
+              <div
+                class="menu-half-circle-wrapper"
+                style={{ "clip-path": "inset(0 0 0 50%)" }}
+              >
+                <div
+                  class="menu-half-circle right-animated"
+                  style={{ "animation-name": "animation-circle-right" }}
+                />
+              </div>
+            </button>
+            <button
+              class="menu-line column"
+              onClick={() => setIsHidden(true)}
+              aria-label="close menu"
+            >
+              <div class="menu-inner-line" />
+            </button>
+          </div>
+        )}
+      </Show>
+    );
+  }
+
   return (
     <div class="website-menu">
-      <menu>
-        {navigation.map((element) => {
-          const style = () =>
-            element.folder === activeFolder()
-              ? { color: "var(--highlight-color)" }
-              : {};
-          return (
-            <li>
-              <Show
-                when={isLoopAware()}
-                fallback={
-                  <A href={element.url} style={style()}>{element.title}</A>
-                }
-              >
-                <a href={element.url} onClick={handleClick(element)} style={style()}>
-                  {element.title}
-                </a>
-              </Show>
-            </li>
-          );
-        })}
-      </menu>
+      <menu>{navigation.map(renderItem)}</menu>
     </div>
   );
 }

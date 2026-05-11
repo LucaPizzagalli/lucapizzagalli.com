@@ -4,6 +4,7 @@ import { MetaProvider } from "@solidjs/meta";
 import { Suspense } from "solid-js";
 import FilterDefs from "./components/FilterDefs";
 import "./style.css";
+import "./components/Layout.css";
 
 export default function App() {
   return (

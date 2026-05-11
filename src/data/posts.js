@@ -1,5 +1,10 @@
 export const posts = [
   {
+    url: "/words/the-indexing-problem",
+    title: "The Indexing Problem",
+    date: "2026-05-11",
+  },
+  {
     url: "/words/two-kids",
     title: "Two kids",
     date: "2023-07-01",
