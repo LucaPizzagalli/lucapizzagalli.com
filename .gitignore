@@ -55,9 +55,11 @@ typings/
 # dotenv environment variables file
 .env
 
-# gatsby files
-.cache/
-public
+# solidstart / vinxi
+.output/
+.vinxi/
+dist/
+app.config.timestamp_*.js
 
 # Mac files
 .DS_Store
