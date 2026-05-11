@@ -166,6 +166,12 @@ li::marker {
   padding: 0.3rem;
 }
 
+/* Buttons */
+
+button {
+  cursor: pointer;
+}
+
 /* Pictures */
 
 figure {

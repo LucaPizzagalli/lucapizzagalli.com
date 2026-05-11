@@ -81,6 +81,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: { maxWidth: 2000, showCaptions: true },
           },
+          `gatsby-remark-copy-linked-files`,
           `gatsby-plugin-catch-links`,
         ],
       },
@@ -155,13 +156,6 @@ module.exports = {
       },
     },
 
-    // Analytics
-    {
-      resolve: `gatsby-plugin-goatcounter`,
-      options: {
-        code: 'lucapizzagalli',
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

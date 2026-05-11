@@ -7,11 +7,11 @@
   "dependencies": {
     "gatsby": "^5.15.0",
     "gatsby-plugin-catch-links": "^5.11.0",
-    "gatsby-plugin-goatcounter": "^0.4.0",
     "gatsby-plugin-feed": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-sharp": "^5.11.0",
+    "gatsby-remark-copy-linked-files": "^6.16.0",
     "gatsby-remark-images": "^7.11.0",
     "gatsby-remark-katex": "^7.11.0",
     "gatsby-source-filesystem": "^5.11.0",
@@ -19,9 +19,10 @@
     "gatsby-transformer-remark": "^6.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
     "gatsby-transformer-yaml": "^5.11.0",
-    "katex": "^0.16.22",
+    "katex": "^0.16.45",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
+    "react-katex": "^3.1.0",
     "reveal.js": "^5.2.1"
   },
   "devDependencies": {
