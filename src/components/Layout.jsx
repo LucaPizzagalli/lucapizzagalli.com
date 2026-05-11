@@ -5,7 +5,7 @@ export default function Layout(props) {
   return (
     <div class="page">
       <main>{props.children}</main>
-      <Menu />
+      <Menu outsideLoop={props.outsideLoop} />
     </div>
   );
 }
