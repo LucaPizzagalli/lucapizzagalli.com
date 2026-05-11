@@ -6,6 +6,8 @@
   "type": "module",
   "author": "Luca Pizzagalli",
   "scripts": {
+    "predev": "node scripts/build-rss.js",
+    "prebuild": "node scripts/build-rss.js",
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
