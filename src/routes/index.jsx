@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
 export default function Home() {
-  const strike = { textDecoration: "line-through" };
+  const strike = { "text-decoration": "line-through" };
   return (
     <>
       <SEO />

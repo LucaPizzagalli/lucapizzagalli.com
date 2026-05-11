@@ -7,7 +7,7 @@ export default function About() {
       <SEO title="Contacts" />
       <Layout>
         <h1>About me</h1>
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around", margin: "0 auto 8rem auto", width: "100%", maxWidth: "48rem" }}>
+        <div style={{ display: "flex", "flex-wrap": "wrap", "justify-content": "space-around", margin: "0 auto 8rem auto", width: "100%", "max-width": "48rem" }}>
           <a href="/curriculumLucaPizzagalli.pdf" target="_blank" rel="noopener noreferrer">Curriculum</a>
           <a href="https://www.linkedin.com/in/luca-pizzagalli" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/LucaPizzagalli" target="_blank" rel="noopener noreferrer">GitHub</a>

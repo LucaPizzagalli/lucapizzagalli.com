@@ -180,7 +180,7 @@ figure {
 }
 
 img {
-  /* width: min(54rem, 100%); */
+  width: min(54rem, 100%);
   border-style: none;
 }
 
