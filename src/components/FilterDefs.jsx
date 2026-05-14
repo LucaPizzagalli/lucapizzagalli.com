@@ -1,5 +1,5 @@
 // Inline <svg> filter defs referenced by the --green-filter / --noise-filter /
-// --noise2-filter CSS variables. Lives in the DOM at all times so any page can
+// --distortion-filter CSS variables. Lives in the DOM at all times so any page can
 // pick up the filter via `filter: var(--noise-filter)` etc.
 //
 // Safari does not resolve fragment identifiers inside `data:` URLs, so the
@@ -30,7 +30,7 @@ export default function FilterDefs() {
         <feBlend in2="SourceGraphic" mode="hue" />
       </filter>
 
-      <filter id="noise-filter" x="-10%" y="-10%" width="120%" height="120%">
+      <filter id="distortion-filter" x="-10%" y="-10%" width="120%" height="120%">
         <feTurbulence baseFrequency="0.01 0.4" result="turbulence" numOctaves="2" />
         <feDisplacementMap
           in="SourceGraphic"
@@ -41,7 +41,18 @@ export default function FilterDefs() {
         />
       </filter>
 
-      <filter id="noise2-filter">
+      <filter id="distortion-filter-light" x="-4%" y="-4%" width="108%" height="108%">
+        <feTurbulence baseFrequency="0.01 0.4" result="turbulence" numOctaves="2" />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="turbulence"
+          scale="5"
+          xChannelSelector="R"
+          yChannelSelector="R"
+        />
+      </filter>
+
+      <filter id="noise-filter">
         <feTurbulence baseFrequency="0.60,0.90" />
         <feColorMatrix
           type="matrix"

@@ -54,22 +54,19 @@ export default function Menu(props) {
   };
 
   if (props.foldable) {
-    // `Show keyed` remounts the wrapper whenever the value flips, which
-    // restarts the CSS animations (open vs close). A plain class toggle would
-    // not, because the animation has already played on the existing element.
     return (
       <Show when={isHidden() ? "closed" : "open"} keyed>
         {(state) => (
           <div
             class={
               (props.menuTheme || "") +
-              " website-menu-wrapper " +
+              " nav-wrapper " +
               (state === "closed" ? "reverse" : "")
             }
           >
-            <div class="website-menu sliding-text-wrapper">
-              <menu class="sliding-text">{navigation.map(renderItem)}</menu>
-            </div>
+            <nav class="sliding-text-wrapper">
+              <ul class="sliding-text">{navigation.map(renderItem)}</ul>
+            </nav>
             <button
               class="menu-circle column"
               onClick={() => setIsHidden(false)}
@@ -109,8 +106,8 @@ export default function Menu(props) {
   }
 
   return (
-    <div class="website-menu">
-      <menu>{navigation.map(renderItem)}</menu>
-    </div>
+    <nav>
+      <ul>{navigation.map(renderItem)}</ul>
+    </nav>
   );
 }

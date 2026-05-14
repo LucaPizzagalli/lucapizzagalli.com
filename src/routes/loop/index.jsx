@@ -35,11 +35,12 @@ function LoopChrome(props) {
   return (
     <Layout outsideLoop={props.level === 0}>
       <h1>My website</h1>
-      <p>{TEXTS[idx()]}</p>
+      <p style={{width: "100%", "max-width": "48rem", "margin-bottom": "1.3rem"}}>{TEXTS[idx()]}</p>
       <div
         style={{
+          "align-self": "stretch",
           border: "3px solid var(--highlight-color)",
-          ...(idx() === 15 ? { filter: "var(--noise-filter)" } : {}),
+          ...(idx() === 15 ? { filter: "var(--distortion-filter)" } : {}),
         }}
       >
         {props.children}

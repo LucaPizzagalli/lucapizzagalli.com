@@ -25,7 +25,7 @@ export const things = [
     technologies: ["C"],
   },
   {
-    url: "/things/chemotaxis",
+    url: "https://github.com/LucaPizzagalli/chemotaxis-pathfinding",
     coverTitle: "Chemotaxis simulation",
     previewImage: "/things/chemotaxis/images/chemotaxisCover.png",
     altText: "Simulation of bacteria forming clusters.",

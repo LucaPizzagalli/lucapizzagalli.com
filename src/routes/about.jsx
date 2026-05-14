@@ -5,14 +5,14 @@ export default function About() {
   return (
     <>
       <SEO title="Contacts" />
-      <Layout>
+      <Layout class="words">
         <h1>About me</h1>
-        <div style={{ display: "flex", "flex-wrap": "wrap", "justify-content": "space-around", margin: "0 auto 8rem auto", width: "100%", "max-width": "48rem" }}>
-          <a href="/curriculumLucaPizzagalli.pdf" target="_blank" rel="noopener noreferrer">Curriculum</a>
-          <a href="https://www.linkedin.com/in/luca-pizzagalli" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/LucaPizzagalli" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <div style={{ "margin-bottom": "8rem", width: "100%", "max-width": "48rem", "flex-direction": "row", "flex-wrap": "wrap", "justify-content": "space-around" }}>
+          <a href="/curriculumLucaPizzagalli.pdf" target="_blank" style={{"flex-grow": 0}}>Curriculum</a>
+          <a href="https://www.linkedin.com/in/luca-pizzagalli" target="_blank" style={{"flex-grow": 0}}>LinkedIn</a>
+          <a href="https://github.com/LucaPizzagalli" target="_blank" style={{"flex-grow": 0}}>GitHub</a>
         </div>
-        <p>Or, you can contact me at <a href="mailto:web@lucapizzagalli.com">web@lucapizzagalli.com</a>.</p>
+        <p>Or, you can contact me at <a style={{"display": "inline"}} href="mailto:web@lucapizzagalli.com">web@lucapizzagalli.com</a>.</p>
       </Layout>
     </>
   );

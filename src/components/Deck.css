@@ -69,12 +69,40 @@
   margin: 0 0 0 1em;
 }
 
-.reveal img,/* Ensure certain elements are never larger than the slide itself */
+/* === Slide CSS firewall ===
+   Insulates the slides from site-level CSS. The `all: revert` rule resets
+   author-set properties on every slide-internal element back to UA defaults
+   (non-inherited) or the inherited value, blocking wildcard rules like
+   `div, section, ul, ... { display: flex }` in style.css from bleeding in.
+   Reveal.js's own rules and the specific snapshot rules below have higher
+   specificity and still apply on top. Snapshot taken from commit a69985d. */
+
+.reveal * {
+  all: revert;
+}
+
+.reveal .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.reveal .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reveal img,
 .reveal video,
+.reveal svg,
 .reveal iframe {
-  /* override the global `img { width: min(54rem, 100%) }` cap from style.css
-     so deck images render at their natural size, capped to the slide */
+  display: block;
   width: auto;
+  height: auto;
   max-width: 95%;
   max-height: 95%;
   border-style: none !important;

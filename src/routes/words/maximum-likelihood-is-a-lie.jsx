@@ -10,7 +10,7 @@ export default function MaximumLikelihoodIsALie() {
   return (
     <>
       <SEO title="Maximum Likelihood is a Lie" />
-      <Layout>
+      <Layout class="words">
         <h1>Maximum Likelihood is a Lie.</h1>
 
         <p>

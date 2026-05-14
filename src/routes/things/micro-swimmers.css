@@ -14,7 +14,7 @@
 
 /* For the foldable menu wrapper on a moseppia deck, paint only the active
    menu item gold (the others inherit the wrapper's regular green). */
-.moseppia.website-menu-wrapper {
+.moseppia.nav-wrapper {
     --menu-active-color: var(--moseppia-highlight-color);
 }
 
@@ -129,7 +129,7 @@
 
 /* Navigation controls */
 
-.moseppia.website-menu-wrapper {
+.moseppia.nav-wrapper {
     border-color: var(--moseppia-highlight-color);
     color: var(--moseppia-highlight-color);
 }

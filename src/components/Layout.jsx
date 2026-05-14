@@ -3,7 +3,7 @@ import Menu from "./Menu";
 export default function Layout(props) {
   return (
     <div class="page">
-      <main>{props.children}</main>
+      <main class={props.class}>{props.children}</main>
       <Menu outsideLoop={props.outsideLoop} />
     </div>
   );

@@ -12,34 +12,36 @@ function Card(props) {
   const isLoopWebsiteCard = () =>
     t.url === "/loop" && location.pathname === "/loop";
 
-  const innerLink = (
-    <>
-      <img src={t.previewImage} alt={t.altText} style={{ "margin-bottom": "2rem" }} />
-      <h2 class="internal-text">{t.coverTitle}</h2>
-    </>
-  );
 
   return (
-    <section class="card">
+    <article class="card">
       <Show
         when={isLoopWebsiteCard()}
         fallback={
-          <Dynamic component={t.external ? "a" : A} href={t.url}>
-            {innerLink}
-          </Dynamic>
+          <>
+            <Dynamic component={t.external ? "a" : A} href={t.url}>
+              <img src={t.previewImage} alt={t.altText} />
+            </Dynamic>
+            <Dynamic component={t.external ? "a" : A} href={t.url}>
+              <h2 style={{ "margin": "0 2rem 0 2rem", "align-self": "flex-start" }}>{t.coverTitle}</h2>
+            </Dynamic>
+          </>
         }
       >
         <a href="/loop" onClick={(e) => { e.preventDefault(); pushLoop(); }}>
-          {innerLink}
+          <img src={t.previewImage} alt={t.altText} />
+        </a>
+        <a href="/loop" onClick={(e) => { e.preventDefault(); pushLoop(); }}>
+          <h2 style={{ "margin": "0 2rem 0 2rem", "align-self": "flex-start" }}>{t.coverTitle}</h2>
         </a>
       </Show>
-      <p class="internal-text" style={{ "flex-grow": 1 }}>{t.excerpt}</p>
-      <div style={{ display: "flex", "flex-wrap": "wrap", "align-items": "center" }}>
+      <p style={{ "margin": "0 2rem 0 2rem", "flex-grow": 1 }}>{t.excerpt}</p>
+      <div class="row">
         {t.technologies.map((tech) => <div class="chip">{tech}</div>)}
         <div style={{ "flex-grow": 1 }} />
         {t.github && <a href={t.github} style={{ margin: "1rem" }}>GitHub</a>}
       </div>
-    </section>
+    </article>
   );
 }
 
