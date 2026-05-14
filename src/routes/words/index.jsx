@@ -3,11 +3,11 @@ import Layout from "../../components/Layout";
 import SEO from "../../components/SEO";
 import { posts } from "../../data/posts";
 
-export default function Words() {
+export default function Words(props) {
   return (
     <>
       <SEO title="Words" />
-      <Layout class="words">
+      <Layout class="words" setPage={props.setPage}>
         <h1>Words</h1>
         <p>I wrote something once. Let's call it a blog.</p>
         <ul>
@@ -17,7 +17,7 @@ export default function Words() {
         </ul>
         <p>
           If you want to receive the new posts I will (not) write,
-          here you have a <a href="/rss.xml" style={{"display": "inline"}}>RSS feed</a> and a <a href="/words/newsletter.html"style={{"display": "inline"}}>newsletter</a>.
+          here you have a <a href="/rss.xml" style={{"display": "inline"}}>RSS feed</a> and a <a href="/words/newsletter" style={{"display": "inline"}}>newsletter</a>.
         </p>
       </Layout>
     </>

@@ -20,6 +20,10 @@ html {
   background-color: var(--base-color);
 }
 
+button, input {
+  all: unset;
+}
+
 *,
 *:before,
 *:after {
@@ -28,7 +32,7 @@ html {
   padding: 0;
 }
 
-div, main, section, article, header, footer, menu, nav, ul, table, tbody, thead, tr, td, fieldset, button, select, a, img {
+div, main, section, article, header, footer, menu, nav, ul, table, tbody, thead, tr, td, form, fieldset, button, select, a, img {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -193,10 +197,38 @@ a:active {
   padding: 0.3rem;
 }
 
-/* Buttons */
+::selection {
+  background-color: var(--highlight-color);
+  color: #000000;
+}
+
+/* Forms */
+
+form {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
 
 button {
   cursor: pointer;
+}
+button:focus-visible {
+  text-decoration: underline var(--highlight-color);
+  text-underline-offset: .2rem;
+}
+
+input {
+  background-color: #333333;
+  padding: .4rem;
+  cursor: text;
+  user-select: text;
+}
+input:focus {
+  outline: 2px solid var(--highlight-color);
 }
 
 /* Pictures */

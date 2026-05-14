@@ -1,0 +1,7 @@
+name = "lp-newsletter"
+main = "src/index.js"
+compatibility_date = "2025-05-01"
+
+[[kv_namespaces]]
+binding = "SUBSCRIBERS"
+id = "d94b184676764390bc83e64870ca7a49"

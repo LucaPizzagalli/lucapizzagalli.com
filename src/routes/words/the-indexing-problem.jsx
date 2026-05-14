@@ -24,10 +24,11 @@ export default function TheIndexingProblemPage() {
           </figure>
           <div style={{flex: "1 1 60%"}}>
             <p>
-              Imagine a two-dimensional universe invariant under rotations of <Math eq={String.raw`\pi/3`} />. On the surface of this circular world live 6 conscious entities, exactly identical in every aspect. Above each entity is a lamp, currently off.
+              Imagine a two-dimensional universe invariant under rotations of <Math eq={String.raw`\pi/3`} />. On the surface of a circular world live 6 conscious entities, exactly identical in every aspect. Above each entity is a lamp, currently off.
             </p>
             <p>
               One thing only breaks the symmetry: One of the lamps - let's call it the North lamp - contains a countdown. When the countdown will reach <Math eq="t=0" />, this and only this lamp will turn on.
+              But all lamps are opaques so the North lamp is visually indistinguishable form the others until <Math eq="t=0" />.
             </p>
             <p>
               Each entity has perfect and complete objective knowledge about universe, except for the internal state of the entities brains (to avoid infinite recursion). They know teh physical laws governing the universe and the exact position and state of every atom outside their brains, including the North lamp and its timer. They also know that all 6 brains are identical, and that these brains act as pure observers (they absorb inputs but emit no outputs to the environment), allowing them to perfectly simulate the evolution of the universe outside the skulls.

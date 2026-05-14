@@ -1,7 +1,7 @@
-import { onMount, Show } from "solid-js";
+import { Show, createSignal } from "solid-js";
+import { useNavigate } from "@solidjs/router";
 import { Dynamic } from "solid-js/web";
 import Layout from "../../components/Layout";
-import { loopInner, loopLevel, resetLoop } from "../../lib/loopState";
 import IndexPage from "../index";
 import ThingsPage from "../things/index";
 import WordsPage from "../words/index";
@@ -28,42 +28,38 @@ const TEXTS = [
   "Maybe if I restart it...",
 ];
 
-const INNER = { home: IndexPage, things: ThingsPage, words: WordsPage, about: AboutPage };
+const INNER = { "": IndexPage, things: ThingsPage, words: WordsPage, about: AboutPage };
 
-function LoopChrome(props) {
-  const idx = () => props.level % TEXTS.length;
+function LoopLevel(props) {
+  const navigate = useNavigate();
+  if (props.level > 36) {
+    navigate("/the-void");
+    return null;
+  }
+  const [page, setPage] = createSignal("");
+  const idx = props.level % TEXTS.length;
   return (
-    <Layout outsideLoop={props.level === 0}>
+    <Layout setPage={props.setPage}>
       <h1>My website</h1>
-      <p style={{width: "100%", "max-width": "48rem", "margin-bottom": "1.3rem"}}>{TEXTS[idx()]}</p>
+      <p style={{ width: "100%", "max-width": "48rem", "margin-bottom": "1.3rem" }}>{TEXTS[idx]}</p>
       <div
         style={{
           "align-self": "stretch",
           border: "3px solid var(--highlight-color)",
-          ...(idx() === 15 ? { filter: "var(--distortion-filter)" } : {}),
+          ...(idx === 15 ? { filter: "var(--distortion-filter)" } : {}),
         }}
       >
-        {props.children}
+        <Show
+          when={page() === "loop"}
+          fallback={<Dynamic component={INNER[page()] || IndexPage} setPage={setPage} />}
+        >
+          <LoopLevel level={props.level + 1} setPage={setPage} />
+        </Show>
       </div>
     </Layout>
   );
 }
 
-function InnerPage() {
-  return <Dynamic component={INNER[loopInner()] || IndexPage} />;
-}
-
-function NestedLoop(props) {
-  return (
-    <LoopChrome level={props.level}>
-      <Show when={props.level < loopLevel()} fallback={<InnerPage />}>
-        <NestedLoop level={props.level + 1} />
-      </Show>
-    </LoopChrome>
-  );
-}
-
-export default function LoopRoute() {
-  onMount(resetLoop);
-  return <NestedLoop level={0} />;
+export default function MyWebsite() {
+  return <LoopLevel level={0} />;
 }

@@ -47,7 +47,7 @@ src/
     things.js          project cards on /things
     posts.js           blog posts on /words (also feeds rss.xml)
   lib/
-    loopState.js       signals backing the recursive /loop joke
+    loopContext.js       signals backing the recursive /loop joke
   routes/
     index.jsx, about.jsx, the-void.jsx, [...404].jsx
     things/            listing + reveal.js decks (bordir, micro-swimmers)
@@ -60,3 +60,19 @@ scripts/build-rss.js   regenerates public/rss.xml from src/data/posts.js
 
 Posts are written as Solid components — there is no markdown pipeline. Math
 uses KaTeX via the `<Math>` component; slide decks use reveal.js via `<Deck>`.
+
+## Newsletter
+
+The `/words/newsletter` form posts to a Cloudflare Worker (`worker/`) that
+stores each address in a KV namespace. One email per key, timestamp as value.
+
+List subscribers:
+
+```sh
+cd worker
+npx wrangler login
+npm run list      # JSON: keys (emails) with metadata
+npm run export    # plain text, one email per line (needs jq)
+```
+
+Or browse the namespace in the Cloudflare dashboard under Workers & Pages → KV.

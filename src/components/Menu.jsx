@@ -1,13 +1,6 @@
-import { A, useLocation, useNavigate } from "@solidjs/router";
+import { A, useLocation } from "@solidjs/router";
 import { Show, createSignal } from "solid-js";
 import "./Menu.css";
-import {
-  INNER_FOLDER,
-  URL_TO_INNER,
-  loopInner,
-  loopLevel,
-  setLoopInner,
-} from "../lib/loopState";
 
 const navigation = [
   { title: "Home", url: "/", folder: "" },
@@ -18,20 +11,13 @@ const navigation = [
 
 export default function Menu(props) {
   const location = useLocation();
-  const navigate = useNavigate();
   const [isHidden, setIsHidden] = createSignal(props.foldable);
 
-  const isLoopAware = () => !props.outsideLoop && location.pathname === "/loop";
-
-  const activeFolder = () => {
-    if (isLoopAware()) return INNER_FOLDER[loopInner()] ?? "";
-    return location.pathname.split("/")[1] || "";
-  };
+  const activeFolder = () => location.pathname.split("/")[1] || "";
 
   const handleClick = (item) => (e) => {
     e.preventDefault();
-    if (loopLevel() >= 36) navigate("/the-void");
-    else setLoopInner(URL_TO_INNER[item.url] ?? "home");
+    props.setPage(item.folder);
   };
 
   const renderItem = (element) => {
@@ -42,7 +28,7 @@ export default function Menu(props) {
     return (
       <li>
         <Show
-          when={isLoopAware()}
+          when={props.setPage}
           fallback={<A href={element.url} style={style()}>{element.title}</A>}
         >
           <a href={element.url} onClick={handleClick(element)} style={style()}>

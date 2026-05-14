@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
-export default function About() {
+export default function About(props) {
   return (
     <>
       <SEO title="Contacts" />
-      <Layout class="words">
+      <Layout class="words" setPage={props.setPage}>
         <h1>About me</h1>
         <div style={{ "margin-bottom": "8rem", width: "100%", "max-width": "48rem", "flex-direction": "row", "flex-wrap": "wrap", "justify-content": "space-around" }}>
           <a href="/curriculumLucaPizzagalli.pdf" target="_blank" style={{"flex-grow": 0}}>Curriculum</a>

@@ -1,12 +1,12 @@
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
-export default function Home() {
+export default function Home(props) {
   const strike = { "text-decoration": "line-through" };
   return (
     <>
       <SEO />
-      <Layout class="words">
+      <Layout class="words" setPage={props.setPage}>
         <h1>Hello.</h1>
         <p>I'm Luca.</p>
         <p>

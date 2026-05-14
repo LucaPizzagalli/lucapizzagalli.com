@@ -34,7 +34,7 @@ export const things = [
     github: "https://github.com/LucaPizzagalli/chemotaxis-pathfinding",
   },
   {
-    url: "/loop",
+    url: "/this-same-website",
     coverTitle: "This same website",
     previewImage: "/things/website/images/websiteCover.png",
     altText: "This same website.",
