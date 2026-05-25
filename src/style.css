@@ -22,17 +22,18 @@ html {
 
 button, input {
   all: unset;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-div, main, section, article, header, footer, menu, nav, ul, table, tbody, thead, tr, td, form, fieldset, button, select, a, img {
+div, main, section, article, details, header, footer, menu, nav, ul, table, tbody, thead, tr, td, form, fieldset, button, select, a, figure, img {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -118,11 +119,17 @@ h2 {
   font-size: 2rem;
   text-align: center;
 }
+h1 + h2 {
+  margin-top: 0;
+}
 .words h2 {
   margin-top: 5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.8rem;
   font-size: 2rem;
   max-width: 52rem;
+}
+.words h1 + h2 {
+  margin-top: 0;
 }
 
 @media (max-width: 60em) {
@@ -180,6 +187,9 @@ a {
   text-decoration: underline var(--highlight-color);
   text-underline-offset: .2rem;
 }
+p>a {
+  display: inline;
+}
 
 a:visited {
   color: var(--main-color);
@@ -200,6 +210,61 @@ a:active {
 ::selection {
   background-color: var(--highlight-color);
   color: #000000;
+}
+
+/* Pictures */
+
+img, video, svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+figure {
+  gap: 1rem;
+}
+
+figcaption {
+  color: var(--highlight-color);
+  font-style: italic;
+}
+
+/* Other */
+
+details {
+  margin-top: 3rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+details>div {
+  border: 3px solid var(--highlight-color);
+  padding: 2rem;
+}
+
+summary {
+  text-decoration: underline var(--highlight-color);
+  text-underline-offset: .2rem;
+  cursor: pointer;
+}
+.words summary {
+  width: 100%;
+  max-width: 44rem;
+}
+
+section.weird {
+  max-width: 48rem;
+  margin: 0 auto 1.3rem auto;
+  border: 3px solid var(--highlight-color);
+  padding: 2rem;
+}
+
+blockquote {
+  border-left: 3px solid var(--highlight-color);
+  padding-left: 1rem;
+  margin: 0 auto 1.3rem auto;
+  max-width: 44rem;
 }
 
 /* Forms */
@@ -229,52 +294,6 @@ input {
 }
 input:focus {
   outline: 2px solid var(--highlight-color);
-}
-
-/* Pictures */
-
-img, video, svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-style: none;
-}
-
-figcaption {
-  color: var(--highlight-color);
-  font-style: italic;
-}
-
-/* Other */
-
-details {
-  max-width: 48rem;
-  margin: 0 auto 1.3rem auto;
-}
-
-details>section {
-  border: 3px solid var(--highlight-color);
-  padding: 2rem;
-}
-
-summary {
-  text-decoration: underline var(--highlight-color);
-  text-underline-offset: .2rem;
-  cursor: pointer;
-}
-
-section.weird {
-  max-width: 48rem;
-  margin: 0 auto 1.3rem auto;
-  border: 3px solid var(--highlight-color);
-  padding: 2rem;
-}
-
-blockquote {
-  border-left: 3px solid var(--highlight-color);
-  padding-left: 1rem;
-  margin: 0 auto 1.3rem auto;
-  max-width: 44rem;
 }
 
 /* a.citation{
@@ -314,16 +333,25 @@ pre {
 }
 
 .responsive-row {
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-self: center;
+}
+@media (min-width: 1100px) {
+  .responsive-row {
+    flex-direction: row;
+    flex-direction: var(--row-direction, row);
+  }
 }
 .responsive-row > * {
-  flex: 1;
+  min-width: 0; 
 }
-@media (max-width: 1100px) {
-  .responsive-row > * {
-    flex-basis: auto;
-    width: 100%;
+.responsive-row > figure {
+  align-self: center;
+  width: 100%;
+  max-width: 30rem;
+}
+@media (min-width: 1100px) {
+  .responsive-row > div:has(p) {
+    align-self: flex-start;
   }
 }
 

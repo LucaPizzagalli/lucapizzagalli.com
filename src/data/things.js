@@ -6,6 +6,7 @@ export const things = [
     altText: "Input - model intermediate output - postprocessing",
     excerpt: "Novel model architecture for instance panoptic segmentation.",
     technologies: ["Python", "Pytorch"],
+    github: "https://github.com/LucaPizzagalli/bordir",
   },
   {
     url: "/things/micro-swimmers",

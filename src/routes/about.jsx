@@ -12,7 +12,7 @@ export default function About(props) {
           <a href="https://www.linkedin.com/in/luca-pizzagalli" target="_blank" style={{"flex-grow": 0}}>LinkedIn</a>
           <a href="https://github.com/LucaPizzagalli" target="_blank" style={{"flex-grow": 0}}>GitHub</a>
         </div>
-        <p>Or, you can contact me at <a style={{"display": "inline"}} href="mailto:web@lucapizzagalli.com">web@lucapizzagalli.com</a>.</p>
+        <p>Or, you can contact me at <a href="mailto:web@lucapizzagalli.com">web@lucapizzagalli.com</a>.</p>
       </Layout>
     </>
   );
