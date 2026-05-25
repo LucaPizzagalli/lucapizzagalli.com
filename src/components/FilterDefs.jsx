@@ -18,7 +18,7 @@ export default function FilterDefs() {
       >
         <feColorMatrix
           type="matrix"
-          values=" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0s 0 0 0 1 0"
+          values=" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0"
           in="SourceGraphic"
         />
         <feComponentTransfer>
