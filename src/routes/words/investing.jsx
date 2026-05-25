@@ -34,10 +34,13 @@ export default function InvestingPage() {
           <strong>No.</strong> Il valore da massimizzare non è l’expected return, ma qualcosa di simile al “Risk-adjusted return on capital”<a href="#risk-adjusted-return">[#risk-adjusted-return]</a><a href="#value-at-risk">[#value-at-risk]</a> (che non mi pare un concetto ben definito).
           In parole povere: essendoci incertezze, preso uno stock <Math eq="i" />, rappresentiamo il suo return (<Math eq="r_i" />) come un evento stocastico, con una certa distribuzione di probabilità, di media (<Math eq="\mu_i" />) e deviazione standard (<Math eq="\sigma_i" />). L'obiettivo non è semplicemente cercare un investimento che massimizzi la media, ma bensì uno che offra un compromesso fra massimizzare la media e minimizzare la deviazione standard. Cioè vogliamo sì massimizzare i guadagni ma anche ridurre i rischi.
         </p>
+        <p>
+          Qui usiamo la varianza come indicatore di quanto uno stock è volatile e quindi del rischio.
+        </p>
 
         <details>
           <summary>Visto dal mio punto di vista</summary>
-          <div style={{ padding: "1rem 0" }}>
+          <div>
             <p>
               Questo è perchè la mia objective function è sublineare rispetto al numero di € sul mio conto in banca.
               A parità di € regalati, un me povero che possiede 100€ avrà un incremento di felicità maggiore di un me ricco che possiede 1000€.
@@ -55,10 +58,6 @@ export default function InvestingPage() {
             </p>
           </div>
         </details>
-
-        <p>
-          Qui usiamo la varianza come indicatore di quanto uno stock è volatile e quindi del rischio.
-        </p>
 
         <h2>The only free lunch is diversification<a href="#diversification">[#diversification]</a></h2>
         <p>
@@ -83,7 +82,7 @@ export default function InvestingPage() {
           Quindi il risk-adjusted return dell’intero mercato è migliore.
         </p>
 
-        <figure style={{ margin: "2rem 0" }}>
+        <figure>
             <div style={{display: "grid", "grid-template-columns": "repeat(2, 1fr)", gap: "2rem"}}>
           <img
             src="/words/investing/diversification-a.png"
@@ -113,7 +112,7 @@ export default function InvestingPage() {
           Ma non finisce qua. Se un anno ho un return -20% l’anno successivo mi serve un +25% per pareggiare: quando guardo agli interessi su più anni ciò che è importante è la media geometrica, non aritmetica. Una varianza maggiore significa un ritorno complessivo minore, questo effetto è chiamato "volatility tax"<a href="#volatility-tax">[#volatility-tax]</a> e comporta che non solo in un portfolio diversificato i rischi sono minori, ma i ritorni maggiori. Wait, com’è possibile? Mantenere un portfolio diversificato significa periodicamente ribilanciare le proprie azioni. I.e. devo vendere un po’ di azioni degli stock che nell’ultimo mese sono andati bene e comprare quelle di quelli che sono andate male, in modo da mantenere un investimento uniforme sugli stock; questo processo di bilanciamento è quello che mi alza i guadagni<a href="#modern-portfolio-theory">[#modern-portfolio-theory]</a> (?? this link).
         </p>
 
-        <figure style={{ margin: "2rem 0" }}>
+        <figure>
             <div style={{display: "grid", "grid-template-columns": "repeat(2, 1fr)", gap: "2rem"}}>
           <img
             src="/words/investing/diversification2-a.png"
@@ -168,7 +167,7 @@ export default function InvestingPage() {
           Noi siamo devoti fedeli dell’efficient market hypothesis, non ci mettiamo a disegnare figurine geometriche sui market chart<a href="#technical-trading-patterns">[#technical-trading-patterns]</a> e crediamo che gli investitori siano enti razionali. Ciò comporta che, ad un rischio maggiore corrisponderanno ritorni maggiori. Abbiamo tuttavia visto come lo specific risk sia eliminabile diversificando, e quindi un rischio che non si riflette sugli investitori razionali che diversificano, quindi una componente di rischio che non aumenta gli expecterd returns. E' solo il non eliminabile systematic risk a cui corrispondono expected returns maggiori.
         </p>
 
-        <h2>Beta Factor</h2>
+        <h3>Beta Factor</h3>
         <p>
           Ci sono stock le cui performances dipendono fortemente dall'andamento dell'economia in generale, altri che sono invece più robusti. Un settore che produce beni di prima necessità non sarà toccato molto da una crisi, al contraro di un settore che si occupa di beni di lusso. Ogni stock ha quindi un suo proprio systematic risk, proprio come .?? ..bambino bello a mamma sua - speciale a modo suo...
         </p>
@@ -192,8 +191,12 @@ export default function InvestingPage() {
         </p>
 
         <div style={{ "text-align": "center", margin: "1.5rem 0" }}>
-          <Math eq="\mu(r_i) - r_f = \beta \cdot \big(\mu(r_m) - r_f \big)" />
+          <Math eq="\mu(r_i) - r_f = \beta_i \cdot \big(\mu(r_m) - r_f \big)" />
         </div>
+
+        <p>
+          dove <Math eq="r_f" /> è il ritorno per un investimento risk-free, quindi in pratica i bond USA. Quindi in media il ritorno per un investimento e' il ritorno base risk-free, piu' il ritorno aggiuntivo dovuto al rischio del mercato, moltiplicato per il fattore i, <Math eq="\beta_i" />.
+        </p>
 
         <ol>
           <li>Non conosciamo la distribuzione di probabilità dei returns, o la sua <Math eq="\sigma" />. Quello che possiamo fare è solo guardare il passato storico e usare i precedenti returns come un campione estratto da questa distribuzione, per stimarne la <Math eq="\sigma" /> e quindi beta.</li>
@@ -201,7 +204,7 @@ export default function InvestingPage() {
         </ol>
 
 
-        <figure style={{ margin: "2rem 0" }}>
+        <figure>
             <div style={{display: "grid", "grid-template-columns": "repeat(2, 1fr)", gap: "2rem"}}>
           <img
             src="/words/investing/capm-a.png"
@@ -228,7 +231,7 @@ export default function InvestingPage() {
           Considerazioni etiche: sì ma di fatto, alla fine dei conti, in cosa sto investendo? Lobby di armi che fomenta guerre? Lobby del tabacco che propaganda pubblicazioni biasate? Lobby del pertolio? Vale la pena prestare attenzione alla cosa e scegliere fondi socialmente responsabili o conviene compensare facendo beneficenza?
         </p>
 
-        <figure style={{ margin: "2rem 0" }}>
+        <figure>
           <img
             src="/words/investing/harry-markowitz.jpg"
             alt="Harry Markowitz"
@@ -244,7 +247,38 @@ export default function InvestingPage() {
 
         <p>4 factors</p>
 
-        <figure style={{ margin: "2rem 0" }}>
+        <p>quello che dico sopra non e' proprio corretto. il rischio scorrelato dal rischio medio del mercato non e' ininfluente, perche' si puo' si ridurre diversificando, ma non lo si porta a zero. non ci sono infiniti stock. la sigma scorrelata la possiamo portare a sigma diviso radice di n_stocks. quando lo stock e' correlato con tutto il mercato non possiamo ridurre il rischio, quando e' completamente scorrelato da tutti gli altri stock possiamo ridurlo piu' stock compriamo. essendo il mercato grande con n molto grande possiamo forse addirittura trascurare il rischio specifico. ma in teoria no. il bonus return si applica anche per i rischi specifici, ma non direttameten per il rischio specifico, bensi' per qualcosa come rischio_specifico/sqrt(n_stoks)
+
+questi pero' sono solo i due casi limite. what if uno stock e' correlato con una frazione del mercato? cosa succede se il mercato e' diviso in n macroblocchi correlati internamente ma non tra loro?
+dipendera' da n. piu' n e' grande piu' possiamo ammortizzare il rischio. piu' n e' piccolo piu' il sottoblocco con maggior rischio specifico avra' ritorni elevati.</p>
+
+
+
+Prendiamo la astrazione: il mercato è composto da $n$ macroblocchi.
+Ogni blocco $i$ ha:
+*   Una dimensione rispetto al mercato totale: $f_i$ (tale che $\sum f_i = 1$)
+*   Una sua varianza intrinseca (il suo rischio): $\sigma_i^2$
+*   Zero correlazione con gli altri blocchi.
+
+Poiché i blocchi sono scorrelati, la varianza del mercato globale ($\sigma_M^2$) è la somma delle varianze dei singoli blocchi, pesate per il *quadrato* della loro dimensione:
+
+$$ \sigma_M^2 = f_1^2 \sigma_1^2 + f_2^2 \sigma_2^2 + ... + f_n^2 \sigma_n^2 = \sum_{i=1}^{n} f_i^2 \sigma_i^2 $$
+
+### Come si calcola il "Bonus Return" (Premio Atteso) di un blocco?
+
+In un mercato in equilibrio, il rendimento in eccesso (sopra il risk-free rate $r_f$) che il mercato *deve* pagare per indurre gli investitori a detenere il blocco $i$ è proporzionale a quanto quel blocco contribuisce al rischio totale del portafoglio globale.
+
+La formula matematica (derivata dai modelli di equilibrio generale) per il rendimento atteso del blocco $i$ (chiamiamolo $\mu_i$) è:
+
+$$ \mu_i - r_f = A \cdot (f_i \cdot \sigma_i^2) $$
+
+Dove:
+*   $A$ è l'avversione al rischio media di tutti gli investitori (un numero costante > 0).
+*   $\sigma_i^2$ è la volatilità del blocco.
+*   $f_i$ è la frazione del mercato occupata dal blocco.
+
+
+        <figure>
           <img
             src="/words/investing/eugene-fama2.jpg"
             alt="Eugene Fama"

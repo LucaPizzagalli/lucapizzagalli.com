@@ -1,4 +1,3 @@
-# That's why we were chosen
 # That's what we were chosen for
 
 Guy with a funny hat: "newmann probes something something"

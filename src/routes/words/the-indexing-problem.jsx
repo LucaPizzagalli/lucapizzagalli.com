@@ -22,7 +22,7 @@ export default function TheIndexingProblemPage() {
             />
             <figcaption>The universe for <Math eq="t<0" />. The North lamp is off and all entities receive identical stimuli via their senses.</figcaption>
           </figure>
-          <div style={{ flex: "3", "max-width": "48rem" }}>
+          <div style={{ flex: "3" }}>
             <p>
               Imagine a two-dimensional universe invariant under rotations of <Math eq={String.raw`\pi/3`} />. On the surface of a circular world live 6 conscious entities, identical to each other, including their brains. The entities are pure observers. They can see the universe but they can't move. Above each entity is a lamp, currently off.
             </p>
@@ -56,8 +56,6 @@ export default function TheIndexingProblemPage() {
               At time <Math eq="t=0" />, the North lamp activates, breaking the symmetry and illuminating each individual in an unique way.
               For the first time each individual have distinct subjective experience, making them different from one another.
             </p>
-
-
             <p>
               Let's label each entity on the planet: at <Math eq={String.raw`\theta = 0`} /> A is, under the North lamp; and continuing clockwise we have B at <Math eq={String.raw`\theta = \pi/3`} />, then C, D, E, and F.
             </p>
