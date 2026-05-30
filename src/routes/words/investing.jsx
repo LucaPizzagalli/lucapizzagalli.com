@@ -73,9 +73,7 @@ export default function InvestingPage() {
           Definiamo il retrun del mercato (<Math eq="r_m" />) come la media dei return di tutti gli stock (stock weighted). Il return medio del mercato è uguale alla media su tutti gli stock dei return medi, ma se guardiamo alla varianza del return del mercato, questa è minore della media su tutti gli stock delle varianze dei returns. Forse in formule viene meglio:
         </p>
 
-        <div style={{ "text-align": "center", margin: "1.5rem 0" }}>
           <Math block eq="\mu(r_m) := \mu(\overline{r_i}) = \overline{\mu(r_i)} \\ \sigma(r_m) := \sigma(\overline{r_i}) < \overline{\sigma(r_i)}" />
-        </div>
 
         <p>
           Questo intuitivamente perchè, quando guardiamo al mercato nel complesso, le oscillazioni dei singoli stock parzialmente si compensano, e il return del mercato è più stabile rispetto a quello dei singoli stock (è un po' il discorso della media campionaria<a href="#error-of-the-mean">[#error-of-the-mean]</a><a href="#law-of-total-variance">[#law-of-total-variance]</a>).
@@ -182,17 +180,13 @@ export default function InvestingPage() {
         </p>
         <p>Beta è definita come:</p>
 
-        <div style={{ "text-align": "center", margin: "1.5rem 0", "overflow-x": "auto" }}>
           <Math block eq="\beta_i = \frac{Cov(r_i, r_m)}{\sigma^2(r_m)} = Corr(r_i, r_m) \cdot \frac{\sigma(r_i)}{\sigma(r_m)}" />
-        </div>
 
         <p>
           dove <Math eq="r_i" /> è il ritorno per un investimento i, <Math eq="r_m" /> è il ritorno del mercato, <Math eq="\beta_i" /> è la nostra beta che meglio fitta i dati minimizzando l'errore <Math eq="\epsilon" /> ed è il fattore di proporzionalità rispetto all'andamento del mercato di cui parlavamo. E <Math eq="\alpha_i" />? Eh, mmh, facciamo finta sia 0.
         </p>
 
-        <div style={{ "text-align": "center", margin: "1.5rem 0" }}>
-          <Math eq="\mu(r_i) - r_f = \beta_i \cdot \big(\mu(r_m) - r_f \big)" />
-        </div>
+          <Math block eq="\mu(r_i) - r_f = \beta_i \cdot \big(\mu(r_m) - r_f \big)" />
 
         <p>
           dove <Math eq="r_f" /> è il ritorno per un investimento risk-free, quindi in pratica i bond USA. Quindi in media il ritorno per un investimento e' il ritorno base risk-free, piu' il ritorno aggiuntivo dovuto al rischio del mercato, moltiplicato per il fattore i, <Math eq="\beta_i" />.
@@ -253,7 +247,7 @@ questi pero' sono solo i due casi limite. what if uno stock e' correlato con una
 dipendera' da n. piu' n e' grande piu' possiamo ammortizzare il rischio. piu' n e' piccolo piu' il sottoblocco con maggior rischio specifico avra' ritorni elevati.</p>
 
 
-
+<p>
 Prendiamo la astrazione: il mercato è composto da $n$ macroblocchi.
 Ogni blocco $i$ ha:
 *   Una dimensione rispetto al mercato totale: $f_i$ (tale che $\sum f_i = 1$)
@@ -262,7 +256,7 @@ Ogni blocco $i$ ha:
 
 Poiché i blocchi sono scorrelati, la varianza del mercato globale ($\sigma_M^2$) è la somma delle varianze dei singoli blocchi, pesate per il *quadrato* della loro dimensione:
 
-$$ \sigma_M^2 = f_1^2 \sigma_1^2 + f_2^2 \sigma_2^2 + ... + f_n^2 \sigma_n^2 = \sum_{i=1}^{n} f_i^2 \sigma_i^2 $$
+<Math block eq="\sigma_M^2 = f_1^2 \sigma_1^2 + f_2^2 \sigma_2^2 + ... + f_n^2 \sigma_n^2 = \sum_{i=1}^{n} f_i^2 \sigma_i^2" />
 
 ### Come si calcola il "Bonus Return" (Premio Atteso) di un blocco?
 
@@ -273,10 +267,10 @@ La formula matematica (derivata dai modelli di equilibrio generale) per il rendi
 $$ \mu_i - r_f = A \cdot (f_i \cdot \sigma_i^2) $$
 
 Dove:
-*   $A$ è l'avversione al rischio media di tutti gli investitori (un numero costante > 0).
+*   $A$ è l'avversione al rischio media di tutti gli investitori (un numero costante &bt 0).
 *   $\sigma_i^2$ è la volatilità del blocco.
 *   $f_i$ è la frazione del mercato occupata dal blocco.
-
+</p>
 
         <figure>
           <img
