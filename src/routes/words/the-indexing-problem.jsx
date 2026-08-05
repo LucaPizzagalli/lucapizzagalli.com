@@ -27,14 +27,14 @@ export default function TheIndexingProblemPage() {
               Imagine a two-dimensional universe invariant under rotations of <Math eq="\pi/3" />. On the surface of a circular world live six conscious entities, identical to each other, including their brains. The entities are pure observers: they can see the universe but they can't move. Above each entity is a lamp, currently off.
             </p>
             <p>
-              One thing only breaks the symmetry: One of the lamps - let's call it North lamp - contains a countdown. When the countdown reaches <Math eq="t=0" />, this and only this lamp turns on.
-              But all lamps are opaque so the North lamp is visually indistinguishable from the others until <Math eq="t=0" />.
+              Only one thing breaks the symmetry: One of the lamps - let's call it North lamp - contains a countdown. When the countdown reaches <Math eq="t=0" />, this and only this lamp turns on.
+              All lamps are opaque, so the North lamp is visually indistinguishable from the others until <Math eq="t=0" />.
             </p>
             <p>
-              The entities are aware of all I described so far, and much more. They are rational being and have perfect knowledge of the universe, except for the internal state of the 6 brains (just to avoid infinite recursion problems). They know the physical laws governing the universe and the exact position and state of every atom outside their brains; including the North lamp and its timer. They can therefore accurately simulate the evolution of the universe outside the skulls.
+              The entities are rational beings aware of all I've described so far. They also have perfect knowledge of the universe, except for the internal state of the 6 brains (just to avoid infinite recursion problems). They know the physical laws governing the universe and the exact position and state of every atom outside their brains, including the North lamp and its timer. They can therefore accurately simulate the evolution of the universe outside their skulls.
             </p>
             <p>
-              Being the North lamp the only symmetry-breaker we can assume the entities encode the space in polar coordinates, with the North lamp fixed at <Math eq="\theta = 0" />.
+              Let's assume the entities encode the space in polar coordinates, with the North lamp fixed at <Math eq="\theta = 0" />.
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function TheIndexingProblemPage() {
           <div style={{ flex: "3" }}>
             <p>
               At time <Math eq="t=0" />, the North lamp activates, breaking the symmetry and illuminating each individual uniquely.
-              For the first time, they have distinct subjective experiences, making them different from one another.
+              For the first time, the entities have distinct subjective experiences, making them different from one another.
             </p>
             <p>
               Let's label each entity on the planet: at <Math eq="\theta = 0" /> is A, under the North lamp; and continuing clockwise we have B at <Math eq="\theta = \pi/3" />, then C, D, E, and F.
@@ -65,13 +65,13 @@ export default function TheIndexingProblemPage() {
               Before <Math eq="t=0" /> each entity can perfectly predict the entire future of the universe in third person: they know that for <Math eq="t>0" /> A will be in light, and D will be in darkness. They can also perfectly predict their own identical sensory experiences for all <Math eq="t<0" />.
             </p>
             <p>
-             However, <em>there is one piece of information they cannot predict: what they will see at <Math eq="t>0" />, or equivalently, which of the six individuals they are.</em>
+             However, <em>there is one piece of information they cannot predict: what they will see at <Math eq="t>0" />, or, equivalently, which of the six individuals they are.</em>
             </p>
             <p>
               The paradox is this: If they truly know all information contained in the universe, how can there be a piece of information ("which of these individuals am I?") that they do not possess and that's provided at <Math eq="t=0" />? It looks like first-person identity must be a metaphysical property, part of the universe but existing beyond the physical world.
             </p>
             <p>
-              Hopefully this feels puzzling, as the next section is only justified if you are feeling the paradox.
+              Hopefully this feels puzzling, as the next section is only justified if you are feeling the paradox. You can pause here and come up with your own answer.
             </p>
           </div>
         </div>
@@ -109,38 +109,28 @@ export default function TheIndexingProblemPage() {
 
         {/* <h2>There is no I</h2> */}
         <p>
-          As it often happens with paradoxes, the issue is in the question. We imagine an entity asking itself <em>"What will I see?"</em>, and there is no answer.
+          As with many paradoxes, the issue is in the question. We imagine an entity asking itself <em>"What will I see?"</em>, and there is no answer.
           The problem is that the question is not well formulated, as it assumes the existence of an "I" persistent in time, crossing from <Math eq="t<0" /> to <Math eq="t>0" />.
         </p>
         <p>
-          Questions like <em>"What will entity A see?"</em> or <em>"What will entity B see?"</em> are meaningful and have predictable, objective answers. The paradox only arises when we assume the existence of an "I" that is preserved across time, floating above the physical reality and waiting to be dropped into one of the six bodies. As if before the lamp turned on there were six bodies plus an unattached <em>I</em>, and at <Math eq="t=0" /> the universe finally reveals where it landed.
+          Questions like <em>"What will entity A see?"</em> or <em>"What will entity B see?"</em> are meaningful and have predictable, objective answers. The paradox only arises when we assume the existence of an "I" label that is preserved across time, floating above the physical reality and waiting to be dropped into one of the six bodies. As if before the lamp turned on there were six bodies plus an unattached "I", and at <Math eq="t=0" /> the universe finally reveals where it landed.
         </p>
         <p>
           There is no such thing.
         </p>
         <p>
-          In this universe, at every instant, there are six brains - six computations - running in parallel. At <Math eq="t<0" /> they are identical. At <Math eq="t>0" /> they diverge. That's it. No metaphysical <em>I</em> travels from the past into one of the six futures.
+          In this universe, at every instant, there are six brains - six computations - running in parallel. At <Math eq="t<0" /> they are identical. At <Math eq="t>0" /> they diverge. That's it. No metaphysical "I" travels from the past into one of the six possible futures.
         </p>
         <p>
-          So the question <em>"what will I see at <Math eq="t>0" /> ?"</em> asked from <Math eq="t<0" /> is malformed. There is no entity that is both the asker (at <Math eq="t<0" />) and the seer (at <Math eq="t<0" />). It's legit to ask <em>"what will A see?"</em>, <em>"what will B see?"</em>; and these question have answers. What's meaningless to ask is: <em>"What will I see?"</em> because there is no well defined concept of I traveling thought time.
+          So the question <em>"what will I see at <Math eq="t>0" /> ?"</em> asked from <Math eq="t<0" /> is malformed. There is no entity that is both the asker (at <Math eq="t<0" />) and the seer (at <Math eq="t>0" />). It's legit to ask <em>"what will A see?"</em>, <em>"what will B see?"</em>; and these questions have answers.
         </p>
         <p>
-          We have this illusion of persistent personal identity because our brain at each moment has access only to its our personal memories, and not the ones of other brains.
-          We therefore identify with this chain of memories and we project this identity into the future. But the "I" of <Math eq="t=-1" /> is not the same thing as the "I" of <Math eq="t=+1" />. They are two separate computations, linked by the fact that the later one contains a record of the earlier one. There is no metaphysical thread.
+          We have this illusion of persistent personal identity because our brain at each moment has access only to its personal memories, and not the ones of other brains.
+          We therefore identify with this chain of memories and we project this identity into the future. But the "I" of <Math eq="t=-1" /> is not the same thing as the "I" of <Math eq="t=+1" />. They are two separate computations, linked by the fact that the later one contains a record of the earlier one. But there is no metaphysical thread.
         </p>
         <p>
-          In a normal universe this same first-person question — <em>"what will I see tomorrow?"</em> — does have a clean answer, even without any traveling <em>I</em>. What you're really asking is <em>"what will the brain tomorrow that contains a memory trace of this brain see?"</em> In ordinary life there is at most one such brain, the substitution is unique, and the question routes cleanly to it. The illusion of a persistent self is harmless because the everyday usage of <em>"I"</em> was always doing a third-person substitution under the hood.
-        </p>
-        <p>
-          In our six-fold universe, the substitution stops being unique. At <Math eq="t=0" /> six brains share the exact same memory trace of the past — six valid referents instead of one. The everyday shortcut runs out of unique targets, and the malformed question that was sitting underneath it the whole time gets exposed.
-        </p>
-
-when we ask about "I" in the future we are asking what will the entity that contains a trace of my memory will see/do? this is a meaningful question in most cases. but if we translate it in the universe proposed we run into the problem that in the future there are multiple being that share the memory with the real I (the istantaneous one).
-
-Before $t = 0$: six identical local processors computing the same thing. After $t = 0$: six local processors computing different things. Nothing is transferred; nothing crosses.
-
-        <p>
-          Before <Math eq="t=0" />: six identical local processors computing the same thing. After <Math eq="t=0" />: six local processors computing different things. Nothing is transferred; nothing crosses. The puzzle's missing fact was never there to be found.
+          In a normal universe, the first-person question <em>"What will I see tomorrow?"</em> has a reasonable answer, even without any traveling "I". What you're really asking is <em>"Tomorrow, what will the brain that contains a memory trace of my brain see?"</em> In ordinary life there is (at most) one such brain, and therefore no ambiguity in the question.
+          But the "time-travelling I" is just an approximation valid in the edge case of everyday reality, not a real fundamental concept.
         </p>
         <hr />
       </Layout>

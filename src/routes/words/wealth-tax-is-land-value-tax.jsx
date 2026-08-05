@@ -1,0 +1,41 @@
+import Layout from "../../components/Layout";
+import SEO from "../../components/SEO";
+import Math from "../../components/Math";
+
+
+export default function WealthTaxIsLandValueTax() {
+  return (
+    <>
+      <SEO title="Maximum Likelihood is a Lie" />
+      <Layout class="words">
+        <h1>WealthTaxIsLandValueTax</h1>
+
+        <p>
+          A land value tax is fair. a land value tax is not distortive. That's what Georgism tells us.
+
+          Let's say I build a city in the desert.
+          Land value there is extra cheap and so is the LVT I have to pay. I build everything in my city completely from scratch.
+          People start moving in, they populate the city, they live there, the work there, and the city becomes attractive.
+          Land value goes to the roof.
+          - Should the LVT update to reflect the new land value? I generated that value, taxing it would mean disincentivizing my land development work.
+          - 300 years pass, my only heir still own the whole city. Should he pay and updated LVT or still pennies?
+          - Another 300 years pass, the land has been parceled, sold, resold, and now the city land is distributed among plenty of landowners, mirroring the land distribution of most normal cities.
+          Should the landowners still pay only pennies or should the LVT be updated? Not properly taxing it would allow landlord to extract unearned rent.
+
+          This is an extreme example to prove a point, but the point is value in general.
+          When i build and open a nice restaurant where there were rubbles, the value of the land value around my restaurant increases, and so does the land value of my restaurant itself.
+          A LVT would absorb both the increase in value of the area around my restaurant (and that's ok as I'm not profiting from it anyway), but also the increase of value of my land, that i was previously able to capture myself.
+          Land value is not truly distinct from development value.
+        </p>
+
+
+        <p>
+          "What is a US Treasury Bond?"
+A Georgist says capital is a shovel. But a Treasury Bond isn't a shovel. It is a legal claim on the future tax revenues of the labor of the American people, enforced by the state's monopoly on violence. Buying a bond is literally buying the right to extract a toll from future workers. It is indistinguishable from buying land. Therefore, the risk-free rate is economic rent.
+
+
+        </p>
+      </Layout>
+    </>
+  );
+}

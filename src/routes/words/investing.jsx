@@ -303,6 +303,12 @@ Dove:
         <h3>Ci credi veramente in quanto hai appena detto?</h3>
         <p>Insomma.</p>
 
+        <h3>Investimenti etici?</h3>
+        <p>Cioe' ad esempio non investire in stock che hanno a che fare con armamenti, o con uccisioni animali o con petrolio etc.
+          cosi' a naso non ha senso, quasi per definizione sotto la perfect market efficiency theory.
+          cioe' ci sono abbastanza smart money il cui lavoro e' prezzare le cose. se eviti di comprare x per motivi etici semplicemente altri compreranno x con un profitto maggiore fino a riportarlo al prezzo di mercato che considera solo profitti senza etica. l'unico effetto netto di questa strategia che vedo e' un trasferimento di profitti da investitori etici a non etici.
+          Obiezione e' che anche gli investitori cinici devono differenziare, quindi potrebbero non esserci abbastanza smart money per riportare il prezzo al vero valore, ma rimane un gap. comunque meh.</p>
+
         <hr />
         
         <div id="references" style={{ "font-size": "0.9em", "word-break": "break-word" }}>
