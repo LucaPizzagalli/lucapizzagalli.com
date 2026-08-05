@@ -11,7 +11,7 @@
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
-    "deploy": "vinxi build && gh-pages -d .output/public -b master"
+    "deploy": "vinxi build && gh-pages -d .output/public -b master --dotfiles"
   },
   "repository": {
     "type": "git",
