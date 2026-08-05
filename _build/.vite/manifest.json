@@ -1,0 +1,634 @@
+{
+  "_Deck-BHXdoFjc.css": {
+    "file": "assets/Deck-BHXdoFjc.css",
+    "src": "_Deck-BHXdoFjc.css"
+  },
+  "_Deck-D2_D5_nB.js": {
+    "file": "assets/Deck-D2_D5_nB.js",
+    "name": "Deck",
+    "imports": [
+      "_preload-helper-ug3pwPZ1.js",
+      "_web-BQBotWVs.js",
+      "_SEO-DZboe-MK.js"
+    ],
+    "dynamicImports": [
+      "node_modules/reveal.js/dist/reveal.esm.js"
+    ],
+    "css": [
+      "assets/Deck-BHXdoFjc.css"
+    ]
+  },
+  "_Layout-CYLc6mnh.js": {
+    "file": "assets/Layout-CYLc6mnh.js",
+    "name": "Layout",
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_SEO-DZboe-MK.js"
+    ]
+  },
+  "_Math-D2rlLsHl.js": {
+    "file": "assets/Math-D2rlLsHl.js",
+    "name": "Math",
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_katex.min-Bz-pEXTG.js"
+    ]
+  },
+  "_SEO-BL2JlRir.css": {
+    "file": "assets/SEO-BL2JlRir.css",
+    "src": "_SEO-BL2JlRir.css"
+  },
+  "_SEO-DZboe-MK.js": {
+    "file": "assets/SEO-DZboe-MK.js",
+    "name": "SEO",
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_index-DwKYU46g.js"
+    ],
+    "css": [
+      "assets/SEO-BL2JlRir.css"
+    ]
+  },
+  "_index-DwKYU46g.js": {
+    "file": "assets/index-DwKYU46g.js",
+    "name": "index",
+    "imports": [
+      "_web-BQBotWVs.js"
+    ]
+  },
+  "_katex-DReXjvPC.css": {
+    "file": "assets/katex-DReXjvPC.css",
+    "src": "_katex-DReXjvPC.css"
+  },
+  "_katex.min-Bz-pEXTG.js": {
+    "file": "assets/katex.min-Bz-pEXTG.js",
+    "name": "katex.min",
+    "css": [
+      "assets/katex-DReXjvPC.css"
+    ],
+    "assets": [
+      "assets/KaTeX_AMS-Regular-BQhdFMY1.woff2",
+      "assets/KaTeX_AMS-Regular-DMm9YOAa.woff",
+      "assets/KaTeX_AMS-Regular-DRggAlZN.ttf",
+      "assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2",
+      "assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff",
+      "assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf",
+      "assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2",
+      "assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff",
+      "assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf",
+      "assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2",
+      "assets/KaTeX_Fraktur-Bold-BsDP51OF.woff",
+      "assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf",
+      "assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2",
+      "assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff",
+      "assets/KaTeX_Fraktur-Regular-CB_wures.ttf",
+      "assets/KaTeX_Main-Bold-Cx986IdX.woff2",
+      "assets/KaTeX_Main-Bold-Jm3AIy58.woff",
+      "assets/KaTeX_Main-Bold-waoOVXN0.ttf",
+      "assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2",
+      "assets/KaTeX_Main-BoldItalic-SpSLRI95.woff",
+      "assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf",
+      "assets/KaTeX_Main-Italic-NWA7e6Wa.woff2",
+      "assets/KaTeX_Main-Italic-BMLOBm91.woff",
+      "assets/KaTeX_Main-Italic-3WenGoN9.ttf",
+      "assets/KaTeX_Main-Regular-B22Nviop.woff2",
+      "assets/KaTeX_Main-Regular-Dr94JaBh.woff",
+      "assets/KaTeX_Main-Regular-ypZvNtVU.ttf",
+      "assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2",
+      "assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff",
+      "assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf",
+      "assets/KaTeX_Math-Italic-t53AETM-.woff2",
+      "assets/KaTeX_Math-Italic-DA0__PXp.woff",
+      "assets/KaTeX_Math-Italic-flOr_0UB.ttf",
+      "assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2",
+      "assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff",
+      "assets/KaTeX_SansSerif-Bold-CFMepnvq.ttf",
+      "assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2",
+      "assets/KaTeX_SansSerif-Italic-DN2j7dab.woff",
+      "assets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf",
+      "assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2",
+      "assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff",
+      "assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf",
+      "assets/KaTeX_Script-Regular-D3wIWfF6.woff2",
+      "assets/KaTeX_Script-Regular-D5yQViql.woff",
+      "assets/KaTeX_Script-Regular-C5JkGWo-.ttf",
+      "assets/KaTeX_Size1-Regular-mCD8mA8B.woff2",
+      "assets/KaTeX_Size1-Regular-C195tn64.woff",
+      "assets/KaTeX_Size1-Regular-Dbsnue_I.ttf",
+      "assets/KaTeX_Size2-Regular-Dy4dx90m.woff2",
+      "assets/KaTeX_Size2-Regular-oD1tc_U0.woff",
+      "assets/KaTeX_Size2-Regular-B7gKUWhC.ttf",
+      "assets/KaTeX_Size3-Regular-CTq5MqoE.woff",
+      "assets/KaTeX_Size3-Regular-DgpXs0kz.ttf",
+      "assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2",
+      "assets/KaTeX_Size4-Regular-BF-4gkZK.woff",
+      "assets/KaTeX_Size4-Regular-DWFBv043.ttf",
+      "assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2",
+      "assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff",
+      "assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf"
+    ]
+  },
+  "_posts-K76ieLhY.js": {
+    "file": "assets/posts-K76ieLhY.js",
+    "name": "posts"
+  },
+  "_preload-helper-ug3pwPZ1.js": {
+    "file": "assets/preload-helper-ug3pwPZ1.js",
+    "name": "preload-helper"
+  },
+  "_things-D17Tl8tb.js": {
+    "file": "assets/things-D17Tl8tb.js",
+    "name": "things"
+  },
+  "_web-BQBotWVs.js": {
+    "file": "assets/web-BQBotWVs.js",
+    "name": "web"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.ttf": {
+    "file": "assets/KaTeX_AMS-Regular-DRggAlZN.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff": {
+    "file": "assets/KaTeX_AMS-Regular-DMm9YOAa.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff2": {
+    "file": "assets/KaTeX_AMS-Regular-BQhdFMY1.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf": {
+    "file": "assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff": {
+    "file": "assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2": {
+    "file": "assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.ttf": {
+    "file": "assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff": {
+    "file": "assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff2": {
+    "file": "assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Caligraphic-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.ttf": {
+    "file": "assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff": {
+    "file": "assets/KaTeX_Fraktur-Bold-BsDP51OF.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff2": {
+    "file": "assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf": {
+    "file": "assets/KaTeX_Fraktur-Regular-CB_wures.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff": {
+    "file": "assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff2": {
+    "file": "assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Fraktur-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Bold.ttf": {
+    "file": "assets/KaTeX_Main-Bold-waoOVXN0.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff": {
+    "file": "assets/KaTeX_Main-Bold-Jm3AIy58.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff2": {
+    "file": "assets/KaTeX_Main-Bold-Cx986IdX.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.ttf": {
+    "file": "assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff": {
+    "file": "assets/KaTeX_Main-BoldItalic-SpSLRI95.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff2": {
+    "file": "assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-BoldItalic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Italic.ttf": {
+    "file": "assets/KaTeX_Main-Italic-3WenGoN9.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Italic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff": {
+    "file": "assets/KaTeX_Main-Italic-BMLOBm91.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff2": {
+    "file": "assets/KaTeX_Main-Italic-NWA7e6Wa.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Italic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Regular.ttf": {
+    "file": "assets/KaTeX_Main-Regular-ypZvNtVU.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff": {
+    "file": "assets/KaTeX_Main-Regular-Dr94JaBh.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff2": {
+    "file": "assets/KaTeX_Main-Regular-B22Nviop.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Main-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.ttf": {
+    "file": "assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff": {
+    "file": "assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff2": {
+    "file": "assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-BoldItalic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-Italic.ttf": {
+    "file": "assets/KaTeX_Math-Italic-flOr_0UB.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-Italic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff": {
+    "file": "assets/KaTeX_Math-Italic-DA0__PXp.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff2": {
+    "file": "assets/KaTeX_Math-Italic-t53AETM-.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Math-Italic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.ttf": {
+    "file": "assets/KaTeX_SansSerif-Bold-CFMepnvq.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff": {
+    "file": "assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff2": {
+    "file": "assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Bold.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.ttf": {
+    "file": "assets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff": {
+    "file": "assets/KaTeX_SansSerif-Italic-DN2j7dab.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff2": {
+    "file": "assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Italic.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.ttf": {
+    "file": "assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff": {
+    "file": "assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff2": {
+    "file": "assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_SansSerif-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Script-Regular.ttf": {
+    "file": "assets/KaTeX_Script-Regular-C5JkGWo-.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Script-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff": {
+    "file": "assets/KaTeX_Script-Regular-D5yQViql.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff2": {
+    "file": "assets/KaTeX_Script-Regular-D3wIWfF6.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Script-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.ttf": {
+    "file": "assets/KaTeX_Size1-Regular-Dbsnue_I.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff": {
+    "file": "assets/KaTeX_Size1-Regular-C195tn64.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff2": {
+    "file": "assets/KaTeX_Size1-Regular-mCD8mA8B.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size1-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.ttf": {
+    "file": "assets/KaTeX_Size2-Regular-B7gKUWhC.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff": {
+    "file": "assets/KaTeX_Size2-Regular-oD1tc_U0.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff2": {
+    "file": "assets/KaTeX_Size2-Regular-Dy4dx90m.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size2-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.ttf": {
+    "file": "assets/KaTeX_Size3-Regular-DgpXs0kz.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.woff": {
+    "file": "assets/KaTeX_Size3-Regular-CTq5MqoE.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size3-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.ttf": {
+    "file": "assets/KaTeX_Size4-Regular-DWFBv043.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff": {
+    "file": "assets/KaTeX_Size4-Regular-BF-4gkZK.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff2": {
+    "file": "assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Size4-Regular.woff2"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf": {
+    "file": "assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.ttf"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff": {
+    "file": "assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff"
+  },
+  "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff2": {
+    "file": "assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2",
+    "src": "node_modules/katex/dist/fonts/KaTeX_Typewriter-Regular.woff2"
+  },
+  "node_modules/reveal.js/dist/reveal.esm.js": {
+    "file": "assets/reveal.esm-jnzMk6Fc.js",
+    "name": "reveal.esm",
+    "src": "node_modules/reveal.js/dist/reveal.esm.js",
+    "isDynamicEntry": true
+  },
+  "src/routes/[...404].jsx?pick=default&pick=$css": {
+    "file": "assets/_...404_-LskEMLBR.js",
+    "name": "_...404_",
+    "src": "src/routes/[...404].jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_index-DwKYU46g.js"
+    ]
+  },
+  "src/routes/about.jsx?pick=default&pick=$css": {
+    "file": "assets/about-B9054-AR.js",
+    "name": "about",
+    "src": "src/routes/about.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_index-DwKYU46g.js"
+    ]
+  },
+  "src/routes/index.jsx?pick=default&pick=$css": {
+    "file": "assets/index-CcNLqONw.js",
+    "name": "index",
+    "src": "src/routes/index.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_index-DwKYU46g.js"
+    ]
+  },
+  "src/routes/the-void.jsx?pick=default&pick=$css": {
+    "file": "assets/the-void-B7ojIkhR.js",
+    "name": "the-void",
+    "src": "src/routes/the-void.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js"
+    ]
+  },
+  "src/routes/things/bordir.jsx?pick=default&pick=$css": {
+    "file": "assets/bordir-E0lbugZp.js",
+    "name": "bordir",
+    "src": "src/routes/things/bordir.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Deck-D2_D5_nB.js",
+      "_SEO-DZboe-MK.js",
+      "_preload-helper-ug3pwPZ1.js",
+      "_index-DwKYU46g.js"
+    ]
+  },
+  "src/routes/things/index.jsx?pick=default&pick=$css": {
+    "file": "assets/index-CX7QFZTv.js",
+    "name": "index",
+    "src": "src/routes/things/index.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_things-D17Tl8tb.js",
+      "_index-DwKYU46g.js"
+    ]
+  },
+  "src/routes/things/micro-swimmers.jsx?pick=default&pick=$css": {
+    "file": "assets/micro-swimmers-CE7V_hrY.js",
+    "name": "micro-swimmers",
+    "src": "src/routes/things/micro-swimmers.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Deck-D2_D5_nB.js",
+      "_Math-D2rlLsHl.js",
+      "_SEO-DZboe-MK.js",
+      "_preload-helper-ug3pwPZ1.js",
+      "_katex.min-Bz-pEXTG.js",
+      "_index-DwKYU46g.js"
+    ],
+    "css": [
+      "assets/micro-swimmers-mrjE_9Tf.css"
+    ]
+  },
+  "src/routes/this-same-website/index.jsx?pick=default&pick=$css": {
+    "file": "assets/index-TK1WHJdT.js",
+    "name": "index",
+    "src": "src/routes/this-same-website/index.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_things-D17Tl8tb.js",
+      "_posts-K76ieLhY.js",
+      "_index-DwKYU46g.js"
+    ]
+  },
+  "src/routes/words/index.jsx?pick=default&pick=$css": {
+    "file": "assets/index-CHQE59Tj.js",
+    "name": "index",
+    "src": "src/routes/words/index.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_posts-K76ieLhY.js",
+      "_index-DwKYU46g.js"
+    ]
+  },
+  "src/routes/words/investing.jsx?pick=default&pick=$css": {
+    "file": "assets/investing-D_grw0hE.js",
+    "name": "investing",
+    "src": "src/routes/words/investing.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_Math-D2rlLsHl.js",
+      "_index-DwKYU46g.js",
+      "_katex.min-Bz-pEXTG.js"
+    ]
+  },
+  "src/routes/words/maximum-likelihood-is-a-lie.jsx?pick=default&pick=$css": {
+    "file": "assets/maximum-likelihood-is-a-lie-6lwXh_Pr.js",
+    "name": "maximum-likelihood-is-a-lie",
+    "src": "src/routes/words/maximum-likelihood-is-a-lie.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_Math-D2rlLsHl.js",
+      "_index-DwKYU46g.js",
+      "_katex.min-Bz-pEXTG.js"
+    ]
+  },
+  "src/routes/words/newsletter.jsx?pick=default&pick=$css": {
+    "file": "assets/newsletter-cXZ2psLS.js",
+    "name": "newsletter",
+    "src": "src/routes/words/newsletter.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_index-DwKYU46g.js"
+    ]
+  },
+  "src/routes/words/the-indexing-problem.jsx?pick=default&pick=$css": {
+    "file": "assets/the-indexing-problem-BarluX0q.js",
+    "name": "the-indexing-problem",
+    "src": "src/routes/words/the-indexing-problem.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_Math-D2rlLsHl.js",
+      "_index-DwKYU46g.js",
+      "_katex.min-Bz-pEXTG.js"
+    ]
+  },
+  "src/routes/words/two-kids.jsx?pick=default&pick=$css": {
+    "file": "assets/two-kids-C1CYUcQ3.js",
+    "name": "two-kids",
+    "src": "src/routes/words/two-kids.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Deck-D2_D5_nB.js",
+      "_SEO-DZboe-MK.js",
+      "_preload-helper-ug3pwPZ1.js",
+      "_index-DwKYU46g.js"
+    ],
+    "css": [
+      "assets/two-kids-CTyJF3jX.css"
+    ]
+  },
+  "src/routes/words/wealth-tax-is-land-value-tax.jsx?pick=default&pick=$css": {
+    "file": "assets/wealth-tax-is-land-value-tax-DCFCJhXT.js",
+    "name": "wealth-tax-is-land-value-tax",
+    "src": "src/routes/words/wealth-tax-is-land-value-tax.jsx?pick=default&pick=$css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_Layout-CYLc6mnh.js",
+      "_SEO-DZboe-MK.js",
+      "_katex.min-Bz-pEXTG.js",
+      "_index-DwKYU46g.js"
+    ]
+  },
+  "virtual:$vinxi/handler/client": {
+    "file": "assets/client-Zzsw39Vd.js",
+    "name": "client",
+    "src": "virtual:$vinxi/handler/client",
+    "isEntry": true,
+    "imports": [
+      "_web-BQBotWVs.js",
+      "_preload-helper-ug3pwPZ1.js",
+      "_index-DwKYU46g.js"
+    ],
+    "dynamicImports": [
+      "src/routes/[...404].jsx?pick=default&pick=$css",
+      "src/routes/about.jsx?pick=default&pick=$css",
+      "src/routes/index.jsx?pick=default&pick=$css",
+      "src/routes/the-void.jsx?pick=default&pick=$css",
+      "src/routes/things/bordir.jsx?pick=default&pick=$css",
+      "src/routes/things/index.jsx?pick=default&pick=$css",
+      "src/routes/things/micro-swimmers.jsx?pick=default&pick=$css",
+      "src/routes/this-same-website/index.jsx?pick=default&pick=$css",
+      "src/routes/words/index.jsx?pick=default&pick=$css",
+      "src/routes/words/investing.jsx?pick=default&pick=$css",
+      "src/routes/words/maximum-likelihood-is-a-lie.jsx?pick=default&pick=$css",
+      "src/routes/words/newsletter.jsx?pick=default&pick=$css",
+      "src/routes/words/the-indexing-problem.jsx?pick=default&pick=$css",
+      "src/routes/words/two-kids.jsx?pick=default&pick=$css",
+      "src/routes/words/wealth-tax-is-land-value-tax.jsx?pick=default&pick=$css"
+    ],
+    "css": [
+      "assets/client-Dyp-PxFN.css"
+    ]
+  }
+}
