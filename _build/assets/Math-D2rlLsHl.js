@@ -1,0 +1,1 @@
+import{i as a,B as n,t as o}from"./web-BQBotWVs.js";import{k as s}from"./katex.min-Bz-pEXTG.js";var l=o("<span>");function p(t){const e=s.renderToString(t.eq,{throwOnError:!1,displayMode:!!t.block});return(()=>{var r=a(l);return n(r,"innerHTML",e),r})()}export{p as M};

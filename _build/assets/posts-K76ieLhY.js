@@ -1,0 +1,1 @@
+const i=[{url:"/words/the-indexing-problem",title:"The Indexing Problem",date:"2026-05-11"},{url:"/words/two-kids",title:"Two kids",date:"2023-07-01"},{url:"/words/maximum-likelihood-is-a-lie",title:"Maximum Likelihood is a Lie",date:"2022-07-27"}];export{i as p};

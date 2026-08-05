@@ -1,0 +1,1 @@
+import{b as t,i as e,t as o}from"./web-BQBotWVs.js";import{L as r}from"./Layout-CYLc6mnh.js";import{S as a}from"./SEO-DZboe-MK.js";import"./index-DwKYU46g.js";var n=o("<h1>Not Found"),m=o("<p>You just hit a route that doesn&#39;t exist... the sadness.");function d(){return[t(a,{title:"404: Not found"}),t(r,{get children(){return[e(n),e(m)]}})]}export{d as default};

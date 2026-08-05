@@ -1,0 +1,1 @@
+import{i as l,y as m,l as r,b as c,w as g,F as o,t as $}from"./web-BQBotWVs.js";import{M as f}from"./SEO-DZboe-MK.js";var u=$("<div class=page><main></main><!$><!/>");function d(e){return(()=>{var t=l(u),a=t.firstChild,n=a.nextSibling,[s,i]=m(n.nextSibling);return r(a,()=>e.children),r(t,c(f,{get setPage(){return e.setPage}}),s,i),g(()=>o(a,e.class)),t})()}export{d as L};
