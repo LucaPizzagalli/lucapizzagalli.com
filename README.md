@@ -45,7 +45,7 @@ src/
   components/          Layout, Menu (foldable + loop-aware), SEO, Math, Deck, Analytics, FilterDefs
   data/
     things.js          project cards on /things
-    posts.js           blog posts on /words (also feeds rss.xml)
+    words.js           blog posts on /words (also feeds rss.xml)
   lib/
     loopContext.js       signals backing the recursive /loop joke
   routes/
@@ -54,7 +54,7 @@ src/
     words/             listing + posts (one .jsx per post)
     loop/              the recursive page (state-based, URL stays /loop)
 
-scripts/build-rss.js   regenerates public/rss.xml from src/data/posts.js
+scripts/build-rss.js   regenerates public/rss.xml from src/data/words.js
                        (auto-runs via predev / prebuild)
 ```
 

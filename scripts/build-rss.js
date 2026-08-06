@@ -1,8 +1,8 @@
-// Regenerates public/rss.xml from src/data/posts.js. Runs automatically before
+// Regenerates public/rss.xml from src/data/words.js. Runs automatically before
 // `npm run dev` and `npm run build` via the predev/prebuild npm hooks.
 
 import { writeFileSync } from "node:fs";
-import { posts } from "../src/data/posts.js";
+import { words } from "../src/data/words.js";
 
 const SITE_URL = "https://lucapizzagalli.com";
 const TITLE = "Things by Luca";
@@ -17,7 +17,7 @@ const escape = (s) =>
     "'": "&apos;",
   }[c]));
 
-const items = posts
+const items = words
   .map((p) => {
     const url = SITE_URL + p.url;
     return `    <item>
@@ -42,4 +42,4 @@ ${items}
 `;
 
 writeFileSync("public/rss.xml", xml);
-console.log(`wrote public/rss.xml with ${posts.length} items`);
+console.log(`wrote public/rss.xml with ${words.length} items`);

@@ -1,8 +1,8 @@
-export const posts = [
+export const words = [
   {
     url: "/words/the-indexing-problem",
     title: "The Indexing Problem",
-    date: "2026-05-11",
+    date: "2026-08-05",
   },
   {
     url: "/words/two-kids",
